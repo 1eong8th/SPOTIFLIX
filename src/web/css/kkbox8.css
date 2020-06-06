@@ -604,17 +604,17 @@ img {
 }
 
 @media (min-width:0) and (max-width:759px) {
-    :lang(en) .page-title,
-    :lang(ja) .page-title,
-    :lang(ms) .page-title {
+     :lang(en) .page-title,
+     :lang(ja) .page-title,
+     :lang(ms) .page-title {
         font-size: 24px
     }
 }
 
 @media (min-width:760px) {
-    :lang(en) .page-title,
-    :lang(ja) .page-title,
-    :lang(ms) .page-title {
+     :lang(en) .page-title,
+     :lang(ja) .page-title,
+     :lang(ms) .page-title {
         font-size: 46px
     }
 }
@@ -928,22 +928,22 @@ img {
 }
 
 @media (min-width:0) and (max-width:759px) {
-    :lang(en) .period-fullwidth,
-    :lang(ms) .period-fullwidth {
+     :lang(en) .period-fullwidth,
+     :lang(ms) .period-fullwidth {
         padding-top: 87px
     }
 }
 
 @media (min-width:760px) and (max-width:1019px) {
-    :lang(en) .period-fullwidth,
-    :lang(ms) .period-fullwidth {
+     :lang(en) .period-fullwidth,
+     :lang(ms) .period-fullwidth {
         padding-top: 230px
     }
 }
 
 @media (min-width:1020px) {
-    :lang(en) .period-fullwidth,
-    :lang(ms) .period-fullwidth {
+     :lang(en) .period-fullwidth,
+     :lang(ms) .period-fullwidth {
         padding-top: 264px
     }
 }
@@ -2364,7 +2364,7 @@ screen and (-ms-high-contrast:active) {
     display: none;
     background-image: url("/charts/assets/images/btn_prev_normal.svg");
     background-size: 100% auto;
-    left: 0
+    left: 0;
 }
 
 .section-slider-prev:hover {
@@ -2373,19 +2373,21 @@ screen and (-ms-high-contrast:active) {
 
 .section-slider-next {
     display: inline-block;
-    background-image: url("/charts/assets/images/btn_next_normal.svg");
+    background-image: url("../music/img/nextpurplr.svg");
     background-size: 100% auto;
-    right: 0
+    right: 0;
 }
 
 @media (min-width:1650px) {
     .section-slider-next {
-        display: none
+        display: none;
     }
 }
 
 .section-slider-next:hover {
-    background-image: url("/charts/assets/images/btn_next_hover.svg")
+    background-image: url("../music/img/next.svg");
+    background-color: rgb(172, 90, 250);
+    border-radius: 50%;
 }
 
 .container.revealed .section-sidebar {
