@@ -3,21 +3,123 @@
 
 <head>
     <title>SPOTIFLIX</title>
-
+    <meta charset="utf-8" />
     <style>
-        #music {
-            color: aqua;
+        section {
+            display: block;
+            height: 50vh;
+            color: #FFFFFF;
         }
         
-        #movie {
-            color: blueviolet;
+        .section1 {
+            background-color: #3C599B;
+        }
+        
+        .section2 {
+            background-color: #527415;
+        }
+        
+        section h1 {
+            color: #FFF;
+            font-size: 6em;
+            font-family: Georgia, serif;
+            width: 100%;
+            line-height: 50vh;
+            text-align: center;
+            margin: 0;
+        }
+        
+        h1 {
+            display: block;
+            font-size: 2em;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+        
+        .block {
+            position: absolute;
+            border: 1px solid gray;
+            height: 50vh;
+            color: yellow;
+            padding: 6px;
+            text-align: center;
+        }
+        
+        .main {
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            background-color: blue;
+            color: white;
+            padding: 6px;
+        }
+        
+        .b1 {
+            display: none;
+            background-color: green;
+            right: 200px;
+            width: 38%;
+        }
+        
+        .b2 {
+            display: none;
+            background-color: brown;
+            right: 0px;
+            width: 200px;
+        }
+        
+        @media only screen and (min-width:700px) {
+            .b2 {
+                display: block;
+            }
+            .main {
+                right: 200px;
+            }
+        }
+        
+        @media only screen and (min-width:1200px) {
+            .b1 {
+                display: block;
+            }
+            .main {
+                right: 45%;
+            }
         }
     </style>
 </head>
 
-<body>
-    <div id="music"></div>
-    <div id="movie"></div>
+<body style="padding: 0!important; margin: 0!important;">
+    <section class="section1">
+
+        <!--<div class="main" style="background-color: blueviolet;">
+            <h1>電影</h1>
+        </div>
+        <div class="b1" style="background-color: brown;">
+            <h1>電視</h1>
+        </div>
+        <div class="b2" style="background-color: cadetblue;">
+            <h1>電腦</h1>
+        </div>-->
+
+    </section>
+
+    <section class="section2">
+        <div class="main block" style="background-color: blueviolet;">
+            <h1>音樂</h1>
+        </div>
+        <div class="b1 block" style="background-color: brown;">
+            <h1>音頻</h1>
+        </div>
+        <div class="b2 block" style="background-color: cadetblue;">
+            <h1 style="writing-mode: vertical-rl; line-height: 200%;margin-top: 50%;">音樂</h1>
+        </div>
+
+
+
+    </section>
 
 </body>
 
