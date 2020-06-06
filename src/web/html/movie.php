@@ -1,5 +1,6 @@
-<<<<<<< Updated upstream:src/web/html/movie.html
-<!--<?php
+<!DOCTYPE html>
+<html>
+<?php
   $dbhost = '127.0.0.1';
   $dbuser = 'sususu';
   $dbpass = 'd03181214';
@@ -8,28 +9,10 @@
   $_SESSION['conn'] = $conn;
   mysqli_query($conn, "SET NAMES 'utf8'");
   mysqli_select_db($conn, $dbname);
-  $sql = "SELECT C_name, C_id FROM customer where account = '{$_SESSION[ "username" ]}' and password = '{$_SESSION[ "password" ]}';";
-  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-  $row = mysqli_fetch_array($result);
-?>-->
-=======
->>>>>>> Stashed changes:src/web/html/movie.php
-<!DOCTYPE html>
-<html>
-    <?php
-    $dbhost = '127.0.0.1';
-    $dbuser = 'sususu';
-    $dbpass = 'd03181214';
-    $dbname = 'sususu';
-    echo "連線成功";
-    $conn = mysqli_connect($dbhost,$dbuser,$dbpass) or die('Error with MySQL connection');
-    $_SESSION['conn'] = $conn;
-    mysqli_query($conn, "SET NAMES 'utf8'");
-    mysqli_select_db($conn, $dbname);
-    // $sql = "SELECT C_name, C_id FROM customer where account = '{$_SESSION[ "username" ]}' and password = '{$_SESSION[ "password" ]}';";
-    // $result = mysqli_query($conn, $sql) or die('MySQL query error');
-    // $row = mysqli_fetch_array($result);
-    ?>
+  // $sql = "SELECT C_name, C_id FROM customer where account = '{$_SESSION[ "username" ]}' and password = '{$_SESSION[ "password" ]}';";
+  // $result = mysqli_query($conn, $sql) or die('MySQL query error');
+  // $row = mysqli_fetch_array($result);
+?>
     <head>
         <title>SPOTFLIX_Movie</title>
         <meta charset="utf-8">
@@ -54,24 +37,6 @@
     </head>
 
     <body >
-      <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top bg-dark">
-        <a class="navbar-brand" href="#">逢甲24H購物</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">首頁 <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-          <form class="form-inline mt-2 mt-md-0">
-            <a class="btn btn-outline-success my-2 my-sm-0" href="signin.html" role="button">
-              登入</a>
-          </form>
-        </div>
-      </nav>
     <div style="background-color: black;">  
       <div>
       <a href="/video/58771.html">
@@ -142,7 +107,7 @@
               <img src="../image/movie 分類/modern-premium-minimalist-streamline-app-button-film-reel-line-icon-design-116925063.jpg" 
               style="width:3%;margin:0px 0px">
               <strong>最新上架電影</strong>
-            </h3>   
+            </h3>
           </div>
           <div class="row">
             <div class="col-md-2">
@@ -151,12 +116,15 @@
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                  <?php
+                
+                <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
                    $result = mysqli_query($conn, $sql) or die('MySQL query error');
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
-                  ?></a></p>
+                ?>
+
+              </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -164,7 +132,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                   $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 1,1";
+                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                   $row = mysqli_fetch_row($result);
+                   echo $row[0];
+                ?>
+              
+              </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -172,7 +149,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                   $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 2,1";
+                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                   $row = mysqli_fetch_row($result);
+                   echo $row[0];
+                ?>
+              
+              </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -180,7 +166,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+              
+                <?php
+                   $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 3,1";
+                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                   $row = mysqli_fetch_row($result);
+                   echo $row[0];
+                ?>
+              
+              </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -188,7 +183,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+              
+                <?php
+                   $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 4,1";
+                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                   $row = mysqli_fetch_row($result);
+                   echo $row[0];
+                ?>
+
+              </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -196,7 +200,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+              
+                <?php
+                   $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 5,1";
+                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                   $row = mysqli_fetch_row($result);
+                   echo $row[0];
+                ?>
+              
+              </a></p>
               </div>
             </div>
           </div>
@@ -617,7 +630,7 @@
           <div class="btitle">
             <h3 style="color:blanchedalmond">
               <img src="../image/movie 分類/istockphoto-1001787010-1024x1024.jpg" style="width:3%;margin:0px 0px">
-              <strong>最新上架影集</strong>
+              <strong>最新上架連續劇</strong>
             </h3>
           </div>
           <div class="row">
@@ -675,7 +688,7 @@
           <div class="btitle">
             <h3 style="color:blanchedalmond">
               <img src="../image/movie 分類/37341892.jpg" style="width:3%;margin:0px 0px">
-              <strong>熱門影集</strong>
+              <strong>熱門連續劇</strong>
             </h3>
           </div>
           <div class="row">
@@ -733,7 +746,7 @@
           <div class="btitle">
             <h3 style="color:blanchedalmond">
               <img src="../image/movie 分類/29288140-icon-korea.jpg" style="width:4%;margin:0px 0px">
-              <strong>韓國</strong>
+              <strong>韓劇</strong>
             </h3>
           </div>
           <div class="row">
@@ -791,7 +804,7 @@
           <div class="btitle">
             <h3 style="color:blanchedalmond">
               <img src="../image/movie 分類/u56fd-102310503.jpg" style="width:3%;margin:0px 0px">
-              <strong>美國</strong>
+              <strong>美劇</strong>
             </h3>
           </div>
           <div class="row">
@@ -849,7 +862,7 @@
           <div class="btitle">
             <h3 style="color:blanchedalmond">
               <img src="../image/movie 分類/下載.png" style="width:3%;margin:0px 0px">
-              <strong>日本</strong>
+              <strong>日劇</strong>
             </h3>
           </div>
           <div class="row">
@@ -907,7 +920,7 @@
           <div class="btitle">
             <h3 style="color:blanchedalmond">
               <img src="../image/movie 分類/1453466098-2228245848.jpg" style="width:2%;margin:0px 0px">
-              <strong>台灣</strong>
+              <strong>台劇</strong>
             </h3>
           </div>
           <div class="row">
@@ -965,7 +978,7 @@
           <div class="btitle">
             <h3 style="color:blanchedalmond">
               <img src="../image/movie 分類/M07155919_big.jpg" style="width:3%;margin:0px 0px">
-              <strong>香港</strong>
+              <strong>港劇</strong>
             </h3>
           </div>
           <div class="row">
@@ -1023,7 +1036,7 @@
           <div class="btitle">
             <h3 style="color:blanchedalmond">
               <img src="../image/movie 分類/a780ee8197109e901eaee2726088bea6.jpg" style="width:3%;margin:0px 0px">
-              <strong>對岸</strong>
+              <strong>陸劇</strong>
             </h3>
           </div>
           <div class="row">
