@@ -1,0 +1,111 @@
+.owl-theme .owl-nav {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    cursor: pointer
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    text-decoration: none
+}
+
+.owl-prev {
+    background-image: url("/charts/assets/images/btn_prev_normal.svg");
+    background-size: 100% auto;
+    left: 50%
+}
+
+@media (min-width:0) and (max-width:1019px) {
+    .owl-prev {
+        -webkit-transform: translate(-380px, -50%);
+        transform: translate(-380px, -50%)
+    }
+}
+
+@media (min-width:1020px) {
+    .owl-prev {
+        -webkit-transform: translate(-520px, -50%);
+        transform: translate(-520px, -50%)
+    }
+}
+
+.owl-prev:hover {
+    background-image: url("/charts/assets/images/btn_prev_hover.svg")
+}
+
+.owl-next {
+    background-image: url("/charts/assets/images/btn_next_normal.svg");
+    background-size: 100% auto;
+    right: 50%
+}
+
+@media (min-width:0) and (max-width:1019px) {
+    .owl-next {
+        -webkit-transform: translate(380px, -50%);
+        transform: translate(380px, -50%)
+    }
+}
+
+@media (min-width:1020px) {
+    .owl-next {
+        -webkit-transform: translate(520px, -50%);
+        transform: translate(520px, -50%)
+    }
+}
+
+.owl-next:hover {
+    background-image: url("/charts/assets/images/btn_next_hover.svg")
+}
+
+.owl-theme .owl-nav .disabled {
+    opacity: .5;
+    cursor: default
+}
+
+.owl-theme .owl-dots {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    line-height: 60px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent
+}
+
+.owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 6px;
+    height: 6px;
+    margin: 0 5px;
+    background-color: hsla(0, 0%, 100%, .5);
+    display: block;
+    -webkit-backface-visibility: visible;
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    border-radius: 50%
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #ffd200
+}
+
+@media (min-width:761px) {
+    .owl-item:not(.center) {
+        opacity: .7
+    }
+}

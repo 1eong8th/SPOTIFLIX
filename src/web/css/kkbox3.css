@@ -1,0 +1,136 @@
+.wpb-popup {
+    z-index: 10000;
+    width: 458px;
+    margin: 0 auto;
+    position: relative
+}
+
+.wpb-popup .wpb-container {
+    border-radius: 2px;
+    background-color: #2a2a2a;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+    width: 458px;
+    margin: 0 auto
+}
+
+.wpb-popup .wpb-content {
+    padding: 30px 50px;
+    position: relative
+}
+
+.wpb-popup .wpb-header {
+    border-bottom: 1px solid #4b4b4b;
+    padding: 30px 66px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0
+}
+
+.wpb-popup input[type=checkbox] {
+    display: none
+}
+
+.wpb-popup input[type=checkbox]+label {
+    display: inline-block;
+    position: relative;
+    font-size: 13px;
+    line-height: 20px;
+    cursor: pointer;
+    color: #787878;
+    margin: 0
+}
+
+.wpb-popup input[type=checkbox]+label .checkbox-icon {
+    display: inline-block;
+    border: 1px solid #979797;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 2px
+}
+
+.wpb-popup input[type=checkbox]+label .checkbox-icon i.fa {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out
+}
+
+.wpb-popup input[type=checkbox]:checked+label .checkbox-icon i.fa {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1
+}
+
+.wpb-popup .checkbox-icon i.fa {
+    position: absolute;
+    font-size: 12px;
+    width: 16px;
+    height: 16px;
+    line-height: 13px;
+    text-align: center;
+    left: 0
+}
+
+.wpb-popup .wpb-footer {
+    padding: 20px 0 0;
+    text-align: center
+}
+
+.wpb-popup .wpb-footer a,
+.wpb-popup .wpb-footer a:active,
+.wpb-popup .wpb-footer a:link,
+.wpb-popup .wpb-footer a:visited {
+    font-size: 13px;
+    color: #fff
+}
+
+.wpb-popup .mfp-close {
+    top: -40px
+}
+
+.wpb-btn,
+.wpb-btn-primary {
+    display: block;
+    padding: 14px 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 0;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 20px
+}
+
+.wpb-btn-primary:hover,
+.wpb-btn:hover {
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: #ffd200
+}
+
+.wpb-btn-primary {
+    background-color: #ffd200;
+    color: #000
+}
+
+.wpb-btn,
+.wpb-btn-primary {
+    border: 2px solid #ffd200;
+    cursor: pointer
+}
+
+.wpb-btn {
+    background-color: transparent;
+    color: #ffd200
+}

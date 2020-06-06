@@ -1,0 +1,122 @@
+@media (min-width: 760px){
+    .home-fullwidth {
+        padding-top: 135px;
+        height: 760px;
+    }
+}
+
+
+.home-fullwidth {
+    background: transparent no-repeat 50%;
+    background-size: cover;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+/*container*/
+.home-fullwidth .container {
+    position: relative;
+}
+.container {
+    padding: 0;
+}
+@media (min-width: 760px){
+    .container, .container-md {
+        max-width: 660px;
+    }
+}
+
+
+.container {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+div {
+    display: block;
+}
+/*sectionsidebar*/
+@media (min-width: 760px){
+    .section-sidebar {
+        float: left;
+        width: 335px;
+        height: 415px;
+    }
+}
+.section-sidebar {
+    opacity: 1;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: .7s;
+    transition-duration: .7s;
+}
+
+
+
+/*section title*/
+@media (min-width: 760px){
+   .section-sidebar .section-title {
+    margin: 0 0 40px;
+} 
+}
+
+@media (min-width: 760px){
+    .section-title {
+    font-size: 36px;
+    margin: 65px 0;
+}
+}
+
+.section-title {
+    display: inline-block;
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,.5);
+    z-index: 5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+@media (min-width: 760px){
+    .section-title:after {
+        height: 18px;
+    }
+}
+
+.section-title:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: transparent url(/charts/assets/images/slash_yellow.png) repeat;
+    z-index: -1;
+}
+/*section nav*/
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
