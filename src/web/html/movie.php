@@ -1,3 +1,16 @@
+<?php
+  $dbhost = '127.0.0.1';
+  $dbuser = 'sususu';
+  $dbpass = 'd03181214';
+  $dbname = 'sususu';
+  $conn = mysqli_connect($dbhost,$dbuser,$dbpass) or die('Error with MySQL connection');
+  $_SESSION['conn'] = $conn;
+  mysqli_query($conn, "SET NAMES 'utf8'");
+  mysqli_select_db($conn, $dbname);
+  $sql = "SELECT C_name, C_id FROM customer where account = '{$_SESSION[ "username" ]}' and password = '{$_SESSION[ "password" ]}';";
+  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+  $row = mysqli_fetch_array($result);
+?>
 <!DOCTYPE html>
 <html>
     <head>
