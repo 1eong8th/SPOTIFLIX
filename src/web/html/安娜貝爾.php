@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html>
+<?php
+  $dbhost = '127.0.0.1';
+  $dbuser = 'sususu';
+  $dbpass = 'd03181214';
+  $dbname = 'sususu';
+  $conn = mysqli_connect($dbhost,$dbuser,$dbpass) or die('Error with MySQL connection');
+  $_SESSION['conn'] = $conn;
+  mysqli_query($conn, "SET NAMES 'utf8'");
+  mysqli_select_db($conn, $dbname);
+  // $sql = "SELECT C_name, C_id FROM customer where account = '{$_SESSION[ "username" ]}' and password = '{$_SESSION[ "password" ]}';";
+  // $result = mysqli_query($conn, $sql) or die('MySQL query error');
+  // $row = mysqli_fetch_array($result);
+?>
     <head>
         <title>SPOTFLIX_Movie</title>
         <meta charset="utf-8">
@@ -32,7 +45,7 @@
               <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
             </li>
             <li >
-               <a class="nav-link" href="../html/movie.html" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a>
+               <a class="nav-link" href="http://127.0.0.1/php_example/movie.php" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
@@ -46,49 +59,77 @@
       <div style="background-color: black;">
           <div class="row">
               <div class="col-md-6 clearfix" >
-                
-                  <div style="padding: 20px;"><iframe width="550" height="400" src="https://www.youtube.com/embed/ebtZ3dznlG8" 
+              <?php
+                $sql = "SELECT Mo_Address FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
+                $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                $movie = mysqli_fetch_row($result);
+              ?>
+                  <div style="padding: 20px;"><iframe width="550" height="400" src="<?php echo $movie[0]; ?>" 
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                   </iframe>
                   </div>
               </div>  
               <div class="col-md-6 clearfix" >
                 <div style="padding: 20px;color: blanchedalmond;">
-                  <h2><!--name:-->鬼修女</h2>
+                  <h2>
+                  <?php
+                    $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
+                    $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                    $movie = mysqli_fetch_row($result);
+                    echo $movie[0];
+                  ?></h2>
                   <table width="100%" heigh="3" style="line-height:25px;" >
+                  <?php
+                      $sql = "SELECT Mo_Grade FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
+                      $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                      $grade = mysqli_fetch_row($result);
+
+                      $sql = "SELECT Mo_Dir FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
+                      $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                      $dir = mysqli_fetch_row($result);
+
+                      $sql = "SELECT Mo_Tag FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
+                      $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                      $tag = mysqli_fetch_row($result);
+
+                      $sql = "SELECT Mo_Year FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
+                      $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                      $time = mysqli_fetch_row($result);
+
+                      $sql = "SELECT Mo_Info FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
+                      $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                      $info = mysqli_fetch_row($result);
+                  ?>
                     <tr >
                       <td colspan="2"><span style="color: #999;">主演 : 
-                        </span><small>泰莎·法蜜嘉、德米安·畢齊、夏洛特·荷蒲、邦妮·艾倫斯</small>
+                        </span><small></small>
                       </td>              
                     </tr>
                     <tr>
                       <td>
                         <span style="color: #999;">分級 : 
-                        </span><small>限制級</small>
+                        </span><small><?php echo $grade[0]; ?></small>
                       </td>
                       <td>
                         <span style="color: #999;">導演 : 
-                        </span><small>Corin Hardy</small>
+                        </span><small><?php echo $dir[0]; ?></small>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <span style="color: #999;">類別 : 
-                        </span><small>恐怖片</small>
+                        </span><small><?php echo $tag[0]; ?></small>
                       </td>
                       <td>
                         <span style="color: #999;">上映時間 : 
-                        </span><small>2018-09-07</small>
+                        </span><small><?php echo $time[0]; ?></small>
                       </td>
                     </tr>
                     
                   </table> 
                   <div >
                     <h5 style="color: #999;">劇情介紹 :</h5> 
-                      <p style="padding: 0px 60px 10px 20px;color:blanchedalmond;"><small>老舊的想法已經過時了。許皓雲的發生，到底需要如何實現，不許皓雲的發生，又會如何產生。
-                      要想清楚，許皓雲，到底是一種怎麼樣的存在。深入的探討許皓雲，是釐清一切的關鍵。我們必須相信，蔡鍔曾講過，
-                      沒有膽量就談希特勒曾經提到過，大自然的全部工作是強者與弱者之間的衝突-強者統治弱者的永恆勝利。不是這樣，
-                      整個大自然就不會衰亡。違背這個基本規律的國家也將衰亡。這句話令我不禁感慨問題的迫切性。如果別人做得到，那我也可以做到。</small>
+                      <p style="padding: 0px 60px 10px 20px;color:blanchedalmond;"><small><?php echo $info[0]; ?></small>
                     </p>
                   </div> 
                 </div>

@@ -111,7 +111,7 @@
           </div>
           <div class="row">
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
+              <a href="http://127.0.0.1/php_example/天氣之子.php">
               <?php
                 $sql = "SELECT Mo_Photo FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
                 $result = mysqli_query($conn, $sql) or die('MySQL query error');
@@ -120,7 +120,7 @@
                 <img src="<?php echo $image[0]; ?>" style="width:115%">
               </a>
               <div>
-                <p align="center"><a href="<?php echo $image[0]; ?>"style="color:blanchedalmond">
+                <p align="center"><a href="http://127.0.0.1/php_example/天氣之子.php"style="color:blanchedalmond">
                 
                 <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
@@ -133,7 +133,7 @@
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
+              <a href="http://127.0.0.1/php_example/可能還愛你.php">
                 <?php
                   $sql = "SELECT Mo_Photo FROM movie ORDER BY movie.Mo_Year DESC LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
@@ -142,7 +142,7 @@
                 <img src="<?php echo $image[0]; ?>" style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                <p align="center"><a href="http://127.0.0.1/php_example/可能還愛你.php"style="color:blanchedalmond">
                 
                 <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 1,1";
@@ -155,7 +155,7 @@
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
+              <a href="http://127.0.0.1/php_example/愛上觸不到的你.php">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie ORDER BY movie.Mo_Year DESC LIMIT 2,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
@@ -164,7 +164,7 @@
                 <img src="<?php echo $image[0]; ?>" style="width:115%">  
                 </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                <p align="center"><a href="http://127.0.0.1/php_example/愛上觸不到的你.php"style="color:blanchedalmond">
                 
                 <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 2,1";
@@ -177,7 +177,7 @@
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
+              <a href="http://127.0.0.1/php_example/飛翔吧！埼玉.php">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie ORDER BY movie.Mo_Year DESC LIMIT 3,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
@@ -186,7 +186,7 @@
                 <img src="<?php echo $image[0]; ?>" style="width:115%">  
                 </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                <p align="center"><a href="http://127.0.0.1/php_example/飛翔吧！埼玉.php"style="color:blanchedalmond">
               
                 <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 3,1";
@@ -199,7 +199,7 @@
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
+              <a href="http://127.0.0.1/php_example/雞不可失.php">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie ORDER BY movie.Mo_Year DESC LIMIT 4,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
@@ -208,7 +208,7 @@
                 <img src="<?php echo $image[0]; ?>" style="width:115%">  
                 </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                <p align="center"><a href="http://127.0.0.1/php_example/雞不可失.php"style="color:blanchedalmond">
               
                 <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 4,1";
@@ -221,7 +221,7 @@
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
+              <a href="http://127.0.0.1/php_example/好不浪漫.php">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie ORDER BY movie.Mo_Year DESC LIMIT 5,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
@@ -230,7 +230,7 @@
                 <img src="<?php echo $image[0]; ?>" style="width:115%"> 
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                <p align="center"><a href="http://127.0.0.1/php_example/好不浪漫.php"style="color:blanchedalmond">
               
                 <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 5,1";
@@ -254,7 +254,7 @@
           </div>
           <div class="row">
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
+              <a href="http://127.0.0.1/php_example/天氣之子.php">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Name = '天氣之子'";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
@@ -263,7 +263,7 @@
                 <img src="<?php echo $image[0]; ?>" style="width:115%"> 
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                <p align="center"><a href="http://127.0.0.1/php_example/天氣之子.php"style="color:blanchedalmond">
                 
                 <?php
                    $sql = "SELECT Mo_Name FROM movie WHERE Mo_Name = '天氣之子'";
@@ -276,7 +276,7 @@
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
+              <a href="http://127.0.0.1/php_example/好不浪漫.php">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Name = '好不浪漫'";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
@@ -285,7 +285,7 @@
                 <img src="<?php echo $image[0]; ?>" style="width:115%">   
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                <p align="center"><a href="http://127.0.0.1/php_example/好不浪漫.php"style="color:blanchedalmond">
                 
                 <?php
                    $sql = "SELECT Mo_Name FROM movie WHERE Mo_Name = '好不浪漫'";
@@ -298,7 +298,7 @@
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
+              <a href="http://127.0.0.1/php_example/安娜貝爾.php">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Name = '安娜貝爾'";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
@@ -307,7 +307,7 @@
                 <img src="<?php echo $image[0]; ?>" style="width:115%">
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                <p align="center"><a href="http://127.0.0.1/php_example/安娜貝爾.php"style="color:blanchedalmond">
                 
                 <?php
                    $sql = "SELECT Mo_Name FROM movie WHERE Mo_Name = '安娜貝爾'";
