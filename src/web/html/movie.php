@@ -112,7 +112,15 @@
           <div class="row">
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+              <img src="
+                <?php
+                  $sql = "SELECT Mo_Photo FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>"
+              >  
+              
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
@@ -228,7 +236,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Name = '天氣之子'";
+                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                   $row = mysqli_fetch_row($result);
+                   echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -236,7 +253,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Name = '好不浪漫'";
+                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                   $row = mysqli_fetch_row($result);
+                   echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -244,7 +270,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Name = '安娜貝爾'";
+                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                   $row = mysqli_fetch_row($result);
+                   echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -252,7 +287,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Name = '你的名字'";
+                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                   $row = mysqli_fetch_row($result);
+                   echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -260,7 +304,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Name = '即刻救援3'";
+                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                   $row = mysqli_fetch_row($result);
+                   echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -268,7 +321,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Name = '厲陰宅2'";
+                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                   $row = mysqli_fetch_row($result);
+                   echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
           </div>
@@ -286,7 +348,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 0,1";
+                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                   $row = mysqli_fetch_row($result);
+                   echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -294,7 +365,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror' LIMIT 1,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -302,7 +382,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 2,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -310,7 +399,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -318,15 +416,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
-              </a>
-              <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 4,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
           </div>
@@ -345,7 +444,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Romance'LIMIT 0,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -353,7 +461,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Romance'LIMIT 1,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -404,7 +521,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Action'LIMIT 0,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -412,7 +538,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Action'LIMIT 1,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -420,7 +555,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Action'LIMIT 2,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -463,7 +607,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Suspense'LIMIT 0,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -471,7 +624,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Suspense'LIMIT 1,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -522,7 +684,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 0,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -530,7 +701,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 1,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -538,7 +718,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 2,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -546,7 +735,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 3,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -554,7 +752,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 4,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -581,7 +788,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Comedy'LIMIT 0,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -589,7 +805,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Comedy'LIMIT 1,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -597,7 +822,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Comedy'LIMIT 2,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -639,7 +873,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Series_Name FROM series LIMIT 0,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -647,7 +890,16 @@
                 <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
+                
+                <?php
+                  $sql = "SELECT Series_Name FROM series LIMIT 1,1";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                ?>
+                
+                </a></p>
               </div>
             </div>
             <div class="col-md-2">
