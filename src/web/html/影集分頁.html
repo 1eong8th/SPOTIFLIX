@@ -8,16 +8,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <style>
-          li{
+          #colorbutton li{
             list-style-type:none;
             display: inline; 
             padding: 6px;
             border-radius: 7px;  
             border: 0.3px solid rgb(255, 8, 0); 
             background-color: rgba(114, 29, 29, 0.377);
-           
+            margin: 2px;
           }
-          li a{
+          #colorbutton li a{
             color:blanchedalmond;
           }
           .wrap ul {
@@ -28,24 +28,27 @@
     </head>
 
     <body >
-      <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top bg-dark">
-        <a class="navbar-brand" href="#">逢甲24H購物</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">首頁 <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-          <form class="form-inline mt-2 mt-md-0">
-            <a class="btn btn-outline-success my-2 my-sm-0" href="signin.html" role="button">
-              登入</a>
-          </form>
-        </div>
-      </nav>
+        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black">
+            <h3><a href="#" style="color:blanchedalmond;">SPOTFLIX</a></h3>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                <li >
+                  <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
+                </li>
+                <li >
+                   <a class="nav-link" href="../html/movie.html" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+              <form class="form-inline mt-2 mt-md-0">
+                <a href="signin.html" role="button" style="color:gainsboro">
+                  <strong>登出</strong></a>
+              </form>
+            </div>
+          </nav>
 
       <div style="background-color: black;">
           <div class="row">
@@ -106,7 +109,7 @@
                 </div>
               </div>                  
           </div>
-          <div>
+          <div id="colorbutton">
             <ul style="width: 100%;">
                 <li><a href="../html/影集分頁.html">第01集</a></li>
                 <li><a href="../html/影集分頁.html">第02集</a></li>
