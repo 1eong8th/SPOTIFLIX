@@ -37,6 +37,11 @@
 						Register
 					</span>
 
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" name="name">
+						<span class="focus-input100" data-placeholder="Name"></span>
+					</div>
+
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
 						<input class="input100" type="text" name="email">
 						<span class="focus-input100" data-placeholder="Email"></span>
@@ -56,6 +61,16 @@
 						</span>
 						<input class="input100" type="password" name="pass">
 						<span class="focus-input100" data-placeholder="Confirm Password"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" >
+						<input pattern="[0-9]{4}[-][0-9]{4}[-][0-9]{4}[-][0-9]{4}" title="#### - #### - #### - ####" class="input100" type="text" name="credit" >
+						<span class="focus-input100" data-placeholder="Credit Card Number"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" >
+						<input pattern="[0-9]{3}" title="###" class="input100" type="text" name="cvv" >
+						<span class="focus-input100" data-placeholder="CVV"></span>
 					</div>
 					
 					<div class="container-login100-form-btn">
