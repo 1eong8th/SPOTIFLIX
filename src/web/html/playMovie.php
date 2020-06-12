@@ -60,11 +60,17 @@
           <div class="row">
               <div class="col-md-6 clearfix" >
               <?php
-                $sql = "SELECT Mo_Address FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
-                $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                $movie = mysqli_fetch_row($result);
+                // $sql = "SELECT Mo_Address FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                // $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                // $movie = mysqli_fetch_row($result);
+                session_start();
+                $newId = $_GET["id"];
+                $_SESSION['id'] = $newId;
+                $newSql = "SELECT Mo_Address, Mo_Name, Mo_Grade, Mo_Dir, Mo_Tag, Mo_Year, Mo_Info FROM movie WHERE Mo_id = '{$_SESSION["id"]}'";
+                $result = mysqli_query($conn, $newSql) or die('MySQL query error');
+                $data = mysqli_fetch_array($result);
               ?>
-                  <div style="padding: 20px;"><iframe width="550" height="400" src="<?php echo $movie[0]; ?>" 
+                  <div style="padding: 20px;"><iframe width="550" height="400" src="<?php echo $data['Mo_Address']; ?>" 
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                   </iframe>
                   </div>
@@ -73,33 +79,33 @@
                 <div style="padding: 20px;color: blanchedalmond;">
                   <h2>
                   <?php
-                    $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
-                    $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                    $movie = mysqli_fetch_row($result);
-                    echo $movie[0];
+                    // $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                    // $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                    // $movie = mysqli_fetch_row($result);
+                    echo $data['Mo_Name'];
                   ?></h2>
                   <table width="100%" heigh="3" style="line-height:25px;" >
-                  <?php
-                      $sql = "SELECT Mo_Grade FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
-                      $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                      $grade = mysqli_fetch_row($result);
+                  <!-- <?php
+                      // $sql = "SELECT Mo_Grade FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                      // $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                      // $grade = mysqli_fetch_row($result);
 
-                      $sql = "SELECT Mo_Dir FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
-                      $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                      $dir = mysqli_fetch_row($result);
+                      // $sql = "SELECT Mo_Dir FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                      // $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                      // $dir = mysqli_fetch_row($result);
 
-                      $sql = "SELECT Mo_Tag FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
-                      $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                      $tag = mysqli_fetch_row($result);
+                      // $sql = "SELECT Mo_Tag FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                      // $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                      // $tag = mysqli_fetch_row($result);
 
-                      $sql = "SELECT Mo_Year FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
-                      $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                      $time = mysqli_fetch_row($result);
+                      // $sql = "SELECT Mo_Year FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                      // $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                      // $time = mysqli_fetch_row($result);
 
-                      $sql = "SELECT Mo_Info FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
-                      $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                      $info = mysqli_fetch_row($result);
-                  ?>
+                      // $sql = "SELECT Mo_Info FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                      // $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                      // $info = mysqli_fetch_row($result);
+                  ?> -->
                     <tr >
                       <td colspan="2"><span style="color: #999;">主演 : 
                         </span><small></small>
@@ -108,28 +114,28 @@
                     <tr>
                       <td>
                         <span style="color: #999;">分級 : 
-                        </span><small><?php echo $grade[0]; ?></small>
+                        </span><small><?php echo $data['Mo_Grade']; ?></small>
                       </td>
                       <td>
                         <span style="color: #999;">導演 : 
-                        </span><small><?php echo $dir[0]; ?></small>
+                        </span><small><?php echo $data['Mo_Dir']; ?></small>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <span style="color: #999;">類別 : 
-                        </span><small><?php echo $tag[0]; ?></small>
+                        </span><small><?php echo $data['Mo_Tag']; ?></small>
                       </td>
                       <td>
                         <span style="color: #999;">上映時間 : 
-                        </span><small><?php echo $time[0]; ?></small>
+                        </span><small><?php echo $data['Mo_Year']; ?></small>
                       </td>
                     </tr>
                     
                   </table> 
                   <div >
                     <h5 style="color: #999;">劇情介紹 :</h5> 
-                      <p style="padding: 0px 60px 10px 20px;color:blanchedalmond;"><small><?php echo $info[0]; ?></small>
+                      <p style="padding: 0px 60px 10px 20px;color:blanchedalmond;"><small><?php echo $data['Mo_Info']; ?></small>
                     </p>
                   </div> 
                 </div>
