@@ -49,6 +49,11 @@
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
+                <a href="signin.html" role="button" style="color:gainsboro">
+                  <strong>個人資料</strong></a>
+              </form>
+              &emsp;
+          <form class="form-inline mt-2 mt-md-0">
             <a href="signin.html" role="button" style="color:gainsboro">
               <strong>登出</strong></a>
           </form>
