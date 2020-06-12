@@ -33,32 +33,33 @@
     </head>
 
     <body style="background-color: black;">
-      <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black">
-        <h3><a href="#" style="color:blanchedalmond;">SPOTFLIX</a></h3>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li >
-              <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
-            </li>
-            <li >
-               <a class="nav-link" href="http://127.0.0.1/php_example/movie.php" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-          <form class="form-inline mt-2 mt-md-0">
-                <a href="signin.html" role="button" style="color:gainsboro">
+     <!--nav-->
+     <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black">
+            <h3><a href="#" style="color:blanchedalmond;"><img src="../image/Spotiflix1.png" width="140"></a></h3>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                <li >
+                  <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
+                </li>
+                <li >
+                   <a class="nav-link" href="../html/movie.html" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+              <form class="form-inline mt-2 mt-md-0">
+                <a href="../html/個人資料.html" role="button" style="color:gainsboro">
                   <strong>個人資料</strong></a>
               </form>
               &emsp;
-          <form class="form-inline mt-2 mt-md-0">
-            <a href="signin.html" role="button" style="color:gainsboro">
-              <strong>登出</strong></a>
-          </form>
-        </div>
-      </nav>
+              <form class="form-inline mt-2 mt-md-0">
+                <a href="signin.html" role="button" style="color:gainsboro">
+                  <strong>登出</strong></a>
+              </form>
+            </div>
+          </nav>
 
 
       <div>
