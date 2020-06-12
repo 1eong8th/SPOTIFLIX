@@ -111,14 +111,20 @@
           </div>
           <div class="row">
             <div class="col-md-2">
-              <a href="http://127.0.0.1/php_example/天氣之子.php">
+
               <?php
+              
                 $sql = "SELECT Mo_Photo FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                $temp = "SELECT * FROM movie";
                 $result = mysqli_query($conn, $sql) or die('MySQL query error');
                 $image = mysqli_fetch_row($result);
+                echo = "<a href=http://127.0.0.1/php_example/天氣之子.php?movie=$temp>" 
+                echo = ""
+                "</a>"
               ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">
-              </a>
+               <img src="<?php echo $image[0]; ?>" style="width:115%">
+                
+              
               <div>
                 <p align="center"><a href="http://127.0.0.1/php_example/天氣之子.php"style="color:blanchedalmond">
                 
