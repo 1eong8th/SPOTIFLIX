@@ -135,7 +135,7 @@
                   </table> 
                   <div >
                     <h5 style="color: #999;">劇情介紹 :</h5> 
-                      <p style="padding: 0px 60px 10px 20px;color:blanchedalmond;"><small><?php echo $data['Mo_Info']; ?></small>
+                      <p style="padding: 0px 60px 10px 20px;color:blanchedalmond;"><small><?php echo $data['Mo_Info']; session_write_close();?></small>
                     </p>
                   </div> 
                 </div>

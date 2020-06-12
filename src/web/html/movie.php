@@ -119,7 +119,7 @@
                 $result = mysqli_query($conn, $temp) or die('MySQL query error');
                 $id = mysqli_fetch_array($result);
                 $trans = $id['Mo_id'];
-                echo "<a href=http://127.0.0.1/php_example/天氣之子.php?id=$trans>";
+                echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
                 echo "<img src=$image[0] style=width:115%>";
                 "</a>";
               ?>
@@ -131,56 +131,69 @@
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
                    echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/天氣之子.php?id=$temp style=color:blanchedalmond>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
                 ?>
-                <!-- <p align="center"><a href="http://127.0.0.1/php_example/天氣之子.php?name<?=$temp;?>"style="color:blanchedalmond">
-              </a></p> -->
+                
               </div>
             </div>
             <div class="col-md-2">
-              <a href="http://127.0.0.1/php_example/可能還愛你.php">
+              <a href="http://127.0.0.1/php_example/playMovie.php">
                 <?php
                   $sql = "SELECT Mo_Photo FROM movie ORDER BY movie.Mo_Year DESC LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 1,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  
-              </a>
+
               <div>
-                <p align="center"><a href="http://127.0.0.1/php_example/可能還愛你.php"style="color:blanchedalmond">
-                
                 <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 1,1";
                    $result = mysqli_query($conn, $sql) or die('MySQL query error');
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
+                   echo "<p align=center>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   "</a>";
+                   "</p>";
                 ?>
-              
-              </a></p>
+  
               </div>
             </div>
             <div class="col-md-2">
-              <a href="http://127.0.0.1/php_example/愛上觸不到的你.php">
+              
               <?php
                   $sql = "SELECT Mo_Photo FROM movie ORDER BY movie.Mo_Year DESC LIMIT 2,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 2,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  
-                </a>
               <div>
-                <p align="center"><a href="http://127.0.0.1/php_example/愛上觸不到的你.php"style="color:blanchedalmond">
                 
                 <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 2,1";
                    $result = mysqli_query($conn, $sql) or die('MySQL query error');
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
+                   echo "<p align=center>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   "</a>";
+                   "</p>";
                 ?>
               
-              </a></p>
               </div>
             </div>
             <div class="col-md-2">
