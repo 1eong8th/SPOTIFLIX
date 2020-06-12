@@ -45,8 +45,6 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/modern-premium-minimalist-streamline-app-button-film-reel-line-icon-design-116925063.jpg" 
-              style="width:3%;margin:0px 0px">
               <strong>最新上架電影</strong>
             </h3>
           </div>
@@ -222,8 +220,6 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/37341892.jpg" 
-              style="width:3%;margin:0px 0px">
               <strong>熱門電影</strong>
             </h3>
           </div>
@@ -362,25 +358,30 @@
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
                 <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Name = '厲陰宅2'";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie WHERE Mo_Name = '厲陰宅2'";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">
-              </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                    $sql = "SELECT Mo_Name FROM movie WHERE Mo_Name = '厲陰宅2'";
                    $result = mysqli_query($conn, $sql) or die('MySQL query error');
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
+                   echo "<p align=center>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   "</a>";
+                   "</p>";
                 ?>
-                
-                </a></p>
+
               </div>
             </div>
           </div>
@@ -388,116 +389,142 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/depositphotos_299122542-stock-illustration-spooky-flying-ghost-hand-drawn.jpg" style="width:3%;margin:0px 0px">
               <strong>恐怖電影</strong>
             </h3>
           </div>
           <div class="row">
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Horror'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  
-                </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                    $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 0,1";
                    $result = mysqli_query($conn, $sql) or die('MySQL query error');
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
+                   echo "<p align=center>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   "</a>";
+                   "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Horror'LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 1,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror' LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Horror'LIMIT 2,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 2,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
-              <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
                 
+              <div>
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 2,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 3,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  
-              </a>
+               
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Horror'LIMIT 4,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 4,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
                 
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 4,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
+               
               </div>
             </div>
           </div>
@@ -505,52 +532,61 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/images.jpg" 
-              style="width:3%;margin:0px 0px">
               <strong>浪漫電影</strong>
             </h3>
           </div>
           <div class="row">
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Romance'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Romance'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Romance'LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 1,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
+               
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Romance'LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -590,73 +626,86 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/1630042L6-0.jpg" 
-              style="width:3%;margin:0px 0px">
               <strong>動作電影</strong>
             </h3>
           </div>
           <div class="row">
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Action'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Action'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Action'LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 1,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Action'LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Action'LIMIT 2,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 2,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Action'LIMIT 2,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -688,52 +737,60 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/098058677b11733b.jpg" 
-              style="width:3%;margin:0px 0px">
               <strong>懸疑電影</strong>
             </h3>
           </div>
           <div class="row">
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Suspense'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Suspense'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Suspense'LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 1,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Suspense'LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -773,115 +830,138 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/436ccefed26a3c9309cf898f5321f5d0.png" 
-              style="width:3%;margin:0px 0px">
               <strong>動畫電影</strong>
             </h3>
           </div>
           <div class="row">
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Animation'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Animation'LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 1,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Animation'LIMIT 2,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 2,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 2,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Animation'LIMIT 3,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 3,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 3,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Animation'LIMIT 4,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 4,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 4,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -897,73 +977,86 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/201-2012740_outline-hand-drawn-smiley-faces-basic-stock-vector-hand-drawn-happy-face.png" 
-              style="width:3%;margin:0px 0px">
               <strong>喜劇電影</strong>
             </h3>
           </div>
           <div class="row">
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Comedy'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Comedy'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Comedy'LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 1,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Comedy'LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Comedy'LIMIT 2,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 2,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Comedy'LIMIT 2,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -995,51 +1088,62 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/istockphoto-1001787010-1024x1024.jpg" style="width:3%;margin:0px 0px">
               <strong>最新上架連續劇</strong>
             </h3>
           </div>
           <div class="row">
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Series_Photo FROM series LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Series_id FROM series LIMIT 0,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Series_Name FROM series LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  //影集 要改掉playMovie
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
               <?php
                   $sql = "SELECT Series_Photo FROM series LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Series_id FROM series LIMIT 1,1";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
                 ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">  </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">
-                
                 <?php
                   $sql = "SELECT Series_Name FROM series LIMIT 1,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
+                  echo "<p align=center>";
+                  //影集 要改掉playMovie
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";
                 ?>
-                
-                </a></p>
               </div>
             </div>
             <div class="col-md-2">
@@ -1079,7 +1183,6 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/37341892.jpg" style="width:3%;margin:0px 0px">
               <strong>熱門連續劇</strong>
             </h3>
           </div>
@@ -1137,7 +1240,6 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/29288140-icon-korea.jpg" style="width:4%;margin:0px 0px">
               <strong>韓劇</strong>
             </h3>
           </div>
@@ -1195,7 +1297,6 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/u56fd-102310503.jpg" style="width:3%;margin:0px 0px">
               <strong>美劇</strong>
             </h3>
           </div>
@@ -1253,7 +1354,6 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/下載.png" style="width:3%;margin:0px 0px">
               <strong>日劇</strong>
             </h3>
           </div>
@@ -1311,7 +1411,6 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/1453466098-2228245848.jpg" style="width:2%;margin:0px 0px">
               <strong>台劇</strong>
             </h3>
           </div>
@@ -1369,7 +1468,6 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/M07155919_big.jpg" style="width:3%;margin:0px 0px">
               <strong>港劇</strong>
             </h3>
           </div>
@@ -1427,7 +1525,6 @@
         <div class="container" >
           <div class="btitle">
             <h3 style="color:blanchedalmond">
-              <img src="../image/movie 分類/a780ee8197109e901eaee2726088bea6.jpg" style="width:3%;margin:0px 0px">
               <strong>陸劇</strong>
             </h3>
           </div>
