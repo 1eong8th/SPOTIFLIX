@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+  $dbhost = '127.0.0.1';
+  $dbuser = 'sususu';
+  $dbpass = 'd03181214';
+  $dbname = 'sususu';
+  $conn = mysqli_connect($dbhost,$dbuser,$dbpass) or die('Error with MySQL connection');
+  $_SESSION['conn'] = $conn;
+  mysqli_query($conn, "SET NAMES 'utf8'");
+  mysqli_select_db($conn, $dbname);
+  // $sql = "SELECT C_name, C_id FROM customer where account = '{$_SESSION[ "username" ]}' and password = '{$_SESSION[ "password" ]}';";
+  // $result = mysqli_query($conn, $sql) or die('MySQL query error');
+  // $row = mysqli_fetch_array($result);
+  session_start();
+?>
 <head>
 	<title>Login V2</title>
 	<meta charset="UTF-8">
@@ -32,7 +46,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="login.php" method="post">
 					<span class="login100-form-title p-b-26">
 						Sign In
 					</span>
@@ -53,7 +67,7 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
+							<button class="login100-form-btn" >
 								Login
 							</button>
 						</div>
@@ -69,6 +83,39 @@
 						</a>
 					</div>
 				</form>
+				<?php 
+					if(empty($_POST["email"])){
+						echo '請輸入帳號',"<br>";
+						$_SESSION['username'] = "";
+					}else{
+						$username = test_input($_POST["email"]);
+						$_SESSION['username'] = $username;
+					}
+
+					if(empty($_POST["pass"])){
+						echo '請輸入密碼',"<br>";
+						$_SESSION['password'] = "";
+					}else{
+						$password = test_input($_POST["pass"]);
+						$_SESSION['password'] = $password;
+					}
+
+					function test_input($data){
+						$data = trim($data);
+						$data = stripslashes($data);
+						$data = htmlspecialchars($data);
+						return $data;
+					}
+
+					if(!empty($_SESSION['username']) and !empty($_SESSION['password']) ){
+						$sql = "SELECT Acc_Email, Acc_Password FROM account WHERE '{$_SESSION["username"]}' and password = '{$_SESSION["password"]}'";
+						$result = mysqli_query($conn, $sql) or die('MySql query error');
+						$row = mysquli_fetch_array($result);
+						if(isset($row['Acc_Password'])){
+							echo "<script> alter"
+						}
+					}
+				?>
 			</div>
 		</div>
 	</div>

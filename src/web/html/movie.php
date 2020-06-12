@@ -111,25 +111,32 @@
           </div>
           <div class="row">
             <div class="col-md-2">
-              <a href="http://127.0.0.1/php_example/天氣之子.php">
               <?php
                 $sql = "SELECT Mo_Photo FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
                 $result = mysqli_query($conn, $sql) or die('MySQL query error');
                 $image = mysqli_fetch_row($result);
+                $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                $id = mysqli_fetch_array($result);
+                $trans = $id['Mo_id'];
+                echo "<a href=http://127.0.0.1/php_example/天氣之子.php?id=$trans>";
+                echo "<img src=$image[0] style=width:115%>";
+                "</a>";
               ?>
-                <img src="<?php echo $image[0]; ?>" style="width:115%">
-              </a>
+               
               <div>
-                <p align="center"><a href="http://127.0.0.1/php_example/天氣之子.php"style="color:blanchedalmond">
-                
                 <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
                    $result = mysqli_query($conn, $sql) or die('MySQL query error');
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
+                   echo "<p align=center>";
+                   echo "<a href=http://127.0.0.1/php_example/天氣之子.php?id=$temp style=color:blanchedalmond>";
+                   "</a>";
+                   "</p>";
                 ?>
-
-              </a></p>
+                <!-- <p align="center"><a href="http://127.0.0.1/php_example/天氣之子.php?name<?=$temp;?>"style="color:blanchedalmond">
+              </a></p> -->
               </div>
             </div>
             <div class="col-md-2">
