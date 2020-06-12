@@ -12,7 +12,6 @@
   // $sql = "SELECT C_name, C_id FROM customer where account = '{$_SESSION[ "username" ]}' and password = '{$_SESSION[ "password" ]}';";
   // $result = mysqli_query($conn, $sql) or die('MySQL query error');
   // $row = mysqli_fetch_array($result);
-  session_start();
 ?>
 <head>
 	<title>Login V2</title>
@@ -67,7 +66,7 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button type ="submit" class="login100-form-btn" >
+							<button type ="submit" class="login100-form-btn" name="submit">
 								Login
 							</button>
 						</div>
@@ -83,43 +82,37 @@
 						</a>
 					</div>
 				</form>
-				<?php 
-					if(empty($_POST["email"])){
-						echo '請輸入帳號',"<br>";
-						$_SESSION['username'] = "";
-					}else{
-						$username = test_input($_POST["email"]);
-						$_SESSION['username'] = $username;
-					}
-
-					if(empty($_POST["pass"])){
-						echo '請輸入密碼',"<br>";
-						$_SESSION['password'] = "";
-					}else{
-						$password = test_input($_POST["pass"]);
-						$_SESSION['password'] = $password;
-					}
-
-					function test_input($data){
-						$data = trim($data);
-						$data = stripslashes($data);
-						$data = htmlspecialchars($data);
-						return $data;
-					}
-
-					if(!empty($_SESSION['username']) and !empty($_SESSION['password']) ){
-						$sql = "SELECT Acc_Email, Acc_Password FROM account WHERE '{$_SESSION["username"]}' and password = '{$_SESSION["password"]}'";
-						$result = mysqli_query($conn, $sql) or die('MySql query error');
-						$row = mysquli_fetch_array($result);
-						if(isset($row['Acc_Password'])){
-							echo "<script> alter"
-						}
-					}
-				?>
 			</div>
 		</div>
 	</div>
 	
+
+	<?php
+		session_start();  // 啟用交談期
+		//第一次直接跳錯誤帳號密碼，之後DEBUG
+		if(!isset($_POST["submit"])){
+			exit;
+		}//檢測是否有submit操作
+		else{
+			if ( isset($_POST["email"]) )
+			$email = $_POST['email'];
+		if ( isset($_POST["pass"]) )	
+			$password = $_POST['pass'];
+		if ($email != ""&& $password != ""){//如果使用者名稱和密碼都不為空
+				$sql = "SELECT * FROM account WHERE Acc_Email = '{$_POST['email']}' and Acc_Passward = '{$_POST["pass"]}'";//檢測資料庫是否有對應的username和password的sql
+				$result = mysqli_query($conn,$sql);//執行sql
+				$count = mysqli_fetch_array($result);//返回一個數值
+				if($count){//0 false 1 true
+					header("refresh:0;url=http://127.0.0.1/php_example/movie.php");
+					exit;
+				}else{
+					echo "<script>alert('帳號密碼錯誤')</script>";
+				}
+			}
+		} 
+		
+		 
+	?>
 
 	<div id="dropDownSelect1"></div>
 	
