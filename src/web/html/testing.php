@@ -160,6 +160,13 @@
 </head>
 
 <body style="padding: 0!important; margin: 0!important;">
+<?php
+session_start();  // 啟用交談期
+// 檢查Session變數是否存在, 表示是否已成功登入
+if ( $_SESSION["login_session"] != true ) 
+   header("Location: login.php");
+echo "歡迎使用者進入網站!<br/>";
+?>
     <section class="section1">
  <div class="b2 block" style="background-color: cadetblue;">
     <h1 style="writing-mode: vertical-rl; line-height: 200%;margin-top: 50%;">電影</h1>
