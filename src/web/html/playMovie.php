@@ -32,7 +32,7 @@
         </style>
     </head>
 
-    <body >
+    <body style="background-color: black;">
       <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black">
         <h3><a href="#" style="color:blanchedalmond;">SPOTFLIX</a></h3>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -56,7 +56,7 @@
       </nav>
 
 
-      <div style="background-color: black;">
+      <div>
           <div class="row">
               <div class="col-md-6 clearfix" >
               <?php

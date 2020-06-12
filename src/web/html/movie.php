@@ -204,8 +204,6 @@
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
-                
-              </a>
               <div>
                 <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 5,1";
@@ -217,7 +215,6 @@
                    "</a>";
                    "</p>";
                 ?>
-
               </div>            
           </div>
         <div class="container" >
