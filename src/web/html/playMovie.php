@@ -41,13 +41,13 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-              <!--<ul class="navbar-nav mr-auto">
+              <ul class="navbar-nav mr-auto">
                 <li >
                   <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
                 </li>
-                <li >-->
+                <li >
                 <?php
-                   /* $newaddress = $_GET["add"];
+                    $newaddress = $_GET["add"];
                     echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress style=color:gainsboro>";
                     echo"<strong>";
                     echo"&emsp; 影片";
@@ -55,19 +55,19 @@
                     echo"<span class=sr-only>";
                     echo"(current)";
                     echo"</span>";
-                    echo"</a>";*/
+                    echo"</a>";
                   ?>
                    <!-- <a class="nav-link" href="http://127.0.0.1/php_example/movie.php?add=$newaddress" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a> -->
-                <!--</li>
+                </li>
               </ul>
-              <form class="form-inline mt-2 mt-md-0">-->
+              <form class="form-inline mt-2 mt-md-0">
               <?php
-                /*$newaddress = $_GET["add"];
+                $newaddress = $_GET["add"];
                 echo"<a href=http://127.0.0.1/php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
                 echo"<strong>";
                 echo"個人資料";
                 echo"</strong>";
-                echo"</a>";*/
+                echo"</a>";
               ?>
                  
               </form>
@@ -107,7 +107,9 @@
                   <table width="100%" heigh="3" style="line-height:25px;" >
                     <tr >
                       <td colspan="2"><span style="color: #999;">主演 : 
-                        </span><small></small>
+                        </span><small>
+
+                        </small>
                       </td>              
                     </tr>
                     <tr>
