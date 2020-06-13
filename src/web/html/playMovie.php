@@ -50,7 +50,7 @@
                 </li>
               </ul>
               <form class="form-inline mt-2 mt-md-0">
-                <a href="../html/個人資料.html" role="button" style="color:gainsboro">
+                 <a href="../html/個人資料.html" role="button" style="color:gainsboro">
                   <strong>個人資料</strong></a>
               </form>
               &emsp;
