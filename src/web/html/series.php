@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html>
+<?php
+  $dbhost = '127.0.0.1';
+  $dbuser = 'sususu';
+  $dbpass = 'd03181214';
+  $dbname = 'sususu';
+  $conn = mysqli_connect($dbhost,$dbuser,$dbpass) or die('Error with MySQL connection');
+  $_SESSION['conn'] = $conn;
+  mysqli_query($conn, "SET NAMES 'utf8'");
+  mysqli_select_db($conn, $dbname);
+  // $sql = "SELECT C_name, C_id FROM customer where account = '{$_SESSION[ "username" ]}' and password = '{$_SESSION[ "password" ]}';";
+  // $result = mysqli_query($conn, $sql) or die('MySQL query error');
+  // $row = mysqli_fetch_array($result);
+?>
     <head>
         <title>SPOTFLIX_Series</title>
         <meta charset="utf-8">
@@ -66,69 +79,104 @@
                 session_start();
                 $newId = $_GET["id"];
                 $_SESSION['id'] = $newId;
-                $newSql = "SELECT Mo_Address, Mo_Name, Mo_Grade, Mo_Dir, Mo_Tag, Mo_Year, Mo_Info FROM movie WHERE Mo_id = '{$_SESSION["id"]}'";
+                $newSql = "SELECT Eprisode_Pic, Series_Name, Series_Grade, Series_Dir, Series_Tag, Series_Year, Series_Season, Eprisode_Ep, Episode_length, Eprisode_Info
+                FROM eprisode, series
+                WHERE Series_id = '{$_SESSION["id"]}' AND series.Series_id = eprisode.Eprisode_id";
                 $result = mysqli_query($conn, $newSql) or die('MySQL query error');
                 $data = mysqli_fetch_array($result);
               ?>  
-                  <div style="padding: 20px;"><iframe width="600" height="400" src="https://www.youtube.com/embed/ebtZ3dznlG8" 
+                  <div style="padding: 20px;"><iframe width="600" height="400" src="<?php echo $data['Eprisode_Pic']; ?>" 
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                   </iframe>
                   </div>
               </div>  
               <div class="col-md-6 clearfix" >
                 <div style="padding: 20px;color: blanchedalmond;">
-                  <h2><!--name:-->鬼修女</h2>
+                  <h2><!--name:-->
+                  <?php
+                    echo $data['Series_Name'];
+                  ?>
+                  </h2>
                   <table width="100%" heigh="3" style="line-height:25px;" >
                     <tr >
                       <td colspan="2"><span style="color: #999;">主演 : 
-                        </span><small>泰莎·法蜜嘉、德米安·畢齊、夏洛特·荷蒲、邦妮·艾倫斯</small>
+                        </span><small></small>
                       </td>              
                     </tr>
                     <tr>
                       <td>
                         <span style="color: #999;">分級 : 
-                        </span><small>限制級</small>
+                        </span><small>
+                        <?php
+                          echo $data['Series_Grade'];
+                        ?>
+                        </small>
                       </td>
                       <td>
                         <span style="color: #999;">導演 : 
-                        </span><small>Corin Hardy</small>
+                        </span><small>
+                        <?php
+                          echo $data['Series_Dir'];
+                        ?>
+                        </small>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         <span style="color: #999;">類別 : 
-                        </span><small>恐怖片</small>
+                        </span><small>
+                        <?php
+                          echo $data['Series_Tag'];
+                        ?>
+                        </small>
                       </td>
                       <td>
                         <span style="color: #999;">上映時間 : 
-                        </span><small>2018-09-07</small>
+                        </span><small>
+                        <?php
+                          echo $data['Series_Year'];
+                        ?>
+                        </small>
                       </td>
                     </tr>
                     <tr>
                         <td>
                           <span style="color: #999;">季數 : 
-                          </span><small>第一季</small>
+                          </span><small>
+                          <?php
+                          echo $data['Series_Season'];
+                          ?>
+                          </small>
                         </td>
                         <td>
                           <span style="color: #999;">集數 : 
-                          </span><small>第1集</small>
+                          </span><small>
+                          <?php
+                          echo $data['Eprisode_Ep'];
+                          ?>
+                          </small>
                         </td>
                     </tr>
                     <tr>
                         <td>
                           <span style="color: #999;">片長 : 
-                          </span><small>00:30:54</small>
+                          </span><small>
+                          <?php
+                          echo $data['Episode_length'];
+                          ?>
+                          </small>
                         </td>
                     </tr>
                     
                   </table> 
                   <br>
                   <div >
-                    <h5 style="color: #999;">劇情介紹 :</h5> 
-                      <p style="padding: 0px 60px 10px 20px;color:blanchedalmond;"><small>老舊的想法已經過時了。許皓雲的發生，到底需要如何實現，不許皓雲的發生，又會如何產生。
-                      要想清楚，許皓雲，到底是一種怎麼樣的存在。深入的探討許皓雲，是釐清一切的關鍵。我們必須相信，蔡鍔曾講過，
-                      沒有膽量就談希特勒曾經提到過，大自然的全部工作是強者與弱者之間的衝突-強者統治弱者的永恆勝利。不是這樣，
-                      整個大自然就不會衰亡。違背這個基本規律的國家也將衰亡。這句話令我不禁感慨問題的迫切性。如果別人做得到，那我也可以做到。</small>
+                    <h5 style="color: #999;">劇情介紹 :</h5>
+                      <p style="padding: 0px 60px 10px 20px;color:blanchedalmond;"><small>
+                      <?php
+                        echo $data['Eprisode_Info'];
+                      ?>
+                      </small>
                     </p>
                   </div>   
                 </div>
@@ -136,7 +184,17 @@
           </div>
           <div id="colorbutton">
             <ul style="width: 100%;">
-                <li><a href="../html/影集分頁.html">第01集</a></li>
+            <?php
+              $temp = "SELECT Eprisode_Ep 
+              FROM eprisode 
+              where ";
+              $result = mysqli_query($conn, $temp) or die('MySQL query error');
+              $id = mysqli_fetch_array($result);
+              $trans = $id['Mo_id'];
+              //下面沒弄好
+            ?>
+
+                <li><a href="http://127.0.0.1/php_example/series.php?id=T000000001">第01集</a></li>
                 <li><a href="../html/影集分頁.html">第02集</a></li>
                 <li><a href="../html/影集分頁.html">第03集</a></li>
                 <li><a href="../html/影集分頁.html">第04集</a></li>
