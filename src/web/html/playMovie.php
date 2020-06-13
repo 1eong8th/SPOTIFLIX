@@ -46,11 +46,11 @@
                   <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
                 </li>
                 <li >
-                   <a class="nav-link" href="../html/movie.html" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a>
+                   <a class="nav-link" href="http://127.0.0.1/php_example/movie.php" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
               <form class="form-inline mt-2 mt-md-0">
-                 <a href="../html/個人資料.html" role="button" style="color:gainsboro">
+                 <a href="http://127.0.0.1/php_example/personInfo.php" role="button" style="color:gainsboro">
                   <strong>個人資料</strong></a>
               </form>
               &emsp;

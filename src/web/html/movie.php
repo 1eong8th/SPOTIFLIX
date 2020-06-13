@@ -37,6 +37,7 @@
     </head>
 
     <body style="background-color: black;">
+    
       <!--nav-->
       <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black">
             <h3><a href="#" style="color:blanchedalmond;"><img src="../image/Spotiflix1.png" width="140"></a></h3>
@@ -50,16 +51,34 @@
                   <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
                 </li>
                 <li >
-                   <a class="nav-link" href="../html/movie.html" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a>
+                <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"&emsp; 影片";
+                    echo"</strong>";
+                    echo"<span class=sr-only>";
+                    echo"(current)";
+                    echo"</span>";
+                    echo"</a>";
+                  ?>
+                   <!-- <a class="nav-link" href="http://127.0.0.1/php_example/movie.php?add=$newaddress" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a> -->
                 </li>
               </ul>
               <form class="form-inline mt-2 mt-md-0">
-                <a href="../html/個人資料.html" role="button" style="color:gainsboro">
-                 <strong>個人資料</strong></a>
+              <?php
+                $newaddress = $_GET["add"];
+                echo"<a href=http://127.0.0.1/php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
+                echo"<strong>";
+                echo"個人資料";
+                echo"</strong>";
+                echo"</a>";
+              ?>
+                 
               </form>
               &emsp;
               <form class="form-inline mt-2 mt-md-0">
-                <a href="signin.html" role="button" style="color:gainsboro">
+                <a href="http://127.0.0.1/php_example/assert/login.php" role="button" style="color:gainsboro">
                   <strong>登出</strong></a>
               </form>
             </div>
@@ -1130,7 +1149,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Series_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -1142,7 +1161,7 @@
                   echo $row[0];
                   echo "<p align=center>";
                   //影集 要改掉playMovie
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -1157,7 +1176,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Series_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -1169,7 +1188,7 @@
                   echo $row[0];
                   echo "<p align=center>";
                   //影集 要改掉playMovie
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>

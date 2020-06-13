@@ -101,8 +101,10 @@
 				$sql = "SELECT * FROM account WHERE Acc_Email = '{$_POST['email']}' and Acc_Passward = '{$_POST["pass"]}'";//檢測資料庫是否有對應的username和password的sql
 				$result = mysqli_query($conn,$sql);//執行sql
 				$count = mysqli_fetch_array($result);//返回一個數值
+				
 				if($count){//0 false 1 true
-					header("refresh:0;url=http://127.0.0.1/php_example/movie.php");
+					$trans = $count['Acc_Email'];
+					header("refresh:0;url=http://127.0.0.1/php_example/movie.php?id=$trans");
 					exit;
 				}else{
 					echo "<script>alert('帳號密碼錯誤')</script>";

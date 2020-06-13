@@ -59,7 +59,17 @@
       <div>
           <div class="row">
               <div class="col-md-6 clearfix" >
-                
+              <?php
+                // $sql = "SELECT Mo_Address FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                // $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                // $movie = mysqli_fetch_row($result);
+                session_start();
+                $newId = $_GET["id"];
+                $_SESSION['id'] = $newId;
+                $newSql = "SELECT Mo_Address, Mo_Name, Mo_Grade, Mo_Dir, Mo_Tag, Mo_Year, Mo_Info FROM movie WHERE Mo_id = '{$_SESSION["id"]}'";
+                $result = mysqli_query($conn, $newSql) or die('MySQL query error');
+                $data = mysqli_fetch_array($result);
+              ?>  
                   <div style="padding: 20px;"><iframe width="600" height="400" src="https://www.youtube.com/embed/ebtZ3dznlG8" 
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                   </iframe>
