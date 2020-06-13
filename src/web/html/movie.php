@@ -1015,10 +1015,10 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/動畫/聲之形.jpg"  style="width:115%">  
+                <img src="https://upload.wikimedia.org/wikipedia/zh/thumb/b/b1/A_Silent_Voice_film_poster.jpg/220px-A_Silent_Voice_film_poster.jpg"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">聲之形</a></p>
               </div>
             </div>
           </div>
@@ -1110,26 +1110,26 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/喜劇/女間諜.jpg"  style="width:115%">  
+                <img src="https://img.arielhsu.tw/pixnet/3bebeed435d700f040a3e25cc703fe13.jpg"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">麻辣賤諜</a></p>
               </div>
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/喜劇/熱帶驚雷.jpg"  style="width:115%">  
+                <img src="https://pics.filmaffinity.com/Tropic_Thunder-292327168-mmed.jpg"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">熱帶驚雷</a></p>
               </div>
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/喜劇/熱血新仔.jpg"  style="width:115%">  
+                <img src="https://film-like.com/images/film/full/f7/58866.jpg"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">熱血新仔</a></p>
               </div>
             </div>
           </div>
