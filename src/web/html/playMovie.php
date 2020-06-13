@@ -45,7 +45,7 @@
                 <li >
                   <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
                 </li>
-                <li >
+                <li >-->
                 <?php
                    /* $newaddress = $_GET["add"];
                     echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress style=color:gainsboro>";
