@@ -1249,8 +1249,15 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Series_id'];
+
+                  $ep = "SELECT Eprisode_Ep
+                  FROM eprisode, series
+                  where Series_id = '$trans' and Eprisode_Ep = 1 and series.Series_id = eprisode.Eprisode_id";
+                  $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                  $epri = mysqli_fetch_array($result);
+                  $epriso = $epri['Eprisode_Ep'];
                   // $newaddress = $_GET["add"];
-                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans&add=$newaddress>";
+                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans&add=$newaddress&ep=$epriso>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
