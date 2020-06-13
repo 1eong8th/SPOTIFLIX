@@ -620,7 +620,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";1
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -640,34 +640,34 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/浪漫/回到最愛的一天.jpg"  style="width:115%">  
+                <img src="https://cdn.unwire.hk/wp-content/uploads/2013/10/About-Time.jpg"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">回到最愛的一天</a></p>
               </div>
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/浪漫/忘了、忘不了.jpg"  style="width:115%">  
+                <img src="https://4.bp.blogspot.com/-gerq2btoZ1k/VGC_5mt7plI/AAAAAAAAAfA/zZoULDBPGPk/s1600/notebook_ver2.jpg"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">忘了、忘不了</a></p>
               </div>
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/浪漫/情約一天.jpg"  style="width:115%">  
+                <img src="https://hwzhiyin.com/uploadfile/1323405151.bmp"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">情約一天</a></p>
               </div>
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/浪漫/每天愛妳第一次.jpg"  style="width:115%">  
+                <img src="https://pic.pimg.tw/luketsu/1204359746.jpg"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">每天愛妳第一次</a></p>
               </div>
             </div>
           </div>
@@ -759,26 +759,26 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/動作/復仇.jpg"  style="width:115%">  
+                <img src="https://lh3.googleusercontent.com/proxy/SzfBF4hQiLd4LhVDTuZxhBTypmLUFBw7ckv-lKbQn_mMKpgrGUJFEOV1GA9OEX5sEAJXU_0_qLpEUd37MOQn-zYgdkcn22IyRy9VVjbiCGOZY7E9QKTHuuk"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">復仇</a></p>
               </div>
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/動作/殺人三步曲.jpg"  style="width:115%">  
+                <img src="https://images-na.ssl-images-amazon.com/images/I/41Y813zuMIL._AC_.jpg"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">殺人三步曲</a></p>
               </div>
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/動作/英雄本色.jpg"  style="width:115%">  
+                <img src="https://puui.qpic.cn/vcover_vt_pic/0/r3m3bpm2cyjpf1e1567586633/0"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">英雄本色</a></p>
               </div>
             </div>
           </div>
@@ -844,34 +844,34 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/懸疑/八面埋伏.jpg"  style="width:115%">  
+                <img src="https://images-na.ssl-images-amazon.com/images/I/51YtxsGY2sL._AC_SY445_.jpg"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">八面埋伏</a></p>
               </div>
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/懸疑/失控謊言.jpg"  style="width:115%">  
+                <img src="https://images.imgbox.com/f3/a5/Jb8qUeT9_o.jpg"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">失控謊言</a></p>
               </div>
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/懸疑/記憶拼圖.jpg"  style="width:115%">  
+                <img src="https://pic1.zhimg.com/v2-b5c638a2590d75bd0776e2dd5421bc46_b.jpg"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">記憶拼圖</a></p>
               </div>
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="../image/電影/懸疑/靈異第六感.jpg"  style="width:115%">  
+                <img src="https://vbmspic.video.friday.tw/MOVIE/8004/8004_2252532_M.jpg"  style="width:115%">  
               </a>
               <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
+                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">靈異第六感</a></p>
               </div>
             </div>
           </div>
