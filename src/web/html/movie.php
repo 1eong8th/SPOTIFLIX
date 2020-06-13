@@ -425,7 +425,7 @@
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Horror'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
-                  $temp = "SELECT Mo_id FROM movie WHERE Mo_Tag = 'Horror'LIMIT 0,1"";
+                  $temp = "SELECT Mo_id FROM movie WHERE Mo_Tag = 'Horror'LIMIT 0,1";
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
@@ -1127,7 +1127,7 @@
                   $temp = "SELECT Series_id FROM series LIMIT 0,1";
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
-                  $trans = $id['Mo_id'];
+                  $trans = $id['Series_id'];
                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
@@ -1154,7 +1154,7 @@
                   $temp = "SELECT Series_id FROM series LIMIT 1,1";
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
-                  $trans = $id['Mo_id'];
+                  $trans = $id['Series_id'];
                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";

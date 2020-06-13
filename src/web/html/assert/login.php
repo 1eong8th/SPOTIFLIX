@@ -77,7 +77,7 @@
 							Don’t have an account?
 						</span>
 
-						<a class="txt2" href="../登入和註冊/註冊.html">
+						<a class="txt2" href="http://127.0.0.1/php_example/assert/signup.php">
 							Sign Up
 						</a>
 					</div>
@@ -91,14 +91,13 @@
 		session_start();  // 啟用交談期
 		//第一次直接跳錯誤帳號密碼，之後DEBUG
 		if(!isset($_POST["submit"])){
-			exit;
-		}//檢測是否有submit操作
-		else{
+			exit;//檢測是否有submit操作
+		}else{
 			if ( isset($_POST["email"]) )
-			$email = $_POST['email'];
-		if ( isset($_POST["pass"]) )	
-			$password = $_POST['pass'];
-		if ($email != ""&& $password != ""){//如果使用者名稱和密碼都不為空
+				$email = $_POST['email'];
+			if ( isset($_POST["pass"]) )	
+				$password = $_POST['pass'];
+			if ($email != ""&& $password != ""){//如果使用者名稱和密碼都不為空
 				$sql = "SELECT * FROM account WHERE Acc_Email = '{$_POST['email']}' and Acc_Passward = '{$_POST["pass"]}'";//檢測資料庫是否有對應的username和password的sql
 				$result = mysqli_query($conn,$sql);//執行sql
 				$count = mysqli_fetch_array($result);//返回一個數值
