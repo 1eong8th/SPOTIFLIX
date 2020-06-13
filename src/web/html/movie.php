@@ -88,8 +88,10 @@
                 echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
                 echo "<img src=$image[0] style=width:115%>";
                 "</a>";
+
               ?>
-               
+              <!--加入鍵-->
+               <span style="position: absolute; bottom: 13%; right: 4%;"><img src="../image/新增 退出片單/780.jpg"  width="27"></span>
               <div>
                 <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
