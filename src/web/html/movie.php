@@ -620,7 +620,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/浪漫/回到最愛的一天.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -628,7 +628,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/浪漫/忘了、忘不了.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -636,7 +636,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/浪漫/情約一天.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -644,7 +644,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/浪漫/每天愛妳第一次.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -739,7 +739,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/動作/復仇.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -747,7 +747,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/動作/殺人三步曲.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -755,7 +755,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/動作/英雄本色.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -824,7 +824,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/懸疑/八面埋伏.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -832,7 +832,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/懸疑/失控謊言.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -840,7 +840,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/懸疑/記憶拼圖.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -848,7 +848,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/懸疑/靈異第六感.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -995,7 +995,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/動畫/聲之形.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -1090,7 +1090,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/喜劇/女間諜.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -1098,7 +1098,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/喜劇/熱帶驚雷.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
@@ -1106,7 +1106,7 @@
             </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:115%">  
+                <img src="../image/電影/喜劇/熱血新仔.jpg"  style="width:115%">  
               </a>
               <div>
                 <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
