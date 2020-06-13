@@ -147,7 +147,7 @@
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
                    echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
                 ?>
@@ -164,7 +164,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -176,7 +176,7 @@
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
                    echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
                 ?>
@@ -192,7 +192,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -204,7 +204,7 @@
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
                    echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
                 ?>
@@ -221,7 +221,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -232,7 +232,7 @@
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
                    echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
                 ?>
@@ -247,7 +247,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -258,7 +258,7 @@
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
                    echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
                 ?>
@@ -283,7 +283,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -294,7 +294,7 @@
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
                    echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
                 ?>
@@ -309,7 +309,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -320,7 +320,7 @@
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
                    echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
                 ?>
@@ -335,7 +335,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -346,7 +346,7 @@
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
                    echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
                 ?>
@@ -361,7 +361,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -372,7 +372,7 @@
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
                    echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
                 ?>
@@ -387,7 +387,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -400,7 +400,7 @@
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
                    echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
                 ?>
@@ -415,7 +415,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -426,7 +426,7 @@
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
                    echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
                 ?>
@@ -451,7 +451,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -462,7 +462,7 @@
                    $row = mysqli_fetch_row($result);
                    echo $row[0];
                    echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
                 ?>
@@ -477,7 +477,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -488,7 +488,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -503,7 +503,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -515,7 +515,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -530,7 +530,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -542,7 +542,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -557,7 +557,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -569,7 +569,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -594,7 +594,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -605,7 +605,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -620,7 +620,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -632,7 +632,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -688,7 +688,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -699,7 +699,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -714,7 +714,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -725,7 +725,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -740,7 +740,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -751,7 +751,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -799,7 +799,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -810,7 +810,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -825,7 +825,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -836,7 +836,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -892,7 +892,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -903,7 +903,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -918,7 +918,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -929,7 +929,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -944,7 +944,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -955,7 +955,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -970,7 +970,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -981,7 +981,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -996,7 +996,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -1007,7 +1007,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -1039,7 +1039,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -1050,7 +1050,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -1065,7 +1065,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -1076,7 +1076,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -1091,7 +1091,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -1102,7 +1102,7 @@
                   $row = mysqli_fetch_row($result);
                   echo $row[0];
                   echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -1150,7 +1150,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Series_id'];
-                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -1162,7 +1162,7 @@
                   echo $row[0];
                   echo "<p align=center>";
                   //影集 要改掉playMovie
-                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -1177,7 +1177,7 @@
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Series_id'];
-                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans>";
+                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans&add=$newaddress>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -1189,7 +1189,7 @@
                   echo $row[0];
                   echo "<p align=center>";
                   //影集 要改掉playMovie
-                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
