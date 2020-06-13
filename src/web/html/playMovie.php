@@ -85,33 +85,9 @@
                 <div style="padding: 20px;color: blanchedalmond;">
                   <h2>
                   <?php
-                    // $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
-                    // $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                    // $movie = mysqli_fetch_row($result);
                     echo $data['Mo_Name'];
                   ?></h2>
                   <table width="100%" heigh="3" style="line-height:25px;" >
-                  <!-- <?php
-                      // $sql = "SELECT Mo_Grade FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
-                      // $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                      // $grade = mysqli_fetch_row($result);
-
-                      // $sql = "SELECT Mo_Dir FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
-                      // $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                      // $dir = mysqli_fetch_row($result);
-
-                      // $sql = "SELECT Mo_Tag FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
-                      // $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                      // $tag = mysqli_fetch_row($result);
-
-                      // $sql = "SELECT Mo_Year FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
-                      // $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                      // $time = mysqli_fetch_row($result);
-
-                      // $sql = "SELECT Mo_Info FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
-                      // $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                      // $info = mysqli_fetch_row($result);
-                  ?> -->
                     <tr >
                       <td colspan="2"><span style="color: #999;">主演 : 
                         </span><small></small>

@@ -104,6 +104,7 @@
                 $result = mysqli_query($conn, $temp) or die('MySQL query error');
                 $id = mysqli_fetch_array($result);
                 $trans = $id['Mo_id'];
+
                 echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans>";
                 echo "<img src=$image[0] style=width:115%>";
                 "</a>";
