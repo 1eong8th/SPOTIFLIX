@@ -41,26 +41,43 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav mr-auto">
+              <!--<ul class="navbar-nav mr-auto">
                 <li >
                   <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
                 </li>
                 <li >
-                   <a class="nav-link" href="http://127.0.0.1/php_example/movie.php" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a>
-                </li>
+                <?php
+                   /* $newaddress = $_GET["add"];
+                    echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"&emsp; 影片";
+                    echo"</strong>";
+                    echo"<span class=sr-only>";
+                    echo"(current)";
+                    echo"</span>";
+                    echo"</a>";*/
+                  ?>
+                   <!-- <a class="nav-link" href="http://127.0.0.1/php_example/movie.php?add=$newaddress" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a> -->
+                <!--</li>
               </ul>
-              <form class="form-inline mt-2 mt-md-0">
-                 <a href="http://127.0.0.1/php_example/personInfo.php" role="button" style="color:gainsboro">
-                  <strong>個人資料</strong></a>
+              <form class="form-inline mt-2 mt-md-0">-->
+              <?php
+                /*$newaddress = $_GET["add"];
+                echo"<a href=http://127.0.0.1/php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
+                echo"<strong>";
+                echo"個人資料";
+                echo"</strong>";
+                echo"</a>";*/
+              ?>
+                 
               </form>
               &emsp;
               <form class="form-inline mt-2 mt-md-0">
-                <a href="signin.html" role="button" style="color:gainsboro">
+                <a href="http://127.0.0.1/php_example/assert/login.php" role="button" style="color:gainsboro">
                   <strong>登出</strong></a>
               </form>
             </div>
           </nav>
-
 
       <div>
           <div class="row">
