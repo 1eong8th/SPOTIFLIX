@@ -19,7 +19,6 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <style>
           #colorbutton li{
             list-style-type:none;
@@ -97,9 +96,11 @@
                 session_start();
                 $newId = $_GET["id"];
                 $_SESSION['id'] = $newId;
+                $newep = $_GET["ep"];
+                $_SESSION['ep'] = $newep;
                 $newSql = "SELECT Eprisode_Pic, Series_Name, Series_Grade, Series_Dir, Series_Tag, Series_Year, Series_Season, Eprisode_Ep, Episode_length, Eprisode_Info
                 FROM eprisode, series
-                WHERE Series_id = '{$_SESSION["id"]}' AND series.Series_id = eprisode.Eprisode_id ";
+                WHERE Series_id = '{$_SESSION["id"]}' AND series.Series_id = eprisode.Eprisode_id and Eprisode_Ep = '{$_SESSION["ep"]}'";
                 $result = mysqli_query($conn, $newSql) or die('MySQL query error');
                 $data = mysqli_fetch_array($result);
               ?>  
@@ -204,27 +205,176 @@
             <ul style="width: 100%;">
                 <li>
                   <?php
-                    $temp = "SELECT Eprisode_Ep 
-                    FROM eprisode 
-                    where Eprisode_Ep = 1 and Series_id = '$newId'";
-                    $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                    $id = mysqli_fetch_array($result);
-                    
+                    $ep = "SELECT Eprisode_Ep
+                    FROM eprisode, series
+                    where Series_id = '$newId' and Eprisode_Ep = 1 and series.Series_id = eprisode.Eprisode_id";
+                    $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                    $epri = mysqli_fetch_array($result);
+                    $epriso = $epri['Eprisode_Ep'];
+                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo"第01集";
+                    echo"</a>";
                   //下面沒弄好
                   ?>
-                  <a href="http://127.0.0.1/php_example/series.php?id=T000000001">第01集</a>
                 </li>
-                <li><a href="../html/影集分頁.html">第02集</a></li>
-                <li><a href="../html/影集分頁.html">第03集</a></li>
-                <li><a href="../html/影集分頁.html">第04集</a></li>
-                <li><a href="../html/影集分頁.html">第05集</a></li>
-                <li><a href="../html/影集分頁.html">第06集</a></li>
-                <li><a href="../html/影集分頁.html">第07集</a></li>
-                <li><a href="../html/影集分頁.html">第08集</a></li>
-                <li><a href="../html/影集分頁.html">第09集</a></li>
-                <li><a href="../html/影集分頁.html">第10集</a></li>
-                <li><a href="../html/影集分頁.html">第11集</a></li>
-                <li><a href="../html/影集分頁.html">第12集</a></li>
+                <li>
+                <?php
+                    $ep = "SELECT Eprisode_Ep
+                    FROM eprisode, series
+                    where Series_id = '$newId' and Eprisode_Ep = 2 and series.Series_id = eprisode.Eprisode_id";
+                    $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                    $epri = mysqli_fetch_array($result);
+                    $epriso = $epri['Eprisode_Ep'];
+                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo"第02集";
+                    echo"</a>";
+                  //下面沒弄好
+                  ?>
+                </li>
+                <li>
+                  <?php
+                    if($newId == 'T000000002'){
+                      $ep = "SELECT Eprisode_Ep
+                      FROM eprisode, series
+                      where Series_id = '$newId' and Eprisode_Ep = 3 and series.Series_id = eprisode.Eprisode_id";
+                      $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                      $epri = mysqli_fetch_array($result);
+                      $epriso = $epri['Eprisode_Ep'];
+                      echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                      echo"第03集";
+                      echo"</a>";
+                    }else{
+                      echo"沒有第03集";
+                    }
+                    
+                  //下面沒弄好
+                  ?></li>
+                <li>
+                <?php
+                    $ep = "SELECT Eprisode_Ep
+                    FROM eprisode, series
+                    where Series_id = '$newId' and Eprisode_Ep = 4 and series.Series_id = eprisode.Eprisode_id";
+                    $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                    $epri = mysqli_fetch_array($result);
+                    $epriso = $epri['Eprisode_Ep'];
+                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo"第04集";
+                    echo"</a>";
+                  //下面沒弄好
+                  ?>
+                </li>
+                <li>
+                <?php
+                    $ep = "SELECT Eprisode_Ep
+                    FROM eprisode, series
+                    where Series_id = '$newId' and Eprisode_Ep = 5 and series.Series_id = eprisode.Eprisode_id";
+                    $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                    $epri = mysqli_fetch_array($result);
+                    $epriso = $epri['Eprisode_Ep'];
+                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo"第05集";
+                    echo"</a>";
+                  //下面沒弄好
+                  ?>
+                </li>
+                <li>
+                <?php
+                    $ep = "SELECT Eprisode_Ep
+                    FROM eprisode, series
+                    where Series_id = '$newId' and Eprisode_Ep = 6 and series.Series_id = eprisode.Eprisode_id";
+                    $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                    $epri = mysqli_fetch_array($result);
+                    $epriso = $epri['Eprisode_Ep'];
+                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo"第06集";
+                    echo"</a>";
+                  //下面沒弄好
+                  ?>
+                </li>
+                <li>
+                <?php
+                    $ep = "SELECT Eprisode_Ep
+                    FROM eprisode, series
+                    where Series_id = '$newId' and Eprisode_Ep = 7 and series.Series_id = eprisode.Eprisode_id";
+                    $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                    $epri = mysqli_fetch_array($result);
+                    $epriso = $epri['Eprisode_Ep'];
+                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo"第07集";
+                    echo"</a>";
+                  //下面沒弄好
+                  ?>
+                </li>
+                <li>
+                <?php
+                    $ep = "SELECT Eprisode_Ep
+                    FROM eprisode, series
+                    where Series_id = '$newId' and Eprisode_Ep = 8 and series.Series_id = eprisode.Eprisode_id";
+                    $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                    $epri = mysqli_fetch_array($result);
+                    $epriso = $epri['Eprisode_Ep'];
+                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo"第08集";
+                    echo"</a>";
+                  //下面沒弄好
+                  ?>
+                </li>
+                <li>
+                <?php
+                    $ep = "SELECT Eprisode_Ep
+                    FROM eprisode, series
+                    where Series_id = '$newId' and Eprisode_Ep = 9 and series.Series_id = eprisode.Eprisode_id";
+                    $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                    $epri = mysqli_fetch_array($result);
+                    $epriso = $epri['Eprisode_Ep'];
+                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo"第09集";
+                    echo"</a>";
+                  //下面沒弄好
+                  ?>
+                </li>
+                <li>
+                <?php
+                    $ep = "SELECT Eprisode_Ep
+                    FROM eprisode, series
+                    where Series_id = '$newId' and Eprisode_Ep = 10 and series.Series_id = eprisode.Eprisode_id";
+                    $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                    $epri = mysqli_fetch_array($result);
+                    $epriso = $epri['Eprisode_Ep'];
+                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo"第10集";
+                    echo"</a>";
+                  //下面沒弄好
+                  ?>
+                </li>
+                <li>
+                <?php
+                    $ep = "SELECT Eprisode_Ep
+                    FROM eprisode, series
+                    where Series_id = '$newId' and Eprisode_Ep = 11 and series.Series_id = eprisode.Eprisode_id";
+                    $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                    $epri = mysqli_fetch_array($result);
+                    $epriso = $epri['Eprisode_Ep'];
+                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo"第11集";
+                    echo"</a>";
+                  //下面沒弄好
+                  ?>
+                </li>
+                <li>
+                <?php
+                    $ep = "SELECT Eprisode_Ep
+                    FROM eprisode, series
+                    where Series_id = '$newId' and Eprisode_Ep = 12 and series.Series_id = eprisode.Eprisode_id";
+                    $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                    $epri = mysqli_fetch_array($result);
+                    $epriso = $epri['Eprisode_Ep'];
+                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo"第12集";
+                    echo"</a>";
+                  //下面沒弄好
+                  ?>
+                </li>
             </ul>
             <br>
           </div> 
