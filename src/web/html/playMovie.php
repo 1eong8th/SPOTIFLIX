@@ -62,9 +62,17 @@
               </ul>
               <!--navbar 片單按鈕-->
               <form class="form-inline mt-2 mt-md-0">
-                <a href="" role="button" style="color:gainsboro">
+                  <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a href=http://127.0.0.1/php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"我的片單";
+                    echo"</strong>";
+                    echo"</a>";
+                  ?>
+                <!-- <a href="http://127.0.0.1/php_example/myList.php" role="button" style="color:gainsboro">
                   <strong>我的片單</strong>
-                </a>
+                </a> -->
               </form>
               &emsp;
               <form class="form-inline mt-2 mt-md-0">
@@ -149,8 +157,24 @@
                   <br>
                   <!--加入我的片單-->
                   <div >
-                    <h6 style="color: blanchedalmond;"><button type="button" value="button" style="padding: 5px;">
-                      加入至我的片單</button></h6> 
+                    <h6 style="color: blanchedalmond;">
+                      <form method="post">
+                        <input type="submit" class="button" value="加入至我的片單" name="butt"/>  
+                      </form>  
+                      <?php
+                        if(!isset($_POST['butt'])){
+                          exit;
+                        }else{
+                          $trans = $_GET["id"];
+                          $sql = "INSERT INTO favorite(Fa_Mine, Acc_Email)
+                          VALUES ('$trans','$newaddress')";
+                          $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                          if($result){
+                            echo "<script>alert('加入成功'); </script>";
+                          }
+                        }
+                        ?>   
+                    </h6> 
                   </div> 
                 </div>
               </div>                  

@@ -77,7 +77,7 @@
               </form>
               &emsp;
               <form class="form-inline mt-2 mt-md-0">
-                <a href="signin.html" role="button" style="color:gainsboro">
+                <a href="http://127.0.0.1/php_example/assert/login.php" role="button" style="color:gainsboro">
                   <strong>登出</strong></a>
               </form>
             </div>
@@ -145,7 +145,7 @@
                 </tr>
                 <tr>
                     <td><font size="5">
-                      <span style="color: #999;">信用卡號 : 
+                      <span style="color: #999;">用戶到期日 :
                       </span><small>
                       <?php
                         echo $data['Cre_DeadLine'];
@@ -155,7 +155,7 @@
                 </tr>
                 <tr>
                   <td><font size="5">
-                    <span style="color: #999;">用戶到期日 : 
+                    <span style="color: #999;">信用卡號 : 
                     </span><small>
                       <?php
                         echo $data['Cre_Num'];

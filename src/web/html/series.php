@@ -376,16 +376,16 @@
                 <?php
                     if($newId == 'T000000002'){
                       $ep = "SELECT Eprisode_Ep
-                    FROM eprisode, series
-                    where Series_id = '$newId' and Eprisode_Ep = 10 and series.Series_id = eprisode.Eprisode_id";
-                    $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
-                    $epri = mysqli_fetch_array($result);
-                    $epriso = $epri['Eprisode_Ep'];
-                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
-                    echo"第10集";
-                    echo"</a>";
-                    }else{
-                      echo"沒有第10集";
+                      FROM eprisode, series
+                      where Series_id = '$newId' and Eprisode_Ep = 10 and series.Series_id = eprisode.Eprisode_id";
+                      $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
+                      $epri = mysqli_fetch_array($result);
+                      $epriso = $epri['Eprisode_Ep'];
+                      echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                      echo"第10集";
+                      echo"</a>";
+                      }else{
+                        echo"沒有第10集";
                     }
                     
                   //下面沒弄好

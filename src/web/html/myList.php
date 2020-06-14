@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html>
+<?php
+  $dbhost = '127.0.0.1';
+  $dbuser = 'sususu';
+  $dbpass = 'd03181214';
+  $dbname = 'sususu';
+  $conn = mysqli_connect($dbhost,$dbuser,$dbpass) or die('Error with MySQL connection');
+  $_SESSION['conn'] = $conn;
+  mysqli_query($conn, "SET NAMES 'utf8'");
+  mysqli_select_db($conn, $dbname);
+  // $sql = "SELECT C_name, C_id FROM customer where account = '{$_SESSION[ "username" ]}' and password = '{$_SESSION[ "password" ]}';";
+  // $result = mysqli_query($conn, $sql) or die('MySQL query error');
+  // $row = mysqli_fetch_array($result);
+?>
     <head>
         <title>SPOTFLIX_片單</title>
         <meta charset="utf-8">
@@ -57,8 +70,17 @@
               </ul>
               <!--navbar 片單按鈕-->
               <form class="form-inline mt-2 mt-md-0">
-                <a href="../html/我的片單分頁.php" role="button" style="color:gainsboro">
-                  <strong>我的片單</strong></a>
+                  <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a href=http://127.0.0.1/php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"我的片單";
+                    echo"</strong>";
+                    echo"</a>";
+                  ?>
+                <!-- <a href="http://127.0.0.1/php_example/myList.php" role="button" style="color:gainsboro">
+                  <strong>我的片單</strong>
+                </a> -->
               </form>
               &emsp;
               <form class="form-inline mt-2 mt-md-0">
@@ -85,82 +107,46 @@
             <h1 style="color: aliceblue; padding: 10px;">
                 我的片單
             </h1>
-          <div class="row">
-
-            <!--一個物件-->
-            <div class="col-md-2">
-              <a href="https://gimy.co/video/50242.html">
-                <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:105%">
+          
+            <div class="row">
+              <div class=col-md-2>
+            <?php
+                $sql = "SELECT Mo_Photo FROM movie, favorite WHERE Mo_id = Fa_Mine";
+                $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                $image = mysqli_fetch_row($result);
+                $temp = "SELECT Mo_id FROM movie, favorite WHERE Mo_id = Fa_Mine";
+                $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                $id = mysqli_fetch_array($result);
+                $trans = $id['Mo_id'];
+                // $sqls = "SELECT COUNT (Mo_id)
+                // FROM movie, favorite
+                // WHERE Mo_id = Fa_Mine";
+                // $result = mysqli_query($conn, $sqls) or die('MySQL query error');
+                // $num = mysqli_fetch_array($result);
+                // $count = $num['COUNT (Mo_id)'];
+                // // $newaddress = $_GET["add"];
+                // for($a=0;,$a<$count;,$a){
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
+                // }
+            ?>
+                <div>
+                <?php 
+                $sql = "SELECT Mo_Name FROM movie, favorite WHERE Mo_id = Fa_Mine";
+                $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                $row = mysqli_fetch_row($result);
+                echo $row[0];
+                echo "<p align=center>";
+                echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
+                "</a>";
+                "</p>";  
+                ?>
                 
-                <!--(圖片:叉) 退出片單-->
-                <span style="position: absolute; bottom: 13%; right: 4%;"><img src="../image/新增 退出片單/780.jpg"  width="27"></span>
-              </a>
-              <div>
-                <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
               </div>
             </div>
-            <!--一個物件-->
-            <div class="col-md-2">
-                <a href="https://gimy.co/video/50242.html">
-                  <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:105%">
-                  
-                  <!--(圖片:叉) 退出片單-->
-                  <span style="position: absolute; bottom: 13%; right: 4%;"><img src="../image/新增 退出片單/780.jpg"  width="27"></span>
-                </a>
-                <div>
-                  <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
-                </div>
-              </div>
-            <!--一個物件-->
-            <div class="col-md-2">
-                <a href="https://gimy.co/video/50242.html">
-                  <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:105%">
-                  
-                  <!--(圖片:叉) 退出片單-->
-                  <span style="position: absolute; bottom: 13%; right: 4%;"><img src="../image/新增 退出片單/780.jpg"  width="27"></span>
-                </a>
-                <div>
-                  <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
-                </div>
-              </div>
-           <!--一個物件-->
-           <div class="col-md-2">
-            <a href="https://gimy.co/video/50242.html">
-              <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:105%">
-              
-              <!--(圖片:叉) 退出片單-->
-              <span style="position: absolute; bottom: 13%; right: 4%;"><img src="../image/新增 退出片單/780.jpg"  width="27"></span>
-            </a>
-            <div>
-              <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
-            </div>
-          </div>
-            <!--一個物件-->
-            <div class="col-md-2">
-                <a href="https://gimy.co/video/50242.html">
-                  <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:105%">
-                  
-                  <!--(圖片:叉) 退出片單-->
-                  <span style="position: absolute; bottom: 13%; right: 4%;"><img src="../image/新增 退出片單/780.jpg"  width="27"></span>
-                </a>
-                <div>
-                  <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
-                </div>
-              </div>
-            <!--一個物件-->
-            <div class="col-md-2">
-                <a href="https://gimy.co/video/50242.html">
-                  <img src="https://cdn.hk01.com/di/media/images/3948627/org/6cc1bf014f03eeddaebd96c883fd39e6.jpg/H_s4zsiLsagEXqJk_I9-olN05Hxi4-BuUUTzs1FE87M?v=w1920"  style="width:105%">
-                  
-                  <!--(圖片:叉) 退出片單-->
-                  <span style="position: absolute; bottom: 13%; right: 4%;"><img src="../image/新增 退出片單/780.jpg"  width="27"></span>
-                </a>
-                <div>
-                  <p align="center"><a href="https://gimy.co/video/50242.html"style="color:blanchedalmond">紙鈔屋第一季</a></p>
-                </div>
-              </div>
-          </div>
-        </div>   
+
+          </div>   
       </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

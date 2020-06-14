@@ -89,7 +89,7 @@
               </form>
             </div>
           </nav>
-    <div style="background-color: black;">  
+      <div style="background-color: black;">
       <div>
         <img  src="https://img.1777cdn.com/upload/vod/20200605-1/4317a881d012dc4c5a7cc6bf70bdca1f.jpg" style="width: 95%;display:block; margin:auto">
       </div>
@@ -115,22 +115,7 @@
                 "</a>";
 
               ?>
-              <!--加入鍵-->
-               <span style="position: absolute; bottom: 13%; right: 4%;">
-                <!-- <?php
-                  // echo "<img src=../image/新增 退出片單/780.jpg  width=27>";
-                  // $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
-                  // $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                  // $id = mysqli_fetch_array($result);
-                  // $trans = $id['Mo_id'];
-                  // $sql = "INSERT INTO favorite(Fa_Mine, Acc_Email)
-                  // VALUES ('$trans','$newaddress')";
-                  // $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                  // if($result){
-                  //   echo "<script>alert('加入成功'); location.href ='http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress'</script>";
-                  // }
-                ?> -->
-               
+              
                </span>
               <div>
                 <?php
