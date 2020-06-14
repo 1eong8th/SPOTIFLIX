@@ -50,7 +50,18 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
                 <li >
-                  <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
+                <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a class=nav-link href=http://127.0.0.1/php_example/kkbox1.php?add=$newaddress style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"&emsp; 音樂";
+                    echo"</strong>";
+                    echo"<span class=sr-only>";
+                    echo"(current)";
+                    echo"</span>";
+                    echo"</a>";
+                  ?>
+                  <!-- <a class="nav-link" href="../php_example/kkbox1.php" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a> -->
                 </li>
                 <li >
                 <?php
