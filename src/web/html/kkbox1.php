@@ -439,111 +439,66 @@
 </head>
 
 <body class="web-view">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6H4WHM" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <a href="https://icons8.com/icon/KQ5qZwOlaNdR/circled-play">Circled Play icon by Icons8</a>
-
-    <header>
-        <div class="container">
-            <a class="logo" href="/charts/?terr=tw&lang=tc" title="KKBOX 風雲榜榜單">
-                <img src="/charts/assets/images/logo.svg?id=e41750806e78fa673556" alt="KKBOX 風雲榜榜單">
-            </a>
-            <nav>
-                <ul class="header-nav">
-                    <li class="" tabindex="1">
-                        <a href="/charts/hourly?terr=tw&amp;lang=tc" target="_self">
-                            <span>即時榜</span>
-                        </a>
-                    </li>
-                    <li class="" tabindex="2">
-                        <a href="javascript:void(0)">
-                            <span>日榜</span>
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="header-subnav">
-                            <li>
-                                <a href="/charts/daily/newrelease?terr=tw&amp;lang=tc" target="_self">
-                                    新歌
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/charts/daily/song?terr=tw&amp;lang=tc" target="_self">
-                                    單曲
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="" tabindex="3">
-                        <a href="javascript:void(0)">
-                            <span>週榜</span>
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="header-subnav">
-                            <li>
-                                <a href="/charts/weekly/newrelease?terr=tw&amp;lang=tc" target="_self">
-                                    新歌
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/charts/weekly/song?terr=tw&amp;lang=tc" target="_self">
-                                    單曲
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/charts/weekly/album?terr=tw&amp;lang=tc" target="_self">
-                                    專輯
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="" tabindex="4">
-                        <a href="/charts/yearly?terr=tw&amp;lang=tc" target="_self">
-                            <span>年度累積榜</span>
-                        </a>
-                    </li>
-                    <li class="" tabindex="5">
-                        <a href="/charts/music-trend?terr=tw&amp;lang=tc" target="_self">
-                            <span>音樂趨勢</span>
-                        </a>
-                    </li>
-                    <li class="" tabindex="6">
-                        <a href="/awards?terr=tw&amp;lang=tc" target="_blank">
-                            <span>風雲榜典禮</span>
-                        </a>
-                    </li>
-
-                    <li class="header-terrnav d-none d-md-block">
-                        <a href="#">台灣 <i class="fa fa-angle-down"></i></a>
-                        <ul class="header-subnav">
-                            <li>
-                                <a href="/charts?terr=hk&amp;lang=tc">香港</a>
-                            </li>
-                            <li>
-                                <a href="/charts?terr=my&amp;lang=en">馬來西亞</a>
-                            </li>
-                            <li>
-                                <a href="/charts?terr=sg&amp;lang=en">新加坡</a>
-                            </li>
-                            <li>
-                                <a href="/charts?terr=jp&amp;lang=ja">日本</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="header-terrnav d-inline-block d-md-none"> <select>
-                            <option>台灣</option>
-                            <option value="/charts?terr=hk&amp;lang=tc">香港</option>
-                            <option value="/charts?terr=my&amp;lang=en">馬來西亞</option>
-                            <option value="/charts?terr=sg&amp;lang=en">新加坡</option>
-                            <option value="/charts?terr=jp&amp;lang=ja">日本</option>
-                        </select>
-                    </li>
-                </ul>
-            </nav>
-            <a class="nav-toggle-phone icon-hamburger" href="javascript:void(0)"></a>
-        </div>
-    </header>
+     <!--nav-->
+     <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black">
+            <h3><a href="#" style="color:blanchedalmond;"><img src="C:\xampp\htdocs\php_example\image" width="140"></a></h3>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                <li >
+                  <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
+                </li>
+                <li >
+                <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"&emsp; 影片";
+                    echo"</strong>";
+                    echo"<span class=sr-only>";
+                    echo"(current)";
+                    echo"</span>";
+                    echo"</a>";
+                  ?>
+                   <!-- <a class="nav-link" href="http://127.0.0.1/php_example/movie.php?add=$newaddress" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a> -->
+                </li>
+              </ul>
+              <!--navbar 片單按鈕-->
+              <form class="form-inline mt-2 mt-md-0">
+                  <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a href=http://127.0.0.1/php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"我的片單";
+                    echo"</strong>";
+                    echo"</a>";
+                  ?>
+                <!-- <a href="http://127.0.0.1/php_example/myList.php" role="button" style="color:gainsboro">
+                  <strong>我的片單</strong>
+                </a> -->
+              </form>
+              &emsp;
+              <form class="form-inline mt-2 mt-md-0">
+              <?php
+                // $newaddress = $_GET["add"];
+                echo"<a href=http://127.0.0.1/php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
+                echo"<strong>";
+                echo"個人資料";
+                echo"</strong>";
+                echo"</a>";
+              ?>
+                 
+              </form>
+              &emsp;
+              <form class="form-inline mt-2 mt-md-0">
+                <a href="http://127.0.0.1/php_example/assert/login.php" role="button" style="color:gainsboro">
+                  <strong>登出</strong></a>
+              </form>
+            </div>
+          </nav>
 
 
 
