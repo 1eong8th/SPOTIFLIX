@@ -24,8 +24,8 @@
     <meta property="og:type" content="article" />
     <link rel="manifest" href="/manifest.json">
     <link rel="canonical" href="/charts/artist-100">
-    <link rel="shortcut icon" href="https://www.billboard.com/assets/1591297523/images/favicon.ico?1c43c053504b632de34f"
-        type="image/vnd.microsoft.icon" />
+    <!-- <link rel="shortcut icon" href="https://www.billboard.com/assets/1591297523/images/favicon.ico?1c43c053504b632de34f"
+        type="image/vnd.microsoft.icon" /> -->
     <link rel="apple-touch-icon"
         href="https://www.billboard.com/assets/1591297523/images/BB_favicon144.png?1c43c053504b632de34f">
 
