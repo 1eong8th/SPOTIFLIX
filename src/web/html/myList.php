@@ -14,16 +14,24 @@
   // $row = mysqli_fetch_array($result);
 ?>
     <head>
-        <title>SPOTFLIX_Movie</title>
+        <title>SPOTFLIX_片單</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <style>
-          li{
+          #colorbutton li{
             list-style-type:none;
             display: inline; 
+            padding: 6px;
+            border-radius: 7px;  
+            border: 0.3px solid rgb(255, 8, 0); 
+            background-color: rgba(114, 29, 29, 0.377);
+            margin: 2px;
+          }
+          #colorbutton li a{
+            color:blanchedalmond;
           }
           .wrap ul {
             display: inline-block;
@@ -33,8 +41,8 @@
     </head>
 
     <body style="background-color: black;">
-     <!--nav-->
-     <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black">
+       <!--nav-->
+       <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black">
             <h3><a href="#" style="color:blanchedalmond;"><img src="../image/Spotiflix1.png" width="140"></a></h3>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
               aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,93 +102,52 @@
             </div>
           </nav>
 
-      <div>
-          <div class="row">
-              <div class="col-md-6 clearfix" >
-              <?php
-                // $sql = "SELECT Mo_Address FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
-                // $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                // $movie = mysqli_fetch_row($result);
-                session_start();
-                $newId = $_GET["id"];
-                $_SESSION['id'] = $newId;
-                $newSql = "SELECT Mo_Address, Mo_Name, Mo_Grade, Mo_Dir, Mo_Tag, Mo_Year, Mo_Info FROM movie WHERE Mo_id = '{$_SESSION["id"]}'";
-                $result = mysqli_query($conn, $newSql) or die('MySQL query error');
-                $data = mysqli_fetch_array($result);
-              ?>
-                  <div style="padding: 20px;"><iframe width="550" height="400" src="<?php echo $data['Mo_Address']; ?>" 
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                  </iframe>
-                  </div>
-              </div>  
-              <div class="col-md-6 clearfix" >
-                <div style="padding: 20px;color: blanchedalmond;">
-                  <h2>
-                  <?php
-                    echo $data['Mo_Name'];
-                  ?></h2>
-                  <table width="100%" heigh="3" style="line-height:25px;" >
-                    <tr >
-                      <td colspan="2"><span style="color: #999;">主演 : 
-                        </span><small>
-
-                        </small>
-                      </td>              
-                    </tr>
-                    <tr>
-                      <td>
-                        <span style="color: #999;">分級 : 
-                        </span><small><?php echo $data['Mo_Grade']; ?></small>
-                      </td>
-                      <td>
-                        <span style="color: #999;">導演 : 
-                        </span><small><?php echo $data['Mo_Dir']; ?></small>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span style="color: #999;">類別 : 
-                        </span><small><?php echo $data['Mo_Tag']; ?></small>
-                      </td>
-                      <td>
-                        <span style="color: #999;">上映時間 : 
-                        </span><small><?php echo $data['Mo_Year']; ?></small>
-                      </td>
-                    </tr>
-                    
-                  </table> 
-                  <div >
-                    <h5 style="color: #999;">劇情介紹 :</h5> 
-                      <p style="padding: 0px 60px 10px 20px;color:blanchedalmond;"><small><?php echo $data['Mo_Info']; session_write_close();?></small>
-                    </p>
-                  </div> 
-                  <br>
-                  <!--加入我的片單-->
-                  <div >
-                    <h6 style="color: blanchedalmond;">
-                      <form method="post">
-                        <input type="submit" class="button" value="加入至我的片單" name="butt"/>  
-                      </form>  
-                      <?php
-                        if(!isset($_POST['butt'])){
-                          exit;
-                        }else{
-                          $trans = $_GET["id"];
-                          $sql = "INSERT INTO favorite(Fa_Mine, Acc_Email)
-                          VALUES ('$trans','$newaddress')";
-                          $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                          if($result){
-                            echo "<script>alert('加入成功'); </script>";
-                          }
-                        }
-                        ?>   
-                    </h6> 
-                  </div> 
-                </div>
-              </div>                  
-          </div>
+      <div> 
+          <div class="container">
+            <h1 style="color: aliceblue; padding: 10px;">
+                我的片單
+            </h1>
           
-      
+            <div class="row">
+              <div class=col-md-2>
+            <?php
+                $sql = "SELECT Mo_Photo FROM movie, favorite WHERE Mo_id = Fa_Mine";
+                $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                $image = mysqli_fetch_row($result);
+                $temp = "SELECT Mo_id FROM movie, favorite WHERE Mo_id = Fa_Mine";
+                $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                $id = mysqli_fetch_array($result);
+                $trans = $id['Mo_id'];
+                // $sqls = "SELECT COUNT (Mo_id)
+                // FROM movie, favorite
+                // WHERE Mo_id = Fa_Mine";
+                // $result = mysqli_query($conn, $sqls) or die('MySQL query error');
+                // $num = mysqli_fetch_array($result);
+                // $count = $num['COUNT (Mo_id)'];
+                // // $newaddress = $_GET["add"];
+                // for($a=0;,$a<$count;,$a){
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
+                  echo "<img src=$image[0] style=width:115%>";
+                  "</a>";
+                // }
+            ?>
+                <div>
+                <?php 
+                $sql = "SELECT Mo_Name FROM movie, favorite WHERE Mo_id = Fa_Mine";
+                $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                $row = mysqli_fetch_row($result);
+                echo $row[0];
+                echo "<p align=center>";
+                echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
+                "</a>";
+                "</p>";  
+                ?>
+                
+              </div>
+            </div>
+
+          </div>   
+      </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

@@ -65,6 +65,21 @@
                    <!-- <a class="nav-link" href="http://127.0.0.1/php_example/movie.php?add=$newaddress" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a> -->
                 </li>
               </ul>
+              <!--navbar 片單按鈕-->
+              <form class="form-inline mt-2 mt-md-0">
+                  <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a href=http://127.0.0.1/php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"我的片單";
+                    echo"</strong>";
+                    echo"</a>";
+                  ?>
+                <!-- <a href="http://127.0.0.1/php_example/myList.php" role="button" style="color:gainsboro">
+                  <strong>我的片單</strong>
+                </a> -->
+              </form>
+              &emsp;
               <form class="form-inline mt-2 mt-md-0">
               <?php
                 // $newaddress = $_GET["add"];
@@ -83,10 +98,9 @@
               </form>
             </div>
           </nav>
-    <div style="background-color: black;">  
+      <div style="background-color: black;">
       <div>
-      <a href="/video/58771.html">
-        <img  src="https://img.1777cdn.com/upload/vod/20200605-1/4317a881d012dc4c5a7cc6bf70bdca1f.jpg" style="width: 95%;display:block; margin:auto"></a> 
+        <img  src="https://img.1777cdn.com/upload/vod/20200605-1/4317a881d012dc4c5a7cc6bf70bdca1f.jpg" style="width: 95%;display:block; margin:auto">
       </div>
         <div class="container" >
           <div class="btitle">
@@ -110,8 +124,8 @@
                 "</a>";
 
               ?>
-              <!--加入鍵-->
-               <span style="position: absolute; bottom: 13%; right: 4%;"><img src="../image/新增 退出片單/780.jpg"  width="27"></span>
+              
+               </span>
               <div>
                 <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";

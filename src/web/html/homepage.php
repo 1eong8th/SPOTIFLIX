@@ -174,7 +174,10 @@
 <body style="padding: 0!important; margin: 0!important;">
 
     <section class="section1">
-    <a href="http://127.0.0.1/php_example/movie.php" role="button" style="color:gainsboro">
+    <?php
+        $newaddress = $_GET["add"];
+        echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress  role=button style=color:gainsboro>";
+    ?>
  <div class="b2 block" style="background-color: cadetblue;">
     <h1 style="writing-mode: vertical-rl; line-height: 200%;margin-top: 50%;">電影</h1>
         </div><div class="b1 block" style="background-color: brown;">
