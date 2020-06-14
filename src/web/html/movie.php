@@ -40,7 +40,7 @@
     
       <!--nav-->
       <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black">
-            <h3><a href="#" style="color:blanchedalmond;"><img src="C:\xampp\htdocs\php_example\image" width="140"></a></h3>
+            <h3><a href="#" style="color:blanchedalmond;"><img src="../image/Spotiflix1.png" width="140"></a></h3>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
               aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -48,7 +48,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
                 <li >
-                  <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="../php_example/kkbox1.php" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
                 </li>
                 <li >
                 <?php
