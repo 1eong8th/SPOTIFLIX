@@ -60,6 +60,11 @@
                    <!-- <a class="nav-link" href="http://127.0.0.1/php_example/movie.php?add=$newaddress" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a> -->
                 </li>
               </ul>
+              <!--navbar 片單按鈕-->
+              <form class="form-inline mt-2 mt-md-0">
+                <a href="../html/我的片單分頁.php" role="button" style="color:gainsboro">
+                  <strong>我的片單</strong></a>
+              </form>
               <form class="form-inline mt-2 mt-md-0">
               <?php
                 $newaddress = $_GET["add"];
@@ -138,6 +143,11 @@
                     <h5 style="color: #999;">劇情介紹 :</h5> 
                       <p style="padding: 0px 60px 10px 20px;color:blanchedalmond;"><small><?php echo $data['Mo_Info']; session_write_close();?></small>
                     </p>
+                  </div> 
+                  <br>
+                  <!--加入我的片單-->
+                  <div >
+                    <h6 style="color: #999;">加入至我的片單</h6> 
                   </div> 
                 </div>
               </div>                  
