@@ -20,6 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
     <title>Spotiflix</title>
+    <!-- nav bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -819,9 +820,15 @@
                 
                     
                 </div>
-                <a class="btn-action" href="/charts/daily/newrelease?terr=tw&lang=tc&category=297">
-                    查看完整榜單
-                </a>
+                <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a href=http://127.0.0.1/php_example/Billboard.php?add=$newaddress role=button style=color:gainsboro>";
+                    echo"查看完整榜單";
+                    echo "</a>";
+                ?>
+                
+                    
+                
             </div>
             <div class="slider-nav"></div>
         </div>
@@ -987,7 +994,7 @@
                                     </li>
                                     <!--song 1~10 week-->
                                     <?php
-                                        $sql = "SELECT Son_Name, sin_Name, Son_Pic FROM songs,singer  WHERE sing_id = sin_id LIMIT 11,19" ;
+                                        $sql = "SELECT Son_Name, sin_Name, Son_Pic FROM songs,singer  WHERE sing_id = sin_id LIMIT 11,13" ;
                                         $result = $conn->query($sql);
                                         $i = 11;
                                         if ($result->num_rows > 0) {
@@ -1045,6 +1052,10 @@
                                             if($i == 15){
                                                 echo '</ul>
                                                 </div> ';
+                                                       
+                                            }
+                                            if($i == 21){
+                                            break;
                                                        
                                             }
                             
@@ -1154,9 +1165,12 @@
                     <a class="section-slider-prev" href="#!" onclick="move(2)"></a>
                     <a class="section-slider-next" href="#!" onclick="move(2)"></a>
                 </div>
-                <a class="btn-action" href="/charts/weekly/newrelease?terr=tw&lang=tc&category=297">
-                    查看完整榜單
-                </a>
+                <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a href=http://127.0.0.1/php_example/Billboard.php?add=$newaddress role=button style=color:gainsboro>";
+                    echo"查看完整榜單";
+                    echo "</a>";
+                ?>
             </div>
         </div>
     </section>
