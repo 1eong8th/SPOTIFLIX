@@ -19,30 +19,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
-    <title>KKBOX 風雲榜 - 匯集最完整的音樂排行榜、音樂趨勢、獨家影音與速爆新歌的權威性音樂入口</title>
-    <meta name="description"
-        content="華人世界最具公信力的音樂排行榜！匯集當紅歌曲資訊與即時圖表，快來跟著排行榜聽聽看： 太陽 (When The Cloudless Day Comes) - 瘦子E.SO 、 她沒在看我 (She Ain’t Watchin’) - 瘦子E.SO 、 不在乎 - 張語噥 (Sammy) 、 玩家 (TVBS《食尚玩家熱血48小時》片尾曲) - 吳卓源 (Julia Wu), 唐仲彣 (ChrisFlow) 、 前任 - 采子 &amp; 黃偉晉" />
-    <meta property="og:title" content="大家都在聽什麼？KKBOX 風雲榜告訴你！" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://kma.kkbox.com/charts/snapshot/hourly/tw/tc/2020/tw-2020-06-06-10.png" />
-    <meta property="og:url" content="https://kma.kkbox.com/charts/?terr=tw&amp;lang=tc" />
-    <meta property="og:description" content="華人世界最具公信力的音樂排行榜，來自全體數百萬會員的聽歌記錄，想知道哪首歌曲最Hit？快來跟著排行榜聽聽看！" />
-    <meta property="og:site_name" content="KKBOX 風雲榜榜單" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@kkbox" />
-    <meta name="twitter:title" content="大家都在聽什麼？KKBOX 風雲榜告訴你！" />
-    <meta name="twitter:description" content="華人世界最具公信力的音樂排行榜，來自全體數百萬會員的聽歌記錄，想知道哪首歌曲最Hit？快來跟著排行榜聽聽看！" />
-    <meta name="twitter:image" content="http://kma.kkbox.com/charts/snapshot/hourly/tw/tc/2020/tw-2020-06-06-10.png" />
+    <title>Spotiflix</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <meta name="google-site-verification" content="lH0xSlrWr1v2xCUhbORSbDyTDkEbl9jEYL3uugO3y7I" />
-    <link rel="shortcut icon" href="/charts/assets/images/favicon.ico?id=2777c29dad3b61e5403a?ts=1548321487" />
-
-    <script>
-    var myboxCmd = myboxCmd || function() {};
-    var listenWithEventReceived = listenWithEventReceived || function() {};
-    var listenWithEventEmitted = listenWithEventEmitted || function() {};
-    var followCancelled = followCancelled || function() {};
-    </script>
+    
     <link rel=stylesheet media="screen" href="../css/kkbox1.css">
     <link rel=stylesheet type="text/css" href="../css/kkbox2.css">
     <link rel=stylesheet type="text/css" href="../css/kkbox3.css">
@@ -440,8 +421,8 @@
 
 <body class="web-view">
      <!--nav-->
-     <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black">
-            <h3><a href="#" style="color:blanchedalmond;"><img src="C:\xampp\htdocs\php_example\image" width="140"></a></h3>
+     <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black; padding-top:0px" >
+            <h3><a href="#" style="color:blanchedalmond;"><img src="../image/Spotiflix1.png" width="140"></a></h3>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
               aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -449,7 +430,18 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
                 <li >
-                  <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
+                  <!-- <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a> -->
+                  <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a class=nav-link href=http://127.0.0.1/php_example/kkbox1.php?add=$newaddress style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"&emsp; 音樂";
+                    echo"</strong>";
+                    echo"<span class=sr-only>";
+                    echo"(current)";
+                    echo"</span>";
+                    echo"</a>";
+                  ?>
                 </li>
                 <li >
                 <?php
