@@ -111,7 +111,22 @@
 
               ?>
               <!--加入鍵-->
-               <span style="position: absolute; bottom: 13%; right: 4%;"><img src="../image/新增 退出片單/780.jpg"  width="27"></span>
+               <span style="position: absolute; bottom: 13%; right: 4%;">
+                <!-- <?php
+                  // echo "<img src=../image/新增 退出片單/780.jpg  width=27>";
+                  // $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
+                  // $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  // $id = mysqli_fetch_array($result);
+                  // $trans = $id['Mo_id'];
+                  // $sql = "INSERT INTO favorite(Fa_Mine, Acc_Email)
+                  // VALUES ('$trans','$newaddress')";
+                  // $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  // if($result){
+                  //   echo "<script>alert('加入成功'); location.href ='http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress'</script>";
+                  // }
+                ?> -->
+               
+               </span>
               <div>
                 <?php
                    $sql = "SELECT Mo_Name FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
