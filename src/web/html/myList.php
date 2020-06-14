@@ -102,50 +102,72 @@
             </div>
           </nav>
 
-      <div> 
+     
           <div class="container">
             <h1 style="color: aliceblue; padding: 10px;">
                 我的片單
             </h1>
-          
+            <br>
             <div class="row">
               <div class=col-md-2>
-            <?php
-                $sql = "SELECT Mo_Photo FROM movie, favorite WHERE Mo_id = Fa_Mine";
-                $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                $image = mysqli_fetch_row($result);
-                $temp = "SELECT Mo_id FROM movie, favorite WHERE Mo_id = Fa_Mine";
-                $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                $id = mysqli_fetch_array($result);
-                $trans = $id['Mo_id'];
-                // $sqls = "SELECT COUNT (Mo_id)
-                // FROM movie, favorite
-                // WHERE Mo_id = Fa_Mine";
-                // $result = mysqli_query($conn, $sqls) or die('MySQL query error');
-                // $num = mysqli_fetch_array($result);
-                // $count = $num['COUNT (Mo_id)'];
-                // // $newaddress = $_GET["add"];
-                // for($a=0;,$a<$count;,$a){
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
-                  echo "<img src=$image[0] style=width:115%>";
-                  "</a>";
-                // }
-            ?>
-                <div>
-                <?php 
-                $sql = "SELECT Mo_Name FROM movie, favorite WHERE Mo_id = Fa_Mine";
-                $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                $row = mysqli_fetch_row($result);
-                echo $row[0];
-                echo "<p align=center>";
-                echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
-                "</a>";
-                "</p>";  
+                 <?php
+                  $sql = "SELECT Mo_Photo FROM movie, favorite WHERE Mo_id = Fa_Mine";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $image = mysqli_fetch_row($result);
+                  $temp = "SELECT Mo_id FROM movie, favorite WHERE Mo_id = Fa_Mine";
+                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
+                  $id = mysqli_fetch_array($result);
+                  $trans = $id['Mo_id'];
+                  // $sqls = "SELECT COUNT (Mo_id)
+                  // FROM movie, favorite
+                  // WHERE Mo_id = Fa_Mine";
+                  // $result = mysqli_query($conn, $sqls) or die('MySQL query error');
+                  // $num = mysqli_fetch_array($result);
+                  // $count = $num['COUNT (Mo_id)'];
+                  // // $newaddress = $_GET["add"];
+                  // for($a=0;,$a<$count;,$a){
+                    echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
+                    echo "<img src=$image[0] style=width:115%>";
+                    "</a>";
+                  // }
                 ?>
+                <div>
+                  <?php 
+                  $sql = "SELECT Mo_Name FROM movie, favorite WHERE Mo_id = Fa_Mine";
+                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                  $row = mysqli_fetch_row($result);
+                  echo $row[0];
+                  echo "<p align=center>";
+                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
+                  "</a>";
+                  "</p>";  
+                  ?>
+                </div>
                 
-              </div>
+                <br>
+                <!--退出我的片單-->
+                <div >
+                  <h6 style="color: blanchedalmond;">
+                    <form method="post">
+                      <input type="submit" class="button" value="加入至我的片單" name="butt"/>  
+                    </form>  
+                    <?php
+                      if(!isset($_POST['butt'])){
+                        exit;
+                      }else{
+                        $trans = $_GET["id"];
+                        $sql = "INSERT INTO favorite(Fa_Mine, Acc_Email)
+                        VALUES ('$trans','$newaddress')";
+                        $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                        if($result){
+                          echo "<script>alert('加入成功'); </script>";
+                        }
+                      }
+                      ?>   
+                  </h6> 
+                </div> 
+                
             </div>
-
           </div>   
       </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
