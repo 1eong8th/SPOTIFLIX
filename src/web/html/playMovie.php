@@ -66,6 +66,7 @@
                   <strong>我的片單</strong>
                 </a>
               </form>
+              &emsp;
               <form class="form-inline mt-2 mt-md-0">
               <?php
                 $newaddress = $_GET["add"];
@@ -148,7 +149,8 @@
                   <br>
                   <!--加入我的片單-->
                   <div >
-                    <h6 style="color: #999;">加入至我的片單</h6> 
+                    <h6 style="color: blanchedalmond;"><button type="button" value="button" style="padding: 5px;">
+                      加入至我的片單</button></h6> 
                   </div> 
                 </div>
               </div>                  

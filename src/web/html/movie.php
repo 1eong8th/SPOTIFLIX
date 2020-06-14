@@ -65,6 +65,12 @@
                    <!-- <a class="nav-link" href="http://127.0.0.1/php_example/movie.php?add=$newaddress" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a> -->
                 </li>
               </ul>
+               <!--navbar 片單按鈕-->
+               <form class="form-inline mt-2 mt-md-0">
+                <a href="../html/我的片單分頁.php" role="button" style="color:gainsboro">
+                  <strong>我的片單</strong></a>
+              </form>
+              &emsp;
               <form class="form-inline mt-2 mt-md-0">
               <?php
                 // $newaddress = $_GET["add"];
@@ -85,8 +91,7 @@
           </nav>
     <div style="background-color: black;">  
       <div>
-      <a href="/video/58771.html">
-        <img  src="https://img.1777cdn.com/upload/vod/20200605-1/4317a881d012dc4c5a7cc6bf70bdca1f.jpg" style="width: 95%;display:block; margin:auto"></a> 
+        <img  src="https://img.1777cdn.com/upload/vod/20200605-1/4317a881d012dc4c5a7cc6bf70bdca1f.jpg" style="width: 95%;display:block; margin:auto">
       </div>
         <div class="container" >
           <div class="btitle">
