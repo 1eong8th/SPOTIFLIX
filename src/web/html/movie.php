@@ -207,7 +207,7 @@
                   $sql = "SELECT Mo_Photo FROM movie ORDER BY movie.Mo_Year DESC LIMIT 3,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
-                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 2,1";
+                  $temp = "SELECT Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 3,1";
                   $result = mysqli_query($conn, $temp) or die('MySQL query error');
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
