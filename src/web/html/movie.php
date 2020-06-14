@@ -65,10 +65,19 @@
                    <!-- <a class="nav-link" href="http://127.0.0.1/php_example/movie.php?add=$newaddress" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a> -->
                 </li>
               </ul>
-               <!--navbar 片單按鈕-->
-               <form class="form-inline mt-2 mt-md-0">
-                <a href="../html/我的片單分頁.php" role="button" style="color:gainsboro">
-                  <strong>我的片單</strong></a>
+              <!--navbar 片單按鈕-->
+              <form class="form-inline mt-2 mt-md-0">
+                  <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a href=http://127.0.0.1/php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"我的片單";
+                    echo"</strong>";
+                    echo"</a>";
+                  ?>
+                <!-- <a href="http://127.0.0.1/php_example/myList.php" role="button" style="color:gainsboro">
+                  <strong>我的片單</strong>
+                </a> -->
               </form>
               &emsp;
               <form class="form-inline mt-2 mt-md-0">
