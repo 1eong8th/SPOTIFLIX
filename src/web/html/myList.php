@@ -131,7 +131,9 @@
                                        
                                         if ($result->num_rows > 0) {
                                         // output data of each row
+                                        
                                         while($row = $result->fetch_assoc()) {
+                                           $a = $row["Mo_id"];
                                            echo  '
                                            <div class=col-md-2><a href=http://127.0.0.1/php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'>
                                                   <img src="'.$row["Mo_Photo"].'" style=width:115%>
@@ -140,7 +142,7 @@
                                             <a href=http://127.0.0.1/php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style=color:blanchedalmond>
                                            </a>
                                            </p></div>';
-                                           $a = $row["Mo_id"];
+                                           
                                            echo '<div>
                                            <h6 style="color: blanchedalmond;">
                                              <form method="post">
@@ -153,12 +155,13 @@
                                             
                                          if(!isset($_POST['delete'])){
                                           continue;
+                                          
                                          }else{
                                           $sql = "DELETE FROM favorite
                                           where '$a' = Fa_Mine and '$newaddress' = Acc_Email";
                                           $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                                          if($result){
-                                            echo "<script>alert('刪除成功'); location.href ='http://127.0.0.1/php_example/movie.php?add=$add'</script>";
+                                          if($result){ 
+                                            echo "<script>alert('刪除成功'); location.href ='http://127.0.0.1/php_example/movie.php?add=$newaddress'</script>";
                                           }
                                          }
                                         }

@@ -225,7 +225,7 @@
                     </p>
                   </div>   
                   <br>
-                   <!--加入我的片單-->
+                   
                   <div >
                     <h6 style="color: blanchedalmond;">
                       <form method="post">
@@ -233,7 +233,7 @@
                       </form>  
                       <?php
                         if(!isset($_POST['butt'])){
-                          exit;
+                          
                         }else{
                           $trans = $_GET["id"];
                           $sql = "INSERT INTO favorite(Fa_Mine, Acc_Email)

@@ -17,15 +17,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Artist 100 Chart | Billboard</title>
+    <title>Spotiflix</title>
     <meta name="title" property="title" content="Artist 100 Chart" />
     <meta name="twitter:site" content="@billboard">
     <meta property="og:site_name" content="Billboard" />
     <meta property="og:type" content="article" />
     <link rel="manifest" href="/manifest.json">
     <link rel="canonical" href="/charts/artist-100">
-    <link rel="shortcut icon" href="https://www.billboard.com/assets/1591297523/images/favicon.ico?1c43c053504b632de34f"
-        type="image/vnd.microsoft.icon" />
+    <!-- <link rel="shortcut icon" href="https://www.billboard.com/assets/1591297523/images/favicon.ico?1c43c053504b632de34f"
+        type="image/vnd.microsoft.icon" /> -->
     <link rel="apple-touch-icon"
         href="https://www.billboard.com/assets/1591297523/images/BB_favicon144.png?1c43c053504b632de34f">
 
@@ -281,7 +281,7 @@
 </head>
 
 <body class="chart-page chart-page- " data-trackcategory="Charts-Artist100" data-content-type="chart" style="background:url(https://wallpaperplay.com/walls/full/3/0/b/139653.jpg);">
-    <div class="header-wrapper ">
+    <!-- <div class="header-wrapper ">
         <header id="site-header" class="site-header " role="banner">
             <div class="site-header__background">
                 <div class="site-header__contents">
@@ -416,8 +416,78 @@
                     </form>
                 </div>
             </div>
-        </header>
-        
+        </header> -->
+    <!--nav-->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black">
+            <h3><a href="#" style="color:blanchedalmond;"><img src="../image/Spotiflix1.png" width="140"></a></h3>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                <li >
+                <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a class=nav-link href=http://127.0.0.1/php_example/kkbox1.php?add=$newaddress style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"&emsp; 音樂";
+                    echo"</strong>";
+                    echo"<span class=sr-only>";
+                    echo"(current)";
+                    echo"</span>";
+                    echo"</a>";
+                  ?>
+                  <!-- <a class="nav-link" href="../php_example/kkbox1.php" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a> -->
+                </li>
+                <li >
+                <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"&emsp; 影片";
+                    echo"</strong>";
+                    echo"<span class=sr-only>";
+                    echo"(current)";
+                    echo"</span>";
+                    echo"</a>";
+                  ?>
+                   <!-- <a class="nav-link" href="http://127.0.0.1/php_example/movie.php?add=$newaddress" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a> -->
+                </li>
+              </ul>
+              <!--navbar 片單按鈕-->
+              <form class="form-inline mt-2 mt-md-0">
+                  <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a href=http://127.0.0.1/php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"我的片單";
+                    echo"</strong>";
+                    echo"</a>";
+                  ?>
+                <!-- <a href="http://127.0.0.1/php_example/myList.php" role="button" style="color:gainsboro">
+                  <strong>我的片單</strong>
+                </a> -->
+              </form>
+              &emsp;
+              <form class="form-inline mt-2 mt-md-0">
+              <?php
+                // $newaddress = $_GET["add"];
+                echo"<a href=http://127.0.0.1/php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
+                echo"<strong>";
+                echo"個人資料";
+                echo"</strong>";
+                echo"</a>";
+              ?>
+                 
+              </form>
+              &emsp;
+              <form class="form-inline mt-2 mt-md-0">
+                <a href="http://127.0.0.1/php_example/assert/login.php" role="button" style="color:gainsboro">
+                  <strong>登出</strong></a>
+              </form>
+            </div>
+          </nav>   
     </div>
     <div class="site-header__placeholder"></div>
     <div class="chart-piano-overlay__attachment-point"></div>

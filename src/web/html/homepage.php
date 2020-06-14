@@ -233,9 +233,13 @@
     </section>
 
     <section class="section2">
+    <?php
+        $newaddress = $_GET["add"];
+        echo"<a class=nav-link href=http://127.0.0.1/php_example/kkbox1.php?add=$newaddress  role=button style=color:gainsboro>";
+    ?>
         <!--main-->
         <div class="main block" style="background-color: blueviolet;">
-            <iframe src="billboard.html" scrolling="auto" width="100%" height="100%" style="border-radius: 2%;"></iframe>
+            <iframe src="../php_example/billboard.html" scrolling="auto" width="100%" height="100%" style="border-radius: 2%;"></iframe>
         </div>
         <!--block1-->
         <div class="b1 block" style="background-color: brown;">
