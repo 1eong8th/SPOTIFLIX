@@ -9,6 +9,7 @@
   $_SESSION['conn'] = $conn;
   mysqli_query($conn, "SET NAMES 'utf8'");
   mysqli_select_db($conn, $dbname);
+  session_start();
   // $sql = "SELECT C_name, C_id FROM customer where account = '{$_SESSION[ "username" ]}' and password = '{$_SESSION[ "password" ]}';";
   // $result = mysqli_query($conn, $sql) or die('MySQL query error');
   // $row = mysqli_fetch_array($result);
@@ -50,14 +51,14 @@
           }
           
 
-          img {
+          /* img {
               opacity: 1;
               display: block;
               width: 100%;
               height: auto;
               transition: .1s ease;
               backface-visibility: hidden;
-            }
+            } */
 
           .middle {
               transition: .3s ease;
@@ -129,12 +130,23 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
                 <li >
-                  <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a>
+                <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a class=nav-link href=../php_example/kkbox1.php?add=$newaddress style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"&emsp; 音樂";
+                    echo"</strong>";
+                    echo"<span class=sr-only>";
+                    echo"(current)";
+                    echo"</span>";
+                    echo"</a>";
+                  ?>
+                  <!-- <a class="nav-link" href="../php_example/kkbox1.php" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a> -->
                 </li>
                 <li >
                 <?php
                     $newaddress = $_GET["add"];
-                    echo"<a class=nav-link href=movie.php?add=$newaddress style=color:gainsboro>";
+                    echo"<a class=nav-link href=../php_example/movie.php?add=$newaddress style=color:gainsboro>";
                     echo"<strong>";
                     echo"&emsp; 影片";
                     echo"</strong>";
@@ -146,10 +158,25 @@
                    <!-- <a class="nav-link" href="http://127.0.0.1/php_example/movie.php?add=$newaddress" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a> -->
                 </li>
               </ul>
+              <!--navbar 片單按鈕-->
+              <form class="form-inline mt-2 mt-md-0">
+                  <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a href=../php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"我的片單";
+                    echo"</strong>";
+                    echo"</a>";
+                  ?>
+                <!-- <a href="http://127.0.0.1/php_example/myList.php" role="button" style="color:gainsboro">
+                  <strong>我的片單</strong>
+                </a> -->
+              </form>
+              &emsp;
               <form class="form-inline mt-2 mt-md-0">
               <?php
-                $newaddress = $_GET["add"];
-                echo"<a href=personInfo.php?add=$newaddress role=button style=color:gainsboro>";
+                // $newaddress = $_GET["add"];
+                echo"<a href=../php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
                 echo"<strong>";
                 echo"個人資料";
                 echo"</strong>";
@@ -159,7 +186,7 @@
               </form>
               &emsp;
               <form class="form-inline mt-2 mt-md-0">
-                <a href="../assert/login.php" role="button" style="color:gainsboro">
+                <a href="../php_example/assert/login.php" role="button" style="color:gainsboro">
                   <strong>登出</strong></a>
               </form>
             </div>
@@ -172,7 +199,7 @@
                 // $sql = "SELECT Mo_Address FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
                 // $result = mysqli_query($conn, $sql) or die('MySQL query error');
                 // $movie = mysqli_fetch_row($result);
-                session_start();
+                
                 $newId = $_GET["id"];
                 $_SESSION['id'] = $newId;
                 $newSql = "SELECT Mo_Address, Mo_Name, Mo_Grade, Mo_Dir, Mo_Tag, Mo_Year, Mo_Info FROM movie WHERE Mo_id = '{$_SESSION["id"]}'";
@@ -224,6 +251,26 @@
                     <h5 style="color: #999;">劇情介紹 :</h5> 
                       <p style="padding: 0px 60px 10px 20px;color:blanchedalmond;"><small><?php echo $data['Mo_Info']; session_write_close();?></small>
                     </p>
+                    <div >
+                    <h6 style="color: blanchedalmond;">
+                      <form method="post">
+                        <input type="submit" class="button" value="加入至我的片單" name="butt"/>
+                      </form>
+                      <?php
+                        if(!isset($_POST['butt'])){
+                          
+                        }else{
+                          $trans = $_GET["id"];
+                          $sql = "INSERT INTO favorite(Fa_Mine, Acc_Email)
+                          VALUES ('$trans','$newaddress')";
+                          $result = mysqli_query($conn, $sql) or die('MySQL query error');
+                          if($result){
+                            echo "<script>alert('加入成功'); </script>";
+                          }
+                        }
+                        ?>
+                    </h6> 
+                  </div>
                   </div> 
                 </div>
               </div>                  

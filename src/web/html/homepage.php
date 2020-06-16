@@ -199,7 +199,7 @@
             line-height: 20pt;
         }
 
-        .pic1{
+        .pic1{   
         background-image: url(https://i.kfs.io/artist/global/6912429,0v1/fit/300x300.jpg);
         background-repeat :no-repeat;
         background-size:cover;
@@ -254,12 +254,16 @@
 <body style="padding: 0!important; margin: 0!important;">
 
     <section class="section1">
+ 
+    
+ <div class="b2 block" style="background-color: black;">
     <?php
         $newaddress = $_GET["add"];
         echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress  role=button style=color:gainsboro>";
+        echo"<h2 style=writing-mode: vertical-rl; line-height: 200%;margin-top: 50%;>";
+        echo"電影</h2>"
     ?>
- <div class="b2 block" style="background-color: black;">
-    <h1 style="writing-mode: vertical-rl; line-height: 200%;margin-top: 50%;">電影</h1>
+    
         </div>
         <div  class="b1 block"  style="background-color: black;">
             <iframe width="655" height="360" src="https://www.youtube.com/embed/AhMhjkYMU5k" frameborder="0" allow="accelerometer;
@@ -296,7 +300,6 @@
     </section>
 
     <section class="section2">
-<<<<<<< Updated upstream
         <!--main-->
         <div class="main block" style="background-color: black;">
             <iframe src="billboard.html" scrolling="auto" width="100%" height="100%" style="border-radius: 2%;"></iframe>
@@ -307,22 +310,6 @@
                 <button type="button" id="myBtn" class="btn btn-primary">Apple</button>
                 <button type="button" id="myBtn1" class="btn btn-primary">Samsung</button>
                 <button type="button" id="myBtn2" class="btn btn-primary">Sony</button>
-=======
-    <?php
-        $newaddress = $_GET["add"];
-        echo"<a class=nav-link href=../php_example/kkbox1.php?add=$newaddress  role=button style=color:gainsboro>";
-    ?>
-        <!--main-->
-        <div class="main block" style="background-color: blueviolet;">
-            <iframe src="../php_example/billboard.php" scrolling="auto" width="100%" height="100%" style="border-radius: 2%;"></iframe>
-        </div>
-        <!--block1-->
-        <div class="b1 block" style="background-color: brown;">
-            <div class="btn-group btn-group-sm">
-                <button type="button" id="myBtn" class="btn btn-primary">輸入1</button>
-                <button type="button" id="myBtn1" class="btn btn-primary">輸入2</button>
-                <button type="button" id="myBtn2" class="btn btn-primary">輸入3</button>
->>>>>>> Stashed changes
               </div>
 
             <div id="myCarousel" class="carousel slide" data-ride="carousel">-->
@@ -342,7 +329,9 @@
                     </div>-->
                     <h4 style=" color: rgb(242, 243, 234);padding-bottom: 5px;"><strong>當紅歌手</strong></h4>
                     <div class="row">
-                            <div class="pic1 rounded-circle col-md-3"><br><br><br><br><br><br><br>
+
+                            <div class="pic1 rounded-circle col-md-3" >
+                            <br><br><br><br><br><br><br>
                                 <h4>瀧川ありさ</h4> 
                                 <p>出道年分:2015</p>
                                 <p>國籍:日本</p>
@@ -397,7 +386,13 @@
 
         <!--block2-->
         <div class="b2 block" style="background-color:black;">
-            <h1 style="writing-mode: vertical-rl; line-height: 200%;margin-top: 50%;">音樂</h1>
+        <?php
+        $newaddress = $_GET["add"];
+        echo"<a class=nav-link href=../php_example/kkbox1.php?add=$newaddress  role=button style=color:gainsboro>";
+        echo"<h2 style=writing-mode: vertical-rl; line-height: 500%;>";
+        echo"音樂</h2>";
+        ?>
+            
         </div>
 
     </section>

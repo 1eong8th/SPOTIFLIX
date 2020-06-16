@@ -742,7 +742,77 @@
 </head>
 
 <body class="web-view">
-    
+    <!--nav-->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black">
+            <h3><a href="#" style="color:blanchedalmond;"><img src="../image/Spotiflix1.png" width="140"></a></h3>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                <li >
+                <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a class=nav-link href=../php_example/kkbox1.php?add=$newaddress style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"&emsp; 音樂";
+                    echo"</strong>";
+                    echo"<span class=sr-only>";
+                    echo"(current)";
+                    echo"</span>";
+                    echo"</a>";
+                  ?>
+                  <!-- <a class="nav-link" href="../php_example/kkbox1.php" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a> -->
+                </li>
+                <li >
+                <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a class=nav-link href=../php_example/movie.php?add=$newaddress style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"&emsp; 影片";
+                    echo"</strong>";
+                    echo"<span class=sr-only>";
+                    echo"(current)";
+                    echo"</span>";
+                    echo"</a>";
+                  ?>
+                   <!-- <a class="nav-link" href="http://127.0.0.1/php_example/movie.php?add=$newaddress" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a> -->
+                </li>
+              </ul>
+              <!--navbar 片單按鈕-->
+              <form class="form-inline mt-2 mt-md-0">
+                  <?php
+                    $newaddress = $_GET["add"];
+                    echo"<a href=../php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
+                    echo"<strong>";
+                    echo"我的片單";
+                    echo"</strong>";
+                    echo"</a>";
+                  ?>
+                <!-- <a href="http://127.0.0.1/php_example/myList.php" role="button" style="color:gainsboro">
+                  <strong>我的片單</strong>
+                </a> -->
+              </form>
+              &emsp;
+              <form class="form-inline mt-2 mt-md-0">
+              <?php
+                // $newaddress = $_GET["add"];
+                echo"<a href=../php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
+                echo"<strong>";
+                echo"個人資料";
+                echo"</strong>";
+                echo"</a>";
+              ?>
+                 
+              </form>
+              &emsp;
+              <form class="form-inline mt-2 mt-md-0">
+                <a href="../php_example/assert/login.php" role="button" style="color:gainsboro">
+                  <strong>登出</strong></a>
+              </form>
+            </div>
+          </nav>
         
     <header id="header">
         
@@ -915,11 +985,11 @@
                 </div>
             </div>
         </div>
-        <div class="u-align-center">
+        <!-- <div class="u-align-center">
             <a class="btn btn-action" href="/charts/music-trend?terr=tw&lang=tc">
                 更多
             </a>
-        </div>
+        </div> -->
     </div>
 
     <section class="daily-chart home-fullwidth"
@@ -935,12 +1005,12 @@
                                 華語新歌
                             </a>
                         </li>
-                        <li class="">
+                        <!-- <li class="">
                             <a href="#!"  data-chart-key="song_297" onclick="flipping(2)"
                                 data-entry-url="/charts/daily/song?terr=tw&lang=tc&category=297">
                                 華語單曲
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="section-scroller">
@@ -1026,18 +1096,22 @@
                 </div>
             </div>
             <div class="section-panel">
-                <div class="section-date">
+                <!-- <div class="section-date">
                     更新時間：<br>
                     <time></time>
-                </div>
+                </div> -->
                 <div class="section-slider-nav">
                 
                     <a class="section-slider-prev" href="#!" onclick="move(1)"></a>
                     <a class="section-slider-next" href="#!"onclick="move(1)"></a>
                 </div>
-                <a class="btn-action" href="/charts/daily/newrelease?terr=tw&lang=tc&category=297">
-                    查看完整榜單
-                </a>
+                <?php
+                    $newaddress = $_GET["add"];
+                    echo "<a class=btn-action href=../php_example/billboard.php?add=$newaddress>";
+                    echo "查看完整榜單";
+                    echo "</a>";
+                ?>
+                
             </div>
             <div class="slider-nav"></div>
         </div>
@@ -1139,7 +1213,7 @@
                                 華語新歌
                             </a>
                         </li>
-                        <li class="">
+                        <!-- <li class="">
                             <a href="#!" data-chart-key="song_297"
                                 data-entry-url="/charts/weekly/song?terr=tw&lang=tc&category=297">
                                 華語單曲
@@ -1150,7 +1224,7 @@
                                 data-entry-url="/charts/weekly/album?terr=tw&lang=tc&category=297">
                                 華語專輯
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="section-scroller">
@@ -1349,17 +1423,20 @@
                 </div>
             </div>
             <div class="section-panel">
-                <div class="section-date">
+                <!-- <div class="section-date">
                     更新時間：<br>
                     <time class="begin"></time> ~ <time class="end"></time>
-                </div>
+                </div> -->
                 <div class="section-slider-nav">
                     <a class="section-slider-prev" href="#!" onclick="move(2)"></a>
                     <a class="section-slider-next" href="#!" onclick="move(2)"></a>
                 </div>
-                <a class="btn-action" href="/charts/weekly/newrelease?terr=tw&lang=tc&category=297">
-                    查看完整榜單
-                </a>
+                <?php
+                    $newaddress = $_GET["add"];
+                    echo "<a class=btn-action href=../php_example/billboard.php?add=$newaddress>";
+                    echo "查看完整榜單";
+                    echo "</a>";
+                ?>
             </div>
         </div>
     </section>
