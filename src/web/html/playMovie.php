@@ -30,6 +30,92 @@
           }
           
         </style>
+        <style>
+          li{
+            list-style-type:none;
+            display: inline; 
+          }
+          img{
+            margin: 3px 10px;
+          }
+          .btitle{
+            margin: 20px 0 0px 0px;
+            padding: 10px;
+            text-align: inherit;
+          }
+
+          .container {
+            position: relative;
+            
+          }
+          
+
+          img {
+              opacity: 1;
+              display: block;
+              width: 100%;
+              height: auto;
+              transition: .1s ease;
+              backface-visibility: hidden;
+            }
+
+          .middle {
+              transition: .3s ease;
+              opacity: 0;
+              position: absolute;
+              top: 40%;
+              left: 60%;
+              transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%)
+          }
+
+          .col-md-2:hover img{
+            opacity: 0.5;
+            width:120%;
+            -webkit-filter:blur(1px);
+          }
+          
+
+          .col-md-2:hover .middle{
+            opacity: 1;
+          }
+          .limit{
+            height:150px;
+            width:150px;
+            
+          }
+          .limit a{
+            overflow: scroll;
+            overflow-x: hidden;
+            text-overflow: scroll;
+            display: -webkit-box;
+            -webkit-line-clamp: 7;
+            -webkit-box-orient: vertical;
+            font-size:12px;
+            color:black;
+          }
+          .limit a:hover{
+            text-decoration: none;
+          }
+          ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* make scrollbar transparent */
+          }
+          .control{
+            margin-right:0px;
+          }
+          .control:hover{
+              background:black;
+              opacity:0.7;
+          }
+          .carousel-inner{
+            padding-right:40px;
+          }
+          .carousel{
+            width:110%; 
+            margin-left:-30px;
+          }
+        </style>
     </head>
 
     <body style="background-color: black;">
@@ -93,7 +179,7 @@
                 $result = mysqli_query($conn, $newSql) or die('MySQL query error');
                 $data = mysqli_fetch_array($result);
               ?>
-                  <div style="padding: 20px;"><iframe width="550" height="400" src="<?php echo $data['Mo_Address']; ?>" 
+                  <div style="padding: 20px;"><iframe width="100%" height="400" src="<?php echo $data['Mo_Address']; ?>" 
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                   </iframe>
                   </div>
@@ -142,7 +228,39 @@
                 </div>
               </div>                  
           </div>
-          
+          <div class="container" >
+          <div class="btitle">
+            <h3 style="color:blanchedalmond">
+              <strong>你可能會喜歡（<?php echo $data['Mo_Tag']; ?>）</strong>
+            </h3>
+          </div>
+
+          <div class="row">
+          <?php
+                  $type = $data['Mo_Tag'];
+                  $sql = "SELECT Mo_Photo, Mo_Name, Mo_id,Mo_Info FROM movie WHERE Mo_Tag = '$type'";
+                  $result = $conn->query($sql);
+
+                 if ($result->num_rows > 0) {
+                   // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                      echo '<div class="col-md-2">
+                              <a href=playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
+                              <div class="middle">
+                                <div style="width:160%;"><h4 style="color:white;"><strong>'.$row["Mo_Name"].'</strong></h4></div>
+                                <div class="limit">
+                                <a href=playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'  style="color:yellow;"><strong>'.$row["Mo_Info"].'</strong></a></div>
+                                </div>
+                              <div>
+                                <p align="center"><a href=playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
+                                </div>
+                              </div>';
+                      
+                    }
+                  }
+            ?>
+          </div>
+        </div>
       
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
