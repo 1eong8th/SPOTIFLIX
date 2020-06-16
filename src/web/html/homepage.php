@@ -24,11 +24,11 @@
         }
 
         .section1 {
-            background-color: rgb(63, 185, 149);
+            background-color: black;
         }
 
         .section2 {
-            background-color: #527415;
+            background-color: black;
         }
 
         section h1 {
@@ -64,7 +64,7 @@
             position: absolute;
             left: 0px;
             right: 0px;
-            background-color:rgb(63, 185, 149);
+            background-color:black;
             color: white;
             padding: 6px;
         }
@@ -147,7 +147,7 @@
             padding: 10px 30px;
             background-color: #E0607E;
             color: #FFF;
-        }
+        } 
 
         .mv table {
             margin: auto;
@@ -165,6 +165,69 @@
             padding: 11px 24px;
             background-color:#46a13e;
             color: #FFF;
+        }
+
+        .rounded-circle {
+            border-radius: 50%!important;
+        }
+
+        .text {
+            background: rgb(0,0,0) transparent;
+            width: 550px;
+            height: 200px;
+            margin: 0 right;
+            float: left;
+            padding-left: 5px;
+            padding-top: 20px;
+            color: whitesmoke;
+            font-family: Microsoft JhengHei;
+        }
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .sin_intro {
+            float: right;
+            width: 50%;
+            height: 50%;
+            padding-top: 60px;
+            line-height: 20pt;
+        }
+
+        .pic1{
+        background-image: url(https://i.kfs.io/artist/global/6912429,0v1/fit/300x300.jpg);
+        background-repeat :no-repeat;
+        background-size:cover;
+        padding:20px 20px 0 30px;
+        border:10px;
+        width:200px;
+        height:170px;
+        margin-left: 40px;
+        }
+        .pic2{
+        background-image: url(https://assets.juksy.com/files/articles/82734/800x_100_w-5ba06a3a63a92.jpg);
+        background-repeat :no-repeat;
+        background-size:cover;
+        padding:20px 20px 0 30px;
+        border:10px;
+        width:200px;
+        height:170px;
+        margin-left: 40px;
+        }
+        .pic3{
+        background-image: url(https://assets.juksy.com/files/articles/84723/800x_100_w-5bebf594b55a6.jpg);
+        background-repeat :no-repeat;
+        background-size:cover;
+        padding:20px 20px 0 30px;
+        border:10px;
+        width:200px;
+        height:170px;
+        margin-left: 40px;
         }
         /*第一欄第一列：左上*/
         tr:first-child td:first-child {
@@ -195,15 +258,15 @@
         $newaddress = $_GET["add"];
         echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress  role=button style=color:gainsboro>";
     ?>
- <div class="b2 block" style="background-color: cadetblue;">
+ <div class="b2 block" style="background-color: black;">
     <h1 style="writing-mode: vertical-rl; line-height: 200%;margin-top: 50%;">電影</h1>
         </div>
-        <div  class="b1 block"  style="background-color: blueviolet;">
+        <div  class="b1 block"  style="background-color: black;">
             <iframe width="655" height="360" src="https://www.youtube.com/embed/AhMhjkYMU5k" frameborder="0" allow="accelerometer;
              autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
              </div>
-        <div class="mv" style="background-color:rgb(67, 11, 78);" align="right">
-            <h4 style="padding-right: 280px; color: rgb(242, 243, 234);"><strong>發燒電影</strong></h4>
+        <div class="mv" style="background-color:black;" align="right">
+            <h4 style="padding-right: 280px; color: rgb(242, 243, 234);padding-top: 5px;"><strong>發燒電影</strong></h4>
             <!--<img src="https://movies.yahoo.com.tw/i/o/production/movies/February2020/PSJKutAvmA3ceZGYVCvK-1488x2125.jpg" 
              width="210" height="320" >    M000000021
             <img src="https://pic.pimg.tw/littledidi/1584399021-150718298_wn.jpg" 
@@ -223,9 +286,9 @@
              <img src="https://movies.yahoo.com.tw/i/o/production/movies/February2020/2oQG8URZbVXQQoHaIAmm-992x1418.JPG" 
              width="210" height="320" >    <!--M000000028-->
              <img src="https://www.mrbuzz.com/wp-content/uploads/2019/03/us-film.jpg" 
-             width="210" height="320" >    <!--M000000028-->
+             width="210" height="320" >    <!--M000000029-->
             <img src="https://movies.yahoo.com.tw/i/o/production/movies/July2019/iJf2rx1TV6hYFdPiWmwL-800x1143.jpg" 
-             width="210" height="320" style="padding-right: 10px ;" >       <!--M000000028-->
+             width="210" height="320" style="padding-right: 10px ;" >       <!--M000000030-->
         </div>
         
        
@@ -233,89 +296,63 @@
     </section>
 
     <section class="section2">
-    <?php
-        $newaddress = $_GET["add"];
-        echo"<a class=nav-link href=http://127.0.0.1/php_example/kkbox1.php?add=$newaddress  role=button style=color:gainsboro>";
-    ?>
         <!--main-->
-        <div class="main block" style="background-color: blueviolet;">
-            <iframe src="../php_example/billboard.html" scrolling="auto" width="100%" height="100%" style="border-radius: 2%;"></iframe>
+        <div class="main block" style="background-color: black;">
+            <iframe src="billboard.html" scrolling="auto" width="100%" height="100%" style="border-radius: 2%;"></iframe>
         </div>
         <!--block1-->
-        <div class="b1 block" style="background-color: brown;">
-            <div class="btn-group btn-group-sm">
+        <div class="b1 block" style="background-color: black;">
+            <!--<div class="btn-group btn-group-sm">
                 <button type="button" id="myBtn" class="btn btn-primary">Apple</button>
                 <button type="button" id="myBtn1" class="btn btn-primary">Samsung</button>
                 <button type="button" id="myBtn2" class="btn btn-primary">Sony</button>
               </div>
 
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">-->
 
                 <!-- Indicators -->
-                <ul class="carousel-indicators">
+                <!--<ul class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                     <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ul>
+                </ul>-->
 
                 <!-- The slideshow -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../music/img/background.jpg" alt="Los Angeles" width="1100" height="500">
+                <div >
+                   <!-- <div class="carousel-item active">
+                        <img src="../music/img/background.jpg" alt="Los Angeles" width="100" height="100">
 
+                    </div>-->
+                    <h4 style=" color: rgb(242, 243, 234);padding-bottom: 5px;"><strong>當紅歌手</strong></h4>
+                    <div class="row">
+                            <div class="pic1 rounded-circle col-md-3"><br><br><br><br><br><br><br>
+                                <h4>瀧川ありさ</h4> 
+                                <p>出道年分:2015</p>
+                                <p>國籍:日本</p>
+                            </div>
+                            <div class="pic2 rounded-circle col-md-3"><br><br><br><br><br><br><br>
+                                <h5>鄧紫棋</h5> 
+                                <p>出道年分:2008</p>
+                                <p>國籍:香港</p>
+                            </div>
+                            <div class="pic3 rounded-circle col-md-3"><br><br><br><br><br><br><br>
+                                <h5>ØZI</h5> 
+                                <p>出道年分:2018</p>
+                                <p>國籍:美國/台灣</p>
+                            </div>
                     </div>
-                    <div class="carousel-item mc">
-                        <table>
-                            <tr>
-                                <td>1</td>
-                                <td>明年今日</td>
-                                <td>陳奕迅</td>
-                                <td>3:54</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>明年今日</td>
-                                <td>陳奕迅</td>
-                                <td>3:54</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>明年今日</td>
-                                <td>陳奕迅</td>
-                                <td>3:54</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>明年今日</td>
-                                <td>陳奕迅</td>
-                                <td>3:54</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>明年今日</td>
-                                <td>陳奕迅</td>
-                                <td>3:54</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>明年今日</td>
-                                <td>陳奕迅</td>
-                                <td>3:54</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="carousel-item">
+                    <!--<div class="carousel-item">
                         <img src="ny.jpg" alt="New York" width="1100" height="500">
-                    </div>
+                    </div>-->
                 </div>
 
                 <!-- Left and right controls -->
-                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                <!--<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                 </a>
                 <a class="carousel-control-next" href="#myCarousel" data-slide="next">
                     <span class="carousel-control-next-icon"></span>
-                </a>
+                </a>-->
             </div>
         </div>
         <script>
@@ -342,7 +379,7 @@
         </script>
 
         <!--block2-->
-        <div class="b2 block" style="background-color: cadetblue;">
+        <div class="b2 block" style="background-color:black;">
             <h1 style="writing-mode: vertical-rl; line-height: 200%;margin-top: 50%;">音樂</h1>
         </div>
 
