@@ -19,12 +19,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
-    <title>Spotiflix</title>
-    <!-- nav bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>KKBOX 風雲榜 - 匯集最完整的音樂排行榜、音樂趨勢、獨家影音與速爆新歌的權威性音樂入口</title>
+    <meta name="description"
+        content="華人世界最具公信力的音樂排行榜！匯集當紅歌曲資訊與即時圖表，快來跟著排行榜聽聽看： 太陽 (When The Cloudless Day Comes) - 瘦子E.SO 、 她沒在看我 (She Ain’t Watchin’) - 瘦子E.SO 、 不在乎 - 張語噥 (Sammy) 、 玩家 (TVBS《食尚玩家熱血48小時》片尾曲) - 吳卓源 (Julia Wu), 唐仲彣 (ChrisFlow) 、 前任 - 采子 &amp; 黃偉晉" />
+    <meta property="og:title" content="大家都在聽什麼？KKBOX 風雲榜告訴你！" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://kma.kkbox.com/charts/snapshot/hourly/tw/tc/2020/tw-2020-06-06-10.png" />
+    <meta property="og:url" content="https://kma.kkbox.com/charts/?terr=tw&amp;lang=tc" />
+    <meta property="og:description" content="華人世界最具公信力的音樂排行榜，來自全體數百萬會員的聽歌記錄，想知道哪首歌曲最Hit？快來跟著排行榜聽聽看！" />
+    <meta property="og:site_name" content="KKBOX 風雲榜榜單" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@kkbox" />
+    <meta name="twitter:title" content="大家都在聽什麼？KKBOX 風雲榜告訴你！" />
+    <meta name="twitter:description" content="華人世界最具公信力的音樂排行榜，來自全體數百萬會員的聽歌記錄，想知道哪首歌曲最Hit？快來跟著排行榜聽聽看！" />
+    <meta name="twitter:image" content="http://kma.kkbox.com/charts/snapshot/hourly/tw/tc/2020/tw-2020-06-06-10.png" />
 
-    
+    <meta name="google-site-verification" content="lH0xSlrWr1v2xCUhbORSbDyTDkEbl9jEYL3uugO3y7I" />
+    <link rel="shortcut icon" href="/charts/assets/images/favicon.ico?id=2777c29dad3b61e5403a?ts=1548321487" />
+
+    <script>
+    var myboxCmd = myboxCmd || function() {};
+    var listenWithEventReceived = listenWithEventReceived || function() {};
+    var listenWithEventEmitted = listenWithEventEmitted || function() {};
+    var followCancelled = followCancelled || function() {};
+    </script>
     <link rel=stylesheet media="screen" href="../css/kkbox1.css">
     <link rel=stylesheet type="text/css" href="../css/kkbox2.css">
     <link rel=stylesheet type="text/css" href="../css/kkbox3.css">
@@ -349,7 +367,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">
 
-        
+    
        
 
         var count = 0;
@@ -363,10 +381,10 @@
                     
                     window.setTimeout(function() { 
                         
-                        $(".daily-chart>li").eq(i).addClass("temp2").removeClass("layer2");
-                        $(".daily-chart>li").eq(i).addClass("temp1").removeClass("layer1");
-                        $(".daily-chart>li").eq(i).addClass("layer2").removeClass("temp1");   
-                        $(".daily-chart>li").eq(i).addClass("layer1").removeClass("temp2");  
+                        // $(".daily-chart>li").eq(i).addClass("temp2").removeClass("layer2");
+                        // $(".daily-chart>li").eq(i).addClass("temp1").removeClass("layer1");
+                        // $(".daily-chart>li").eq(i).addClass("layer2").removeClass("temp1");   
+                        // $(".daily-chart>li").eq(i).addClass("layer1").removeClass("temp2");  
                             
                         
                         i++;
@@ -379,8 +397,301 @@
         })
     </script>
 
-
     <style>
+        /* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	
+	.button2 {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		border-radius: 4px;
+		border: 0;
+		cursor: pointer;
+		display: inline-block;
+		font-weight: 300;
+		height: 2.85em;
+		line-height: 2.95em;
+		padding: 0 2.5em;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+		input[type="submit"].icon,
+		input[type="reset"].icon,
+		input[type="button"].icon,
+		
+		.button2.icon {
+			padding-left: 1.35em;
+		}
+
+			input[type="submit"].icon:before,
+			input[type="reset"].icon:before,
+			input[type="button"].icon:before,
+			.button2.icon:before {
+				margin-right: 0.5em;
+			}
+
+		input[type="submit"].alt,
+		input[type="reset"].alt,
+		input[type="button"].alt,
+		
+		.button2.alt {
+			background: #FFF;
+			color: #e74c3c;
+		}
+
+		input[type="submit"].fit,
+		input[type="reset"].fit,
+		input[type="button"].fit,
+		
+		.button2.fit {
+			display: block;
+			margin: 0 0 1em 0;
+			width: 100%;
+		}
+
+		input[type="submit"].small,
+		input[type="reset"].small,
+		input[type="button"].small,
+		
+		.button2.small {
+			font-size: 0.8em;
+		}
+
+		input[type="submit"].big,
+		input[type="reset"].big,
+		input[type="button"].big,
+		
+		.button2.big {
+			font-size: 1.35em;
+		}
+
+		input[type="submit"].disabled, input[type="submit"]:disabled,
+		input[type="reset"].disabled,
+		input[type="reset"]:disabled,
+		input[type="button"].disabled,
+		input[type="button"]:disabled,
+		
+		.button2.disabled,
+		.button2:disabled {
+			-moz-pointer-events: none;
+			-webkit-pointer-events: none;
+			-ms-pointer-events: none;
+			pointer-events: none;
+			opacity: 0.25;
+		}
+
+		@media screen and (max-width: 480px) {
+
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button"],
+			button,
+			.button2 {
+				padding: 0;
+			}
+
+		}
+    /*header*/ 
+    #header {
+		-moz-transition: background 1s ease-in-out, height 0.2s ease-in-out;
+		-webkit-transition: background 1s ease-in-out, height 0.2s ease-in-out;
+		-ms-transition: background 1s ease-in-out, height 0.2s ease-in-out;
+		transition: background 1s ease-in-out, height 0.2s ease-in-out;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		display: -ms-flexbox;
+		-ms-flex-align: center;
+		-ms-flex-pack: center;
+		background: rgba(254, 254, 254, 0.85);
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: 10001;
+	}
+
+		#header .inner {
+			-moz-transition: height 0.2s ease-in-out, width 0.2s ease-in-out;
+			-webkit-transition: height 0.2s ease-in-out, width 0.2s ease-in-out;
+			-ms-transition: height 0.2s ease-in-out, width 0.2s ease-in-out;
+			transition: height 0.2s ease-in-out, width 0.2s ease-in-out;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-direction: column;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			-moz-align-items: center;
+			-webkit-align-items: center;
+			-ms-align-items: center;
+			align-items: center;
+			display: -ms-flexbox;
+			-ms-flex-align: center;
+			-ms-flex-pack: center;
+			background: #e74c3c;
+			border-radius: 100%;
+			width: 35em;
+			height: 35em;
+			padding: 4em;
+			text-align: center;
+			box-shadow: 0 0 0 1em #FFF;
+			cursor: default;
+		}
+
+			#header .inner .content {
+				-moz-transition: opacity 1s ease-in-out;
+				-webkit-transition: opacity 1s ease-in-out;
+				-ms-transition: opacity 1s ease-in-out;
+				transition: opacity 1s ease-in-out;
+				opacity: 1;
+			}
+
+				#header .inner .content h1 {
+					font-size: 3em;
+					font-family: 'Pattaya', sans-serif;
+					margin: 0 0 .25em 0;
+					color: #fff;
+				}
+
+				#header .inner .content h2 {
+					font-size: 1.5em;
+					color: #fff;
+					margin: 0 0 1em 0;
+				}
+
+			#header .inner .button2 {
+				-moz-transition: background 1s ease-in-out;
+				-webkit-transition: background 1s ease-in-out;
+				-ms-transition: background 1s ease-in-out;
+				transition: background 1s ease-in-out;
+				margin: 0;
+				border-radius: 30px;
+			}
+
+				#header .inner .button2.hidden {
+					display: none;
+					cursor: pointer;
+				}
+
+			#header .inner.hidden {
+				display: none;
+			}
+
+		#header.hide, #header.preview {
+			-moz-transition: background 0.2s ease-in-out, height 1s ease-in-out;
+			-webkit-transition: background 0.2s ease-in-out, height 1s ease-in-out;
+			-ms-transition: background 0.2s ease-in-out, height 1s ease-in-out;
+			transition: background 0.2s ease-in-out, height 1s ease-in-out;
+			background: none;
+			height: 0;
+		}
+
+			#header.hide .inner, #header.preview .inner {
+				height: 6em;
+				width: 6em;
+				padding: 2em;
+			}
+
+				#header.hide .inner .content, #header.preview .inner .content {
+					opacity: 0;
+				}
+
+					#header.hide .inner .content h1, #header.preview .inner .content h1 {
+						display: none;
+					}
+
+					#header.hide .inner .content h2, #header.preview .inner .content h2 {
+						display: none;
+					}
+
+			#header.hide .button2.big, #header.preview .button2.big {
+				display: none;
+			}
+
+			#header.hide .button2.hidden, #header.preview .button2.hidden {
+				text-decoration: none;
+				padding-top: 1.5em;
+				padding-left: 0;
+				padding-right: 0;
+				background: none;
+				display: inline-block;
+			}
+
+				#header.hide .button2.hidden:before, #header.preview .button2.hidden:before {
+					-moz-osx-font-smoothing: grayscale;
+					-webkit-font-smoothing: antialiased;
+					font-family: FontAwesome;
+					font-style: normal;
+					font-weight: normal;
+					text-transform: none !important;
+				}
+
+				#header.hide .button2.hidden:before, #header.preview .button2.hidden:before {
+                    /* content: '\f015'; */
+                    /* background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAFHElEQVRoge2ZXWyTVRjHf+ecty2UsbgOE2GDG8GRcEF0E5AQ46Y3kpgIZoEwTSQxRNwWvfAjYpBilERITESYgmIwgQjOEPnSeMGCXzdkuxKiLBIQkJnIBhndWNe95/FiH8yu7fv27dgu3D9p+rRpzvn9z/O856swpSn9v6XGpZVaMfNjLHGEagWVjrDQWGYbocgRMJaEEa5p4bwjtCmhZcUCzsTjyhbadUEG5rwkc6cp6rXlWWMpMwJmEBgj4IyKTXrsctUoDpgUu48cUVcn1MB9jXJv2PKugeeNJZwJMif8f+N+A5+rfjZ/eVxdv+sGyhtknRY+MkIsG1ge8COxY+l0hIZ9x9Shu2KgcoOEOiI0OZYXcsEEhB/9/R77N41721Rq3AzM2SBRFeFrY3nyLsMPx9/2OdTuPa56vdi0n5GfYHiMsLI4ydF4rYQLNtARoWmC4Yc/P9F/gw+9+HKWUHmj1GnLgUmAH4kdy9otp9XhvA2U1Uupgd+NMGuy4Ifeu6YrKl49nXmKzVpCBrblDy9oN4V2B8YHfrCfmFi25pWBskYpD1su5LtISSrBssVJBpLCubNhwqoIBx0c/k7c78CCl39Wl9NZnUwGIpYGHWCFdVO32fz6LEIhRUtLD/s/7WLg9kwcIoXAYyxhLWwE3vQuobho7VIXpOa1CKHQYFJramaws6mEBx9KYFPdaGuDwg/Hz31VK8bTwPwOlhqhPOgDO1r3lBhee7uU+jccIuFOcJPBH3JLWfdFKj0NOEJ1IbNNJi19NMq2z2IsejiBm+pGuzZf+OG4xtOAUVQFhU/PwGgVlxga3ill/SaH0LShbOQHj4OPDGjLA0HhdQ4Dw6qsjrJpf4yKZQkGhp4NP/DGgrZUeGdg8CQVeJHyo5kxw/r3SlkTdzDRLrApv33M9jZw5xiYN3yuEsqkxTVRGr4owYl2o6346W9mehtj1oFC4G2eBkYGzWd/Tob2M5VQIgh8rlkom86d6mVf3Q10ohhHlCe8EW6ltzEmA0boMEIsCLzrEzzR5XLi/Zv8+UOIqI4Nbje84TFCh7cBS7sRFuUL73cWOnuql+929KC7i5mhI77KZtQsdN7bALQaYVW+8MOvXKN+bPtNLv0YIqpKRzZ5fuGNgFa0ehpQQktQ+GzPwK+nejm5owedKGaGyrKx84A3AsrS4mlgxQLOtP7GFSPMzRc+PQO3ulyObr/JpZ9CTNelOKIDwxvhcnU7bem8Y2aheFxZAweDwBsUA6lBF23f97Bz3Q2u/FJEVBfj2ALgLWiXg4qxV5EZDzSrV0u5UVwwQtg3vIBN9bBgSR9uP1xrDTFdFw2Oeh7zfJbfJEOK+5e3q798GQBY+4x8bCwv5nOS0iIoO4BjIUzIE9gnPEbYteIP1ZiJM+uZ2NW85Viu+4U3Ao4oIhIab/jOaTr7mTirgeZm1eUIjX7hc5ZacHi0y8aq9uyXvjkvtvYdU4eMZc+kwVt2L7+omnMxet7MdUap18I3kwB/MjmPV7z4fF3ubnhKosVJmo2wciLgjeVEqI81VdfG4XIXYO9x1dvdydNG+GQiyqZvHqv8wEOAPzi2PiZrNOxy7NCt3fjB/6Nd6r1qPl2+MjBaW06rw8aw0IEmIyTHY5Eywi7dx8J84aHAP/k+eETKQtBghDpjh/ZO/uGvaMuBsGZ3phV2QgwMK47o8iqqjFDjQKW2VBihzNih87WQMC5XtdBuFK3apeXxdtoy7W2mNKUp5ad/Afn0aUTSl+oJAAAAAElFTkSuQmCC); */
+                    /* background-position: center;  */
+					/* color: #FFF; */
+					/* font-size: 1.5em; */
+				}
+
+				#header.hide .button2.hidden span, #header.preview .button2.hidden span {
+					/* display: none; */
+				}
+
+		@media screen and (max-width: 736px) {
+
+			#header .inner {
+				width: 25em;
+				height: 25em;
+				font-size: .75em;
+				padding: 3em;
+			}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			#header .inner {
+				width: 26em;
+				height: 26em;
+				padding: 2em;
+				font-size: .65em;
+			}
+
+				#header .inner .button2 {
+					padding-left: 2em;
+					padding-right: 2em;
+				}
+
+		}
+
     .button {
         background-color: #242424;
         /* Green */
@@ -403,11 +714,11 @@
     }
 
     .button1:hover {
-        background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAFHElEQVRoge2ZXWyTVRjHf+ecty2UsbgOE2GDG8GRcEF0E5AQ46Y3kpgIZoEwTSQxRNwWvfAjYpBilERITESYgmIwgQjOEPnSeMGCXzdkuxKiLBIQkJnIBhndWNe95/FiH8yu7fv27dgu3D9p+rRpzvn9z/O856swpSn9v6XGpZVaMfNjLHGEagWVjrDQWGYbocgRMJaEEa5p4bwjtCmhZcUCzsTjyhbadUEG5rwkc6cp6rXlWWMpMwJmEBgj4IyKTXrsctUoDpgUu48cUVcn1MB9jXJv2PKugeeNJZwJMif8f+N+A5+rfjZ/eVxdv+sGyhtknRY+MkIsG1ge8COxY+l0hIZ9x9Shu2KgcoOEOiI0OZYXcsEEhB/9/R77N41721Rq3AzM2SBRFeFrY3nyLsMPx9/2OdTuPa56vdi0n5GfYHiMsLI4ydF4rYQLNtARoWmC4Yc/P9F/gw+9+HKWUHmj1GnLgUmAH4kdy9otp9XhvA2U1Uupgd+NMGuy4Ifeu6YrKl49nXmKzVpCBrblDy9oN4V2B8YHfrCfmFi25pWBskYpD1su5LtISSrBssVJBpLCubNhwqoIBx0c/k7c78CCl39Wl9NZnUwGIpYGHWCFdVO32fz6LEIhRUtLD/s/7WLg9kwcIoXAYyxhLWwE3vQuobho7VIXpOa1CKHQYFJramaws6mEBx9KYFPdaGuDwg/Hz31VK8bTwPwOlhqhPOgDO1r3lBhee7uU+jccIuFOcJPBH3JLWfdFKj0NOEJ1IbNNJi19NMq2z2IsejiBm+pGuzZf+OG4xtOAUVQFhU/PwGgVlxga3ill/SaH0LShbOQHj4OPDGjLA0HhdQ4Dw6qsjrJpf4yKZQkGhp4NP/DGgrZUeGdg8CQVeJHyo5kxw/r3SlkTdzDRLrApv33M9jZw5xiYN3yuEsqkxTVRGr4owYl2o6346W9mehtj1oFC4G2eBkYGzWd/Tob2M5VQIgh8rlkom86d6mVf3Q10ohhHlCe8EW6ltzEmA0boMEIsCLzrEzzR5XLi/Zv8+UOIqI4Nbje84TFCh7cBS7sRFuUL73cWOnuql+929KC7i5mhI77KZtQsdN7bALQaYVW+8MOvXKN+bPtNLv0YIqpKRzZ5fuGNgFa0ehpQQktQ+GzPwK+nejm5owedKGaGyrKx84A3AsrS4mlgxQLOtP7GFSPMzRc+PQO3ulyObr/JpZ9CTNelOKIDwxvhcnU7bem8Y2aheFxZAweDwBsUA6lBF23f97Bz3Q2u/FJEVBfj2ALgLWiXg4qxV5EZDzSrV0u5UVwwQtg3vIBN9bBgSR9uP1xrDTFdFw2Oeh7zfJbfJEOK+5e3q798GQBY+4x8bCwv5nOS0iIoO4BjIUzIE9gnPEbYteIP1ZiJM+uZ2NW85Viu+4U3Ao4oIhIab/jOaTr7mTirgeZm1eUIjX7hc5ZacHi0y8aq9uyXvjkvtvYdU4eMZc+kwVt2L7+omnMxet7MdUap18I3kwB/MjmPV7z4fF3ubnhKosVJmo2wciLgjeVEqI81VdfG4XIXYO9x1dvdydNG+GQiyqZvHqv8wEOAPzi2PiZrNOxy7NCt3fjB/6Nd6r1qPl2+MjBaW06rw8aw0IEmIyTHY5Eywi7dx8J84aHAP/k+eETKQtBghDpjh/ZO/uGvaMuBsGZ3phV2QgwMK47o8iqqjFDjQKW2VBihzNih87WQMC5XtdBuFK3apeXxdtoy7W2mNKUp5ad/Afn0aUTSl+oJAAAAAElFTkSuQmCC);
+        background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAFPElEQVRoge2ZXWxTZRjH/+9pu2nZ1GwgdF8GcGxAvJH5kZgYIRqDIRFChoaiMZGwkEEkRqOJMTkkxAvlQgJdYEauWIShhi+5XAyakCxF5UOUr4ysXXexDZWVjp5znufxoh2Wrd356FYu3P+mb5425/39n/fp+3WAWc3q/y01HQ/p7hbfkxh4lggribCCLWlmUSEmVDABzJJkQoItXGFW51jQ0zta26vrih+ogYvHBupNQjtbsokZtUxABjj7mYFHvjixxIXUIbJUZL1eFy+pgV9OD87T0rSLSb3DJGX3A9vD34tnYoZYOGgG/J9u1GuGZ9zAhWOJjSyylwlVTIIi4XPaMiKktoV3NxyeEQPRA9FAeSjUQYTNmY6nFf5emwgHjLGh7W2dLea0GYieTATLmL9lVqtnEj4nfpqsQGtbZ03Kjk1zkvkSw4MJrzEbx7tbfy8r2kB5KNRRYngwCYTx8lCwYo8d35QldOF4Iswsh0oNf19c5M0dXQuPuDbwx/fx6rRSfzJh7gODz7RvsZZu+uCbprxTbMESSit85haeLIFhWDAtc7rgwSRVkg7sdDUC57+L15GoG24XqVTqDh57QoNlMIZvMsp9QQhrxcDfW+zA3PjxycX9jkaAoLZ5WWHvGmN4aeNivLq5Cc+snYcx+gdp0ygWHkwos0jb6qiERBeNLQl7qXkigc+feeSSlrlY/9FSVC9ipFJJELFX+EzbwlvdreKzNfDrsoHnmFHn9Q+bq2BlAKu3NOLFt+fjrtxG2jC8wWdmo9rLI30rbA0QYaXn2abA5rixpRqbdi7F/KWC1FgSZJE7+GwfJssqWwMWqZZipspCCj4SwOvbG/HKlvkwfLdhmIYreCZASNmPgBCWFDPP26n5+Wq8+/ky1DwFpNJJkMWO4LOxJlsDzBLyCi9TjECu5jwaQOuHjVjz3gJQYBSmZTmBBxNC9gb+Owa6gh+fKt1o+QvVaNvTDJSnQLmjULjvyonP8Ocx4BleHJTQJMn9I2jXt72BzAG8yi38eNyNLp4ZwYm9cdCdOVCs7BNHGLU3QBhkQpXXjZkTJf8ycXxvH66dNeBXlVCsOYGHMAadGLjKjOVe4Fns4S/9NIIT+2KgZBABrcJZyWbjRLjiwICKMss61/BTLGQAkPzbxIlIH66fNeDHI9CguYLPtqP2BgQ9nuAp813erP88glMd2ayrCiezTd64EvTYGugdre19ujwWY0K9l/38xKyfjPThRm8266J5hmdG/4Jri85N5J20Dui6YibV5QVeSIHMjIvzPw6ho/0ybkaBgKrIORd4gocQunRMvoqcNAIAQJaKiMj7TChzcxjxq4dw9IvrMNOC2AUTflWZyXru7z3AM0laMyiSjzXvgWa9XhcXCwfdnqR82sOI/+bD4CUfAlo268XDQwhf7Y83DTg2AAASUJ8wybBT+PESUuKDgn/y7z3CM2FEmVTwTFzQwAa9/paQ2u5q3+58V+kUHiKytTOR/0ZiSgMAEN7dcJgIBx4UPLOKfN3feHQqRtubuTmJhnZmOVZyeMIPDbH+HXZ8tgY2HFVEVlmYSU6XDl5O+Tm4QcdKq2gDANDWWZNS2vBaIbW/FGXTEI+v60zY30wDHl5wfBnue4MttY9J5k4z/JCItNvV/EQ5GoFc7ehaeOSu4W8Wlg4mpKcBPi2EfULlzW7hgSJf8u1aE6sFW9uYEGaWepfwMSEcUoYVKbRIzbiBcem6aDjT12KyrBJSK5jQxIRaZqnIAieZESfCVSZElaDn8auLzuXb28xqVrNyp38BxoSD65Jpmm0AAAAASUVORK5CYII=);
         background-position: center; 
         color: #242424;
     }
-    .button1:active {
+    .button1:before {
         background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAE3klEQVRoge2Zb2hVdRjHv885d1N0umGWzW0RaW0o2YuNfBmTXlQo1ItZNMOCwEyF3kVEcIMQeqER+ScXJIGSzgql8kXB6k1Q464UUdxIbG66IBV19zq3c57v04vdrXV3737n3M27oD1vHjgHfufzPc9znuf5/Q4wZ3P2/zaZiUWsvd3vxcrHA7VmIxuVXoMpqkmpoAKkpKm4oirdMOnSAB1rB9d0SlI4qwIuH++sG1HZRpVNRtRkYVHQE1Ad9VT0k3KIYnub33ysv6QCBk7+em84rO+p4mVSyrNAceAn3huh4tMEyt9pTtZfvesC+o7/8qKZ9xEVS8bApgGfvSYgcU3pbV+/c9WRuyIgdSBVVl3Nfary6r8fPiPw497UOzBwK7NjS1tTMGMCrnydWkDyC1Kevpvw/3jvZPlQumVDW9NtF5sX5c2XFl5A2jOZxMIT7S1ny6ctoLqa+0oLDygBUp4cqfI/dPFNmUJ9JzpbjXKo5PATrhnxwuaD9UdjC+j/6pd7KN55KpbOFnzWXw8Cq9/yef4SWzCFTLyd/wF4kFgi8N6NFYH+L3+uDc2/ELVJBaFiMJNBoAQVEPiYn6iAIAESCAIiPZSGhgYSgPmYl6iAWMIFP+ZHhN7DW46tuJTLmsgnIIC/3WJ02MFMBo2bHsWSB6oAAFf/uIGfPjmLhfMqQRWkh9J44vXVuO+hSgDAn7/fwHe7urGgrDIKPEgp15BbAbzlTCFLmmcqrXHSZiTUcXgAWPpgFYJQxwHCkOPwAHD/yioEgUaFBxUAvJfaW8x3Cuhd9dtaErVxc37Si8jJ/VxTiw5PCjRETf/QxUangECtOS68cfKnlAvkEjgV/KgHwtDW5a4z6Rsws6bY1SbPG84Fcgl0wetoT3BHwIhHiimVsSMQEz57r94ZAQ296kK1fKo6PyMRmBoeVKl2RoBERVx41zeg5hbohgdILHILKLLDFgLUCAKjwY+VU2cEJF3MeJAPUCMIjANPymCUCAwUM9vk2sQ6b/kEWmx4UDEQJQI9xQxmueZqZEXAQ83rdgowSqqYqXIyoCPFYsKTAgZM5a4zuYwG6OCkBzi6ZqE67xcWaHHhFYBJhzMCawfXdFLRF3eeLy4C0eFJXJp/qq7LKUCSQlIOx4IXHwM9N8fXuHz+JpCd9akCgY++c7fG7/eeuQWYHwceShxOYvJRZN4NzQ/vn67liHeBRHmUnVQQEJnhNMJAQQKCMszzKwCOigiVuH0njVA1mwoJlHmLAPMjwZMyHApWfHC67nIkAQDwffLMflJec8HHGYmLSBuQAlXs2X22bkc+zoJ7YoX3Nomrsw1PxTUJ/IJ74oICnkquvq70dswyPMxk666e5QUPfac82Fq/c9URU+/ArMETe3efqz02FaPzZO5Ob8M2qne81PCkfLt4We0bLj6ngI3HRMuH0q1KOVlC+G8yC7yNyR8lnLYAANjQ1nT7ZpB+loqPS5E2lctqnmvrWu48mQaK+MHx2Svdz6vKHhJLZxLeFH/RZJsr53MtUgQm2uaD9Ud9aANV9pEYngH4YVXsUaAhLjwwzZ98+1u6a8LQ227mtVJRFwdeDX1UHFKRvfk6bEkEjFkyad7i1MWmMLR1RmkkpZ6KGk74zapq/TS/hwFTMOmYf6quK99sM2dzNmfx7G9vQsF1jBzApwAAAABJRU5ErkJggg==);
         background-position: center; 
         
@@ -418,80 +729,34 @@
     }
     </style>
 
+    <script>
+        function hiding(ctrl){
+            if(ctrl==1)
+                document.querySelector("#header").classList.add('hide');
+            else                          
+                document.querySelector("#header").classList.remove('hide');
+                                    
+        }
+    </script>
+
 </head>
 
 <body class="web-view">
-     <!--nav-->
-     <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top " style="background-color: black; padding-top:0px" >
-            <h3><a href="#" style="color:blanchedalmond;"><img src="../image/Spotiflix1.png" width="140"></a></h3>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav mr-auto">
-                <li >
-                  <!-- <a class="nav-link" href="../html/kkbox.html" style="color:gainsboro"><strong>&emsp;音樂</strong> <span class="sr-only">(current)</span></a> -->
-                  <?php
-                    $newaddress = $_GET["add"];
-                    echo"<a class=nav-link href=http://127.0.0.1/php_example/kkbox1.php?add=$newaddress style=color:gainsboro>";
-                    echo"<strong>";
-                    echo"&emsp; 音樂";
-                    echo"</strong>";
-                    echo"<span class=sr-only>";
-                    echo"(current)";
-                    echo"</span>";
-                    echo"</a>";
-                  ?>
-                </li>
-                <li >
-                <?php
-                    $newaddress = $_GET["add"];
-                    echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress style=color:gainsboro>";
-                    echo"<strong>";
-                    echo"&emsp; 影片";
-                    echo"</strong>";
-                    echo"<span class=sr-only>";
-                    echo"(current)";
-                    echo"</span>";
-                    echo"</a>";
-                  ?>
-                   <!-- <a class="nav-link" href="http://127.0.0.1/php_example/movie.php?add=$newaddress" style="color:gainsboro"><strong>&emsp;影片</strong> <span class="sr-only">(current)</span></a> -->
-                </li>
-              </ul>
-              <!--navbar 片單按鈕-->
-              <form class="form-inline mt-2 mt-md-0">
-                  <?php
-                    $newaddress = $_GET["add"];
-                    echo"<a href=http://127.0.0.1/php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
-                    echo"<strong>";
-                    echo"我的片單";
-                    echo"</strong>";
-                    echo"</a>";
-                  ?>
-                <!-- <a href="http://127.0.0.1/php_example/myList.php" role="button" style="color:gainsboro">
-                  <strong>我的片單</strong>
-                </a> -->
-              </form>
-              &emsp;
-              <form class="form-inline mt-2 mt-md-0">
-              <?php
-                // $newaddress = $_GET["add"];
-                echo"<a href=http://127.0.0.1/php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
-                echo"<strong>";
-                echo"個人資料";
-                echo"</strong>";
-                echo"</a>";
-              ?>
-                 
-              </form>
-              &emsp;
-              <form class="form-inline mt-2 mt-md-0">
-                <a href="http://127.0.0.1/php_example/assert/login.php" role="button" style="color:gainsboro">
-                  <strong>登出</strong></a>
-              </form>
-            </div>
-          </nav>
+    
+        
+    <header id="header">
+        
+		<div class="inner" style="background-color: rgb(56, 58, 63);">
+			<div class="content" >
+                <h1 style="color: rgb(247, 232, 206);" id="songtitle">聽音樂，用spotiflix~</h1>
+                <h1 id="singer" style="font-size:30px;"></h1>
+				<h2><audio controls id="mymp3" ></audio></h2>
+				<a href="#" class="button2 big alt" onclick="hiding(1)"><span>Explore</span></a>
+			</div>
+			<a href="#" class="button2 hidden" onclick="hiding(2)"><span>play</span></a>
+		</div>
+	    
+    </header>
 
 
 
@@ -683,61 +948,13 @@
                         <div class="daily-chart">
                             <div class="u-layout-2-col">
                                 <ul class="charts-list charts-list--section">
-                                    <li class="charts-list-row">
-                                        <span class="charts-list-rank">1</span>
-                                        <a>
-                                            <div class="flipper">
-                                                <div class="flipper-item layer1">
-                                                    <img class="charts-list-cover" src="" alt="">
-                                                    <span class="charts-list-desc">
-                                                        <span class="charts-list-song"></span>
-                                                        <span class="charts-list-artist"></span>
-                                                    </span>
-                                                    <button class="button button1 btplay" onclick="changeSongMethod(1)">
-                                                        <audio controls id="mymp3" hidden="true">
-                                                            <source src="../music/spotiflix/1.mp3" type="audio/mpeg"
-                                                                hidden="true">
-                                                        </audio>
-                                                    </button>
-                                                    <span class="charts-list-unauth">未授權</span>
-                                                    <div class="tooltip tooltip-top">
-                                                        <div class="arrow"></div>
-                                                        <div class="tooltip-inner">
-                                                            <h6 class="tooltip-title"></h6>
-                                                            <ol>
-                                                                <li class="tooltip-line1"></li>
-                                                                <li class="tooltip-line2"></li>
-                                                            </ol>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="flipper-item layer2">
-                                                    <img class="charts-list-cover" src="" alt="">
-                                                    <span class="charts-list-desc">
-                                                        <span class="charts-list-song"></span>
-                                                        <span class="charts-list-artist"></span>
-                                                    </span>
-                                                    <span class="charts-list-unauth">未授權</span>
-                                                    <div class="tooltip tooltip-top">
-                                                        <div class="arrow"></div>
-                                                        <div class="tooltip-inner">
-                                                            <h6 class="tooltip-title"></h6>
-                                                            <ol>
-                                                                <li class="tooltip-line1"></li>
-                                                                <li class="tooltip-line2"></li>
-                                                            </ol>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
+                                    
                                     <!--song 1~10-->
                                     <?php
-                                        $sql = "SELECT Son_Name, sin_Name, Son_Pic, Son_Address FROM songs,singer  WHERE sing_id = sin_id LIMIT 1,9" ;
+                                        $sql = "SELECT Son_Name, sin_Name, Son_Pic, Son_Address FROM songs,singer  WHERE sing_id = sin_id LIMIT 0,10  " ;
                                         $result = $conn->query($sql);
-                                        $i = 2;
-                                        $sql1 = "SELECT Son_Name, sin_Name, Son_Pic, Son_Address FROM songs,singer  WHERE sing_id = sin_id LIMIT 11,19  " ;
+                                        $i = 1;
+                                        $sql1 = "SELECT Son_Name, sin_Name, Son_Pic, Son_Address FROM songs,singer  WHERE sing_id = sin_id LIMIT 10,19  " ;
                                         $result1 = $conn->query($sql1);
                                        
                                         if ($result->num_rows > 0) {
@@ -753,10 +970,10 @@
                                             <a>
                                                 <div class="flipper">
                                                     <div class="flipper-item layer1">
-                                                        <img class="charts-list-cover" src="'.$row1["Son_Pic"].'" alt="">
+                                                        <img class="charts-list-cover" src="'.$row["Son_Pic"].'" alt="">
                                                         <span class="charts-list-desc">
-                                                        <span class="charts-list-song">'.$row1["Son_Name"].'</span>
-                                                        <span class="charts-list-artist">'.$row1["sin_Name"].'</span>
+                                                        <span class="charts-list-song">'.$row["Son_Name"].'</span>
+                                                        <span class="charts-list-artist">'.$row["sin_Name"].'</span>
                                                         </span>
                                                         <button class="button button1 btplay" onclick="changeSongMethod('.$i++.')">
                                                         </button>
@@ -817,18 +1034,10 @@
                 
                     <a class="section-slider-prev" href="#!" onclick="move(1)"></a>
                     <a class="section-slider-next" href="#!"onclick="move(1)"></a>
-                
-                    
                 </div>
-                <?php
-                    $newaddress = $_GET["add"];
-                    echo"<a href=http://127.0.0.1/php_example/Billboard.php?add=$newaddress role=button style=color:gainsboro>";
-                    echo"查看完整榜單";
-                    echo "</a>";
-                ?>
-                
-                    
-                
+                <a class="btn-action" href="/charts/daily/newrelease?terr=tw&lang=tc&category=297">
+                    查看完整榜單
+                </a>
             </div>
             <div class="slider-nav"></div>
         </div>
@@ -949,63 +1158,21 @@
                         <div class="weekly-chart">
                             <div class="u-layout-2-col">
                                 <ul class="charts-list charts-list--section">
-                                    <li class="charts-list-row">
-                                        <span class="charts-list-rank">1</span>
-                                        <a href="#">
-                                            <div class="flipper">
-                                                <div class="flipper-item layer1">
-                                                    <img class="charts-list-cover" src="" alt="">
-                                                    <span class="charts-list-desc">
-                                                        <span class="charts-list-song"></span>
-                                                        <span class="charts-list-artist"></span>
-                                                    </span>
-                                                    <span class="charts-list-unauth">未授權</span>
-                                                    <div class="tooltip tooltip-top">
-                                                        <div class="arrow"></div>
-                                                        <div class="tooltip-inner">
-                                                            <h6 class="tooltip-title"></h6>
-                                                            <ol>
-                                                                <li class="tooltip-line1"></li>
-                                                                <li class="tooltip-line2"></li>
-                                                            </ol>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="flipper-item layer2">
-                                                    <img class="charts-list-cover" src="" alt="">
-                                                    <span class="charts-list-desc">
-                                                        <span class="charts-list-song"></span>
-                                                        <span class="charts-list-artist"></span>
-                                                    </span>
-                                                    <span class="charts-list-unauth">未授權</span>
-                                                    <div class="tooltip tooltip-top">
-                                                        <div class="arrow"></div>
-                                                        <div class="tooltip-inner">
-                                                            <h6 class="tooltip-title"></h6>
-                                                            <ol>
-                                                                <li class="tooltip-line1"></li>
-                                                                <li class="tooltip-line2"></li>
-                                                            </ol>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
+                                    
                                     <!--song 1~10 week-->
                                     <?php
-                                        $sql = "SELECT Son_Name, sin_Name, Son_Pic FROM songs,singer  WHERE sing_id = sin_id LIMIT 11,13" ;
+                                        $sql = "SELECT Son_Name, sin_Name, Son_Pic FROM songs,singer  WHERE sing_id = sin_id LIMIT 11,10" ;
                                         $result = $conn->query($sql);
-                                        $i = 11;
+                                        $i = 1;
                                         if ($result->num_rows > 0) {
                                         // output data of each row
                                         while($row = $result->fetch_assoc()) {
-                                            if($i == 15){
+                                            if($i == 6){
                                                 echo '<div class="u-layout-2-col">
                                                         <ul class="charts-list charts-list--section">';
                                             }
                                             echo '<li class="charts-list-row">
-                                            <span class="charts-list-rank">'.($i-9).'</span>
+                                            <span class="charts-list-rank">'.$i.'</span>
                                             <a>
                                                 <div class="flipper">
                                                     <div class="flipper-item layer1">
@@ -1014,7 +1181,7 @@
                                                         <span class="charts-list-song">'.$row["Son_Name"].'</span>
                                                         <span class="charts-list-artist">'.$row["sin_Name"].'</span>
                                                         </span>
-                                                        <button class="button button1 btplay" onclick="changeSongMethod('.(($i++)+1).')">
+                                                        <button class="button button1 btplay" onclick="changeSongMethod('.(($i++)+11).')">
                                                         </button>
                                                         <span class="charts-list-unauth">未授權</span>
                                                         <div class="tooltip tooltip-top">
@@ -1049,13 +1216,9 @@
                                                         </div>
                                                     </a>
                                                 </li>';
-                                            if($i == 15){
+                                            if($i == 6){
                                                 echo '</ul>
                                                 </div> ';
-                                                       
-                                            }
-                                            if($i == 21){
-                                            break;
                                                        
                                             }
                             
@@ -1066,22 +1229,47 @@
                                     //song play control setting
                                     var play = 0;
                                     var song = -1;
-                                    var songslist = [<?php
-                                                        $sql = "SELECT Son_Address FROM songs LIMIT 1,19";
-                                                        $result = $conn -> query($sql);
+                                    <?php
+                                        $sql = "SELECT Son_Address, Son_Name, sin_Name, Son_Pic FROM songs, singer WHERE sin_id=sing_id LIMIT 0,19";
+                                        $result = $conn -> query($sql);
+                                        $resultname = $conn -> query($sql);
+                                        $singername = $conn -> query($sql);
+                                       
+                                        echo 'var songslist = [';
+                                        if ($result -> num_rows > 0) {
+                                            // output data of each row
+                                            while ($row = $result -> fetch_assoc()) {
+                                                echo '"'.$row["Son_Address"].'",';
+                                            }
+                                        }
+                                        echo'""];';
+                                        echo 'var songsname = [';
+                                        if ($resultname -> num_rows > 0) {
+                                            // output data of each row
+                                            while ($row = $resultname -> fetch_assoc()) {
+                                                echo '"'.$row["Son_Name"].'",';
+                                            }
+                                        }
+                                        echo'""];';
+                                        echo 'var singername = [';
+                                        if ($singername -> num_rows > 0) {
+                                            // output data of each row
+                                            while ($row = $singername -> fetch_assoc()) {
+                                                echo '"'.$row["sin_Name"].'",';
+                                            }
+                                        }
+                                        echo'""];';
+                                        
 
-                                                        if ($result -> num_rows > 0) {
-                                                            // output data of each row
-                                                            while ($row = $result -> fetch_assoc()) {
-                                                                echo '"'.$row["Son_Address"].'",';
-                                                            }
-                                                        }
-                                                    ?> ""];
+                                    ?> 
 
                                     function changeSongMethod(nowsong) {
                                         var ebtplay = document.querySelector(".btplay");
                                         var emymp3 = document.querySelector("#mymp3");
-                                        emymp3.src = songslist[nowsong - 2];
+                                        emymp3.src = songslist[nowsong-1];
+                                        var name = songsname[nowsong-1];
+                                        var singer = singername[nowsong-1];
+                                        
                                         
 
                                         if (play && nowsong == song) {
@@ -1089,10 +1277,14 @@
                                             play = 0;
                                         } else {
                                             emymp3.play();
+                                            document.getElementById("songtitle").innerHTML = name;
+                                            document.getElementById("singer").innerHTML = singer;
+                                            
                                             play = 1;
                                         }
                                         song = nowsong;
                                         return;
+                                        
                                     }
                                     //container daily-chart weekly-chart left-right move
                                     var day = 0;
@@ -1165,12 +1357,9 @@
                     <a class="section-slider-prev" href="#!" onclick="move(2)"></a>
                     <a class="section-slider-next" href="#!" onclick="move(2)"></a>
                 </div>
-                <?php
-                    $newaddress = $_GET["add"];
-                    echo"<a href=http://127.0.0.1/php_example/Billboard.php?add=$newaddress role=button style=color:gainsboro>";
-                    echo"查看完整榜單";
-                    echo "</a>";
-                ?>
+                <a class="btn-action" href="/charts/weekly/newrelease?terr=tw&lang=tc&category=297">
+                    查看完整榜單
+                </a>
             </div>
         </div>
     </section>
@@ -1221,39 +1410,9 @@
 
 
     <footer>
-        <div class="inner">
-            <ul class="footer-nav">
-                <li>
-                    <a href="https://www.kkbox.com/tw/tc/" target="_blank">KKBOX</a>
-                </li>
-                <li>
-                    <a href="https://www.kkbox.com/tw/tc/listen-with" target="_blank">一起聽</a>
-                </li>
-                <li>
-                    <a href="https://www.kkbox.com/live/?terr=tw" target="_blank">KKBOX LIVE</a>
-                </li>
-            </ul>
-            <div class="copyright">Copyright &copy; 2020 KKBOX All Rights Reserved.</div>
-        </div>
+        
     </footer>
-    <div class="wpb-popup mfp-hide" id="open-kkbox-setting">
-        <div class="wpb-container">
-            <h2 class="wpb-header">聆聽歌曲前需要先安裝 KKBOX 應用程式喔！</h2>
-            <div class="wpb-content">
-                <button id="playwith_kkbox" class="wpb-btn-primary">已安裝，立即開啟 KKBOX</button>
-                <button id="playwith_wp" class="wpb-btn">免安裝，開啟網頁播放器</button>
-                <input type="checkbox" id="wpb-remember">
-                <label for="wpb-remember">
-                    <span class="checkbox-icon"><i class="fa fa-check"></i></span>
-                    <span>下次不用再問我</span>
-                </label>
-                <div class="wpb-footer">
-                    <a href="https://www.kkbox.com/get-app" target="_blank">還沒安裝？點此立即下載</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
     <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
     <script src="https://unpkg.com/lodash@4.17.4/lodash.min.js"></script>
     <script src="https://unpkg.com/axios@0.16.2/dist/axios.min.js"></script>
@@ -2898,6 +3057,10 @@
     };
     </script>
     <script src="/charts/assets/pages/home.js?id=114488d0f43ecc8797e7"></script>
+    <script src="../js/skel.min.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/main.js"></script>
+
 </body>
 
 </html>
