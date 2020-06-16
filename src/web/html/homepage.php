@@ -296,6 +296,7 @@
     </section>
 
     <section class="section2">
+<<<<<<< Updated upstream
         <!--main-->
         <div class="main block" style="background-color: black;">
             <iframe src="billboard.html" scrolling="auto" width="100%" height="100%" style="border-radius: 2%;"></iframe>
@@ -306,6 +307,22 @@
                 <button type="button" id="myBtn" class="btn btn-primary">Apple</button>
                 <button type="button" id="myBtn1" class="btn btn-primary">Samsung</button>
                 <button type="button" id="myBtn2" class="btn btn-primary">Sony</button>
+=======
+    <?php
+        $newaddress = $_GET["add"];
+        echo"<a class=nav-link href=../php_example/kkbox1.php?add=$newaddress  role=button style=color:gainsboro>";
+    ?>
+        <!--main-->
+        <div class="main block" style="background-color: blueviolet;">
+            <iframe src="../php_example/billboard.php" scrolling="auto" width="100%" height="100%" style="border-radius: 2%;"></iframe>
+        </div>
+        <!--block1-->
+        <div class="b1 block" style="background-color: brown;">
+            <div class="btn-group btn-group-sm">
+                <button type="button" id="myBtn" class="btn btn-primary">輸入1</button>
+                <button type="button" id="myBtn1" class="btn btn-primary">輸入2</button>
+                <button type="button" id="myBtn2" class="btn btn-primary">輸入3</button>
+>>>>>>> Stashed changes
               </div>
 
             <div id="myCarousel" class="carousel slide" data-ride="carousel">-->
