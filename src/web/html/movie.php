@@ -38,35 +38,60 @@
             position: relative;
             
           }
+          
 
           img {
               opacity: 1;
               display: block;
               width: 100%;
               height: auto;
-              transition: .2s ease;
+              transition: .1s ease;
               backface-visibility: hidden;
             }
 
           .middle {
-              transition: .25s ease;
+              transition: .3s ease;
               opacity: 0;
               position: absolute;
-              top: 50%;
-              left: 50%;
+              top: 40%;
+              left: 60%;
               transform: translate(-50%, -50%);
               -ms-transform: translate(-50%, -50%)
           }
 
           .col-md-2:hover img{
-            opacity: 0.65;
+            opacity: 0.5;
             width:120%;
             -webkit-filter:blur(1px);
           }
+          
 
           .col-md-2:hover .middle{
             opacity: 1;
           }
+          .limit{
+            height:150px;
+            width:150px;
+            
+          }
+          .limit a{
+            overflow: scroll;
+            overflow-x: hidden;
+            text-overflow: scroll;
+            display: -webkit-box;
+            -webkit-line-clamp: 7;
+            -webkit-box-orient: vertical;
+            font-size:12px;
+            color:black;
+          }
+          .limit a:hover{
+            text-decoration: none;
+          }
+          ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* make scrollbar transparent */
+          }
+          
         </style>
     </head>
 
@@ -84,7 +109,7 @@
                 <li >
                 <?php
                     $newaddress = $_GET["add"];
-                    echo"<a class=nav-link href=../php_example/kkbox1.php?add=$newaddress style=color:gainsboro>";
+                    echo"<a class=nav-link href=http://127.0.0.1/php_example/kkbox1.php?add=$newaddress style=color:gainsboro>";
                     echo"<strong>";
                     echo"&emsp; 音樂";
                     echo"</strong>";
@@ -98,7 +123,7 @@
                 <li >
                 <?php
                     $newaddress = $_GET["add"];
-                    echo"<a class=nav-link href=../php_example/movie.php?add=$newaddress style=color:gainsboro>";
+                    echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress style=color:gainsboro>";
                     echo"<strong>";
                     echo"&emsp; 影片";
                     echo"</strong>";
@@ -114,7 +139,7 @@
               <form class="form-inline mt-2 mt-md-0">
                   <?php
                     $newaddress = $_GET["add"];
-                    echo"<a href=../php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
+                    echo"<a href=http://127.0.0.1/php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
                     echo"<strong>";
                     echo"我的片單";
                     echo"</strong>";
@@ -128,7 +153,7 @@
               <form class="form-inline mt-2 mt-md-0">
               <?php
                 // $newaddress = $_GET["add"];
-                echo"<a href=../php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
+                echo"<a href=http://127.0.0.1/php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
                 echo"<strong>";
                 echo"個人資料";
                 echo"</strong>";
@@ -138,7 +163,7 @@
               </form>
               &emsp;
               <form class="form-inline mt-2 mt-md-0">
-                <a href="../php_example/assert/login.php" role="button" style="color:gainsboro">
+                <a href="http://127.0.0.1/php_example/assert/login.php" role="button" style="color:gainsboro">
                   <strong>登出</strong></a>
               </form>
             </div>
@@ -154,27 +179,7 @@
             </h3>
           </div>
           <div class="row">
-            <?php
-              $sql = "SELECT Mo_Photo, Mo_Name, Mo_id FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,6";
-              $result = mysqli_query($conn, $sql) or die('MySQL query error');
-              if ($result->num_rows > 0) {
-                // output data of each row
-                 while($row = $result->fetch_assoc()) {
-                   echo '<div class="col-md-2">
-                           <a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
-                           <div class="middle">
-                             
-                             <div><img src="https://img.icons8.com/fluent/48/000000/play.png"  /></div>
-                             </div>
-                           <div>
-                             <p align="center"><a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
-                             </div>
-                           </div>';
-                   
-                 }
-               }
-            ?>
-            <!-- <div class="col-md-2">
+            <div class="col-md-2">
               <?php
                 $sql = "SELECT Mo_Photo FROM movie ORDER BY movie.Mo_Year DESC LIMIT 0,1";
                 $result = mysqli_query($conn, $sql) or die('MySQL query error');
@@ -184,7 +189,7 @@
                 $id = mysqli_fetch_array($result);
                 $trans = $id['Mo_id'];
                 // $newaddress = $_GET["add"];
-                echo "<a href=../php_example/playMovie.php?id=$trans&add=$newaddress>";
+                echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
                 echo "<img src=$image[0] style=width:115%>";
                 "</a>";
 
@@ -353,7 +358,7 @@
                    "</p>";
                 ?>
               </div>            
-            </div> -->
+            </div>
           </div>
         </div>
         <div class="container" >
@@ -363,27 +368,7 @@
             </h3>
           </div>
           <div class="row">
-          <?php
-              $sql = "SELECT Mo_Photo, Mo_Name, Mo_id FROM movie ORDER BY movie.Mo_id DESC LIMIT 0,6";
-              $result = mysqli_query($conn, $sql) or die('MySQL query error');
-              if ($result->num_rows > 0) {
-                // output data of each row
-                 while($row = $result->fetch_assoc()) {
-                   echo '<div class="col-md-2">
-                           <a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
-                           <div class="middle">
-                             
-                             <div><img src="https://img.icons8.com/fluent/48/000000/play.png"  /></div>
-                             </div>
-                           <div>
-                             <p align="center"><a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
-                             </div>
-                           </div>';
-                   
-                 }
-               }
-            ?>
-            <!-- <div class="col-md-2">
+            <div class="col-md-2">
               
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Name = '天氣之子'";
@@ -554,8 +539,8 @@
                 ?>
 
               </div>
-            </div> -->
-          </div> 
+            </div>
+          </div>
         </div>
         <div class="container" >
           <div class="btitle">
@@ -565,169 +550,27 @@
           </div>
           <div class="row">
           <?php
-              $sql = "SELECT Mo_Photo, Mo_Name, Mo_id FROM movie WHERE Mo_Tag = 'Horror' LIMIT 0,6";
-              $result = mysqli_query($conn, $sql) or die('MySQL query error');
-              if ($result->num_rows > 0) {
-                // output data of each row
-                 while($row = $result->fetch_assoc()) {
-                   echo '<div class="col-md-2">
-                           <a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
-                           <div class="middle">
-                             
-                             <div><img src="https://img.icons8.com/fluent/48/000000/play.png"  /></div>
-                             </div>
-                           <div>
-                             <p align="center"><a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
-                             </div>
-                           </div>';
-                   
-                 }
-               }
+                  $sql = "SELECT Mo_Photo, Mo_Name, Mo_id,Mo_Info FROM movie WHERE Mo_Tag = 'horror'";
+                  $result = $conn->query($sql);
+
+                 if ($result->num_rows > 0) {
+                   // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                      echo '<div class="col-md-2">
+                              <a href=http://127.0.0.1/php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
+                              <div class="middle">
+                                <div style="width:160%;"><h4 style="color:white;"><strong>'.$row["Mo_Name"].'</strong></h4></div>
+                                <div class="limit">
+                                <a href="#!"  style="color:yellow;"><strong>'.$row["Mo_Info"].'</strong></a></div>
+                                </div>
+                              <div>
+                                <p align="center"><a href=http://127.0.0.1/php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
+                                </div>
+                              </div>';
+                      
+                    }
+                  }
             ?>
-            <!-- <div class="col-md-2">
-              <?php
-                  $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Horror'LIMIT 0,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $image = mysqli_fetch_row($result);
-                  $temp = "SELECT Mo_id FROM movie WHERE Mo_Tag = 'Horror'LIMIT 0,1";
-                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                  $id = mysqli_fetch_array($result);
-                  $trans = $id['Mo_id'];
-                  // $newaddress = $_GET["add"];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
-                  echo "<img src=$image[0] style=width:115%>";
-                  "</a>";
-                ?>
-              <div>
-                <?php
-                   $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 0,1";
-                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                   $row = mysqli_fetch_row($result);
-                  //  $newaddress = $_GET["add"];
-                   echo $row[0];
-                   echo "<p align=center>";
-                   echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
-                   "</a>";
-                   "</p>";
-                ?>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <?php
-                  $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Horror'LIMIT 1,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $image = mysqli_fetch_row($result);
-                  $temp = "SELECT Mo_id FROM movie WHERE Mo_Tag = 'Horror'LIMIT 1,1";
-                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                  $id = mysqli_fetch_array($result);
-                  $trans = $id['Mo_id'];
-                  // $newaddress = $_GET["add"];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
-                  echo "<img src=$image[0] style=width:115%>";
-                  "</a>";
-                ?>
-              <div>
-                <?php
-                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror' LIMIT 1,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $row = mysqli_fetch_row($result);
-                  // $newaddress = $_GET["add"];
-                  echo $row[0];
-                  echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
-                  "</a>";
-                  "</p>";
-                ?>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <?php
-                  $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Horror'LIMIT 2,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $image = mysqli_fetch_row($result);
-                  $temp = "SELECT Mo_id FROM movie WHERE Mo_Tag = 'Horror'LIMIT 2,1";
-                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                  $id = mysqli_fetch_array($result);
-                  $trans = $id['Mo_id'];
-                  // $newaddress = $_GET["add"];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
-                  echo "<img src=$image[0] style=width:115%>";
-                  "</a>";
-                ?>
-                
-              <div>
-                <?php
-                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 2,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $row = mysqli_fetch_row($result);
-                  // $newaddress = $_GET["add"];
-                  echo $row[0];
-                  echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
-                  "</a>";
-                  "</p>";
-                ?>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <?php
-                  $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $image = mysqli_fetch_row($result);
-                  $temp = "SELECT Mo_id FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
-                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                  $id = mysqli_fetch_array($result);
-                  $trans = $id['Mo_id'];
-                  // $newaddress = $_GET["add"];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
-                  echo "<img src=$image[0] style=width:115%>";
-                  "</a>";
-                ?>
-               
-              <div>
-                <?php
-                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 3,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $row = mysqli_fetch_row($result);
-                  // $newaddress = $_GET["add"];
-                  echo $row[0];
-                  echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
-                  "</a>";
-                  "</p>";
-                ?>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <?php
-                  $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Horror'LIMIT 4,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $image = mysqli_fetch_row($result);
-                  $temp = "SELECT Mo_id FROM movie WHERE Mo_Tag = 'Horror'LIMIT 4,1";
-                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                  $id = mysqli_fetch_array($result);
-                  $trans = $id['Mo_id'];
-                  // $newaddress = $_GET["add"];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
-                  echo "<img src=$image[0] style=width:115%>";
-                  "</a>";
-                ?>
-              <div>
-                
-                <?php
-                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Horror'LIMIT 4,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $row = mysqli_fetch_row($result);
-                  // $newaddress = $_GET["add"];
-                  echo $row[0];
-                  echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
-                  "</a>";
-                  "</p>";
-                ?>
-               
-              </div>
-            </div> -->
           </div>
         </div>
         <div class="container" >
@@ -738,27 +581,28 @@
           </div>
           <div class="row">
             <?php
-                  $sql = "SELECT Mo_Photo, Mo_Name, Mo_id FROM movie WHERE Mo_Tag = 'Romance'";
+                  $sql = "SELECT Mo_Photo, Mo_Name, Mo_id,Mo_Info FROM movie WHERE Mo_Tag = 'Romance'";
                   $result = $conn->query($sql);
 
                  if ($result->num_rows > 0) {
                    // output data of each row
                     while($row = $result->fetch_assoc()) {
                       echo '<div class="col-md-2">
-                              <a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
+                              <a href=http://127.0.0.1/php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
                               <div class="middle">
-                                
-                                <div><img src="https://img.icons8.com/fluent/48/000000/play.png"  /></div>
+                                <div style="width:160%;"><h4 style="color:white;"><strong>'.$row["Mo_Name"].'</strong></h4></div>
+                                <div class="limit">
+                                <a href="#!"  style="color:yellow;"><strong>'.$row["Mo_Info"].'</strong></a></div>
                                 </div>
                               <div>
-                                <p align="center"><a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
+                                <p align="center"><a href=http://127.0.0.1/php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
                                 </div>
                               </div>';
                       
                     }
                   }
             ?>
-            <!-- <div class="col-md-2">
+            <div class="col-md-2">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Romance'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
@@ -814,7 +658,7 @@
                   "</p>";
                 ?>
               </div>
-            </div> -->
+            </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
                 <img src="https://cdn.unwire.hk/wp-content/uploads/2013/10/About-Time.jpg"  style="width:115%">  
@@ -856,28 +700,7 @@
             </h3>
           </div>
           <div class="row">
-          <?php
-                  $sql = "SELECT Mo_Photo, Mo_Name, Mo_id FROM movie WHERE Mo_Tag = 'Action'";
-                  $result = $conn->query($sql);
-
-                 if ($result->num_rows > 0) {
-                   // output data of each row
-                    while($row = $result->fetch_assoc()) {
-                      echo '<div class="col-md-2">
-                              <a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
-                              <div class="middle">
-                                
-                                <div><img src="https://img.icons8.com/fluent/48/000000/play.png"  /></div>
-                                </div>
-                              <div>
-                                <p align="center"><a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
-                                </div>
-                              </div>';
-                      
-                    }
-                  }
-            ?>
-            <!-- <div class="col-md-2">
+            <div class="col-md-2">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Action'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
@@ -960,7 +783,7 @@
                   "</p>";
                 ?>
               </div>
-            </div> -->
+            </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
                 <img src="https://lh3.googleusercontent.com/proxy/SzfBF4hQiLd4LhVDTuZxhBTypmLUFBw7ckv-lKbQn_mMKpgrGUJFEOV1GA9OEX5sEAJXU_0_qLpEUd37MOQn-zYgdkcn22IyRy9VVjbiCGOZY7E9QKTHuuk"  style="width:115%">  
@@ -994,29 +817,8 @@
             </h3>
           </div>
           <div class="row">
-          <?php
-                  $sql = "SELECT Mo_Photo, Mo_Name, Mo_id FROM movie WHERE Mo_Tag = 'Suspense'";
-                  $result = $conn->query($sql);
-
-                 if ($result->num_rows > 0) {
-                   // output data of each row
-                    while($row = $result->fetch_assoc()) {
-                      echo '<div class="col-md-2">
-                              <a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
-                              <div class="middle">
-                                
-                                <div><img src="https://img.icons8.com/fluent/48/000000/play.png"  /></div>
-                                </div>
-                              <div>
-                                <p align="center"><a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
-                                </div>
-                              </div>';
-                      
-                    }
-                  }
-            ?>
-          <!--  <div class="col-md-2">
-               <?php
+            <div class="col-md-2">
+              <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Suspense'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
@@ -1070,7 +872,7 @@
                   "</p>";
                 ?>
               </div>
-            </div> -->
+            </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
                 <img src="https://images-na.ssl-images-amazon.com/images/I/51YtxsGY2sL._AC_SY445_.jpg"  style="width:115%">  
@@ -1113,166 +915,28 @@
           </div>
           <div class="row">
           <?php
-                  $sql = "SELECT Mo_Photo, Mo_Name, Mo_id FROM movie WHERE Mo_Tag = 'Animation'";
+                  $sql = "SELECT Mo_Photo, Mo_Name, Mo_id,Mo_Info FROM movie WHERE Mo_Tag = 'Animation'";
                   $result = $conn->query($sql);
 
                  if ($result->num_rows > 0) {
                    // output data of each row
                     while($row = $result->fetch_assoc()) {
                       echo '<div class="col-md-2">
-                              <a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
+                              <a href=playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
                               <div class="middle">
-                                
-                                <div><img src="https://img.icons8.com/fluent/48/000000/play.png"  /></div>
+                                <div style="width:160%;"><h4 style="color:white;"><strong>'.$row["Mo_Name"].'</strong></h4></div>
+                                <div class="limit">
+                                <a href=playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:yellow;"><strong>'.$row["Mo_Info"].'</strong></a></div>
                                 </div>
                               <div>
-                                <p align="center"><a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
+                                <p align="center"><a href=playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
                                 </div>
                               </div>';
                       
                     }
                   }
             ?>
-            <!-- <div class="col-md-2">
-              <?php
-                  $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Animation'LIMIT 0,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $image = mysqli_fetch_row($result);
-                  $temp = "SELECT Mo_id FROM movie WHERE Mo_Tag = 'Animation'LIMIT 0,1";
-                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                  $id = mysqli_fetch_array($result);
-                  $trans = $id['Mo_id'];
-                  // $newaddress = $_GET["add"];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
-                  echo "<img src=$image[0] style=width:115%>";
-                  "</a>";
-                ?>
-              <div>
-                <?php
-                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 0,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $row = mysqli_fetch_row($result);
-                  // $newaddress = $_GET["add"];
-                  echo $row[0];
-                  echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
-                  "</a>";
-                  "</p>";
-                ?>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <?php
-                  $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Animation'LIMIT 1,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $image = mysqli_fetch_row($result);
-                  $temp = "SELECT Mo_id FROM movie WHERE Mo_Tag = 'Animation'LIMIT 1,1";
-                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                  $id = mysqli_fetch_array($result);
-                  $trans = $id['Mo_id'];
-                  // $newaddress = $_GET["add"];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
-                  echo "<img src=$image[0] style=width:115%>";
-                  "</a>";
-                ?>
-              <div>
-                <?php
-                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 1,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $row = mysqli_fetch_row($result);
-                  // $newaddress = $_GET["add"];
-                  echo $row[0];
-                  echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
-                  "</a>";
-                  "</p>";
-                ?>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <?php
-                  $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Animation'LIMIT 2,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $image = mysqli_fetch_row($result);
-                  $temp = "SELECT Mo_id FROM movie WHERE Mo_Tag = 'Animation'LIMIT 2,1";
-                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                  $id = mysqli_fetch_array($result);
-                  $trans = $id['Mo_id'];
-                  // $newaddress = $_GET["add"];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
-                  echo "<img src=$image[0] style=width:115%>";
-                  "</a>";
-                ?>
-              <div>
-                <?php
-                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 2,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $row = mysqli_fetch_row($result);
-                  // $newaddress = $_GET["add"];
-                  echo $row[0];
-                  echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
-                  "</a>";
-                  "</p>";
-                ?>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <?php
-                  $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Animation'LIMIT 3,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $image = mysqli_fetch_row($result);
-                  $temp = "SELECT Mo_id FROM movie WHERE Mo_Tag = 'Animation'LIMIT 3,1";
-                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                  $id = mysqli_fetch_array($result);
-                  $trans = $id['Mo_id'];
-                  // $newaddress = $_GET["add"];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
-                  echo "<img src=$image[0] style=width:115%>";
-                  "</a>";
-                ?>
-              <div>
-                <?php
-                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 3,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $row = mysqli_fetch_row($result);
-                  // $newaddress = $_GET["add"];
-                  echo $row[0];
-                  echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
-                  "</a>";
-                  "</p>";
-                ?>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <?php
-                  $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Animation'LIMIT 4,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $image = mysqli_fetch_row($result);
-                  $temp = "SELECT Mo_id FROM movie WHERE Mo_Tag = 'Animation'LIMIT 4,1";
-                  $result = mysqli_query($conn, $temp) or die('MySQL query error');
-                  $id = mysqli_fetch_array($result);
-                  $trans = $id['Mo_id'];
-                  // $newaddress = $_GET["add"];
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress>";
-                  echo "<img src=$image[0] style=width:115%>";
-                  "</a>";
-                ?>
-              <div>
-                <?php
-                  $sql = "SELECT Mo_Name FROM movie WHERE Mo_Tag = 'Animation'LIMIT 4,1";
-                  $result = mysqli_query($conn, $sql) or die('MySQL query error');
-                  $row = mysqli_fetch_row($result);
-                  // $newaddress = $_GET["add"];
-                  echo $row[0];
-                  echo "<p align=center>";
-                  echo "<a href=http://127.0.0.1/php_example/playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
-                  "</a>";
-                  "</p>";
-                ?>
-              </div>
-            </div> -->
+            
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
                 <img src="https://upload.wikimedia.org/wikipedia/zh/thumb/b/b1/A_Silent_Voice_film_poster.jpg/220px-A_Silent_Voice_film_poster.jpg"  style="width:115%">  
@@ -1290,28 +954,7 @@
             </h3>
           </div>
           <div class="row">
-          <?php
-                  $sql = "SELECT Mo_Photo, Mo_Name, Mo_id FROM movie WHERE Mo_Tag = 'Comedy'";
-                  $result = $conn->query($sql);
-
-                 if ($result->num_rows > 0) {
-                   // output data of each row
-                    while($row = $result->fetch_assoc()) {
-                      echo '<div class="col-md-2">
-                              <a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
-                              <div class="middle">
-                                
-                                <div><img src="https://img.icons8.com/fluent/48/000000/play.png"  /></div>
-                                </div>
-                              <div>
-                                <p align="center"><a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
-                                </div>
-                              </div>';
-                      
-                    }
-                  }
-            ?>
-            <!-- <div class="col-md-2">
+            <div class="col-md-2">
               <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Tag = 'Comedy'LIMIT 0,1";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
@@ -1394,7 +1037,7 @@
                   "</p>";
                 ?>
               </div>
-            </div> -->
+            </div>
             <div class="col-md-2">
               <a href="https://gimy.co/video/50242.html">
                 <img src="https://img.arielhsu.tw/pixnet/3bebeed435d700f040a3e25cc703fe13.jpg"  style="width:115%">  
@@ -1428,27 +1071,6 @@
             </h3>
           </div>
           <div class="row">
-          <!-- <?php
-                  $sql = "SELECT Series_Photo, Eprisode_Ep, Series_id, Series_Name FROM movie WHERE Mo_Tag = 'Comedy'";
-                  $result = $conn->query($sql);
-
-                 if ($result->num_rows > 0) {
-                   // output data of each row
-                    while($row = $result->fetch_assoc()) {
-                      echo '<div class="col-md-2">
-                              <a href=http://127.0.0.1/php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
-                              <div class="middle">
-                                
-                                <div><img src="https://img.icons8.com/fluent/48/000000/play.png"  /></div>
-                                </div>
-                              <div>
-                                <p align="center"><a href=http://127.0.0.1/php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
-                                </div>
-                              </div>';
-                      
-                    }
-                  }
-            ?> -->
             <div class="col-md-2">
               <?php
                   $sql = "SELECT Series_Photo FROM series LIMIT 0,1";
@@ -1466,7 +1088,7 @@
                   $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
                   $epri = mysqli_fetch_array($result);
                   $epriso = $epri['Eprisode_Ep'];
-                  echo "<a href=../php_example/series.php?id=$trans&add=$newaddress&ep=$epriso>";
+                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans&add=$newaddress&ep=$epriso>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -1479,7 +1101,7 @@
                   echo $row[0];
                   echo "<p align=center>";
                   //影集 要改掉playMovie
-                  echo "<a href=../php_example/series.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
@@ -1502,7 +1124,7 @@
                   $epri = mysqli_fetch_array($result);
                   $epriso = $epri['Eprisode_Ep'];
                   // $newaddress = $_GET["add"];
-                  echo "<a href=../php_example/series.php?id=$trans&add=$newaddress&ep=$epriso>";
+                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans&add=$newaddress&ep=$epriso>";
                   echo "<img src=$image[0] style=width:115%>";
                   "</a>";
                 ?>
@@ -1515,7 +1137,7 @@
                   echo $row[0];
                   echo "<p align=center>";
                   //影集 要改掉playMovie
-                  echo "<a href=../php_example/series.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
+                  echo "<a href=http://127.0.0.1/php_example/series.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                   "</a>";
                   "</p>";
                 ?>
