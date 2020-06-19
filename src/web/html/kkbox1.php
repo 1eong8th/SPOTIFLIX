@@ -19,7 +19,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
-    <title>KKBOX 風雲榜 - 匯集最完整的音樂排行榜、音樂趨勢、獨家影音與速爆新歌的權威性音樂入口</title>
+    <title>SPOTIFLEX</title>
     <meta name="description"
         content="華人世界最具公信力的音樂排行榜！匯集當紅歌曲資訊與即時圖表，快來跟著排行榜聽聽看： 太陽 (When The Cloudless Day Comes) - 瘦子E.SO 、 她沒在看我 (She Ain’t Watchin’) - 瘦子E.SO 、 不在乎 - 張語噥 (Sammy) 、 玩家 (TVBS《食尚玩家熱血48小時》片尾曲) - 吳卓源 (Julia Wu), 唐仲彣 (ChrisFlow) 、 前任 - 采子 &amp; 黃偉晉" />
     <meta property="og:title" content="大家都在聽什麼？KKBOX 風雲榜告訴你！" />
@@ -759,7 +759,8 @@
     </header>
     <header>
         <div class="container">
-        <a class="logo" href="homepage.php" title="KKBOX 風雲榜榜單">
+        <?php $newaddress = $_GET["add"];?>
+        <a class="logo" href="homepage.php?add=<?php echo $newaddress;?>" title="KKBOX 風雲榜榜單">
                 <img src="../image/Spotiflix1.png" width="140" alt="KKBOX 風雲榜榜單">
             </a>
             <nav>
@@ -772,7 +773,7 @@
                     echo"&emsp; 音樂";
                     echo"</strong>";
                     echo"<span class=sr-only>";
-                    echo"(current)";
+                    // echo"(current)";
                     echo"</span>";
                     echo"</a>";
                   ?>
@@ -788,7 +789,7 @@
                     echo"&emsp; 影片";
                     echo"</strong>";
                     echo"<span class=sr-only>";
-                    echo"(current)";
+                    // echo"(current)";
                     echo"</span>";
                     echo"</a>";
                   ?>
@@ -823,15 +824,22 @@
                  
               </form>
                 </li>
+                &emsp;
                 <li class="" tabindex="5">
                     <form class="form-inline mt-2 mt-md-0">
-                        <a href="assert/login.php" role="button" style="color:gainsboro">
-                    <strong>登出</strong></a>
+                    <?php
+                        // $newaddress = $_GET["add"];
+                        echo"<a href=assert/login.php?add=$newaddress role=button style=color:gainsboro>";
+                        echo"<strong>";
+                        echo"登出";
+                        echo"</strong>";
+                        echo"</a>";
+                    ?>
                     </form>
                 </li>
                     
 
-                    <li class="header-terrnav d-none d-md-block">
+                    <!-- <li class="header-terrnav d-none d-md-block">
                         <a href="#">台灣 <i class="fa fa-angle-down"></i></a>
                         <ul class="header-subnav">
                             <li>
@@ -855,7 +863,7 @@
                                                 <option value="/charts?terr=sg&amp;lang=en">新加坡</option>
                                                 <option value="/charts?terr=jp&amp;lang=ja">日本</option>
                                             </select>
-                    </li>
+                    </li> -->
                 </ul>
             </nav>
             <a class="nav-toggle-phone icon-hamburger" href="javascript:void(0)"></a>
@@ -1019,9 +1027,9 @@
             </div>
         </div>
         <div class="u-align-center">
-            <a class="btn btn-action" href="/charts/music-trend?terr=tw&lang=tc">
+            <!-- <a class="btn btn-action" href="/charts/music-trend?terr=tw&lang=tc">
                 更多
-            </a>
+            </a> -->
         </div>
     </div>
 
@@ -1129,16 +1137,16 @@
                 </div>
             </div>
             <div class="section-panel">
-                <div class="section-date">
+                <!-- <div class="section-date">
                     更新時間：<br>
                     <time></time>
-                </div>
+                </div> -->
                 <div class="section-slider-nav">
                 
                     <a class="section-slider-prev" href="#!" onclick="move(1)"></a>
                     <a class="section-slider-next" href="#!"onclick="move(1)"></a>
                 </div>
-                <a class="btn-action" href="billboard.php">
+                <a class="btn-action" href="billboard.php?add=<?php echo"$newaddress";?>">
                     查看完整榜單
                 </a>
             </div>
@@ -1453,15 +1461,15 @@
                 </div>
             </div>
             <div class="section-panel">
-                <div class="section-date">
+                <!-- <div class="section-date">
                     更新時間：<br>
                     <time class="begin"></time> ~ <time class="end"></time>
-                </div>
+                </div> -->
                 <div class="section-slider-nav">
                     <a class="section-slider-prev" href="#!" onclick="move(2)"></a>
                     <a class="section-slider-next" href="#!" onclick="move(2)"></a>
                 </div>
-                <a class="btn-action" href="billboard.php">
+                <a class="btn-action" href="billboard.php?add=<?php echo"$newaddress"; ?>">
                     查看完整榜單
                 </a>
             </div>

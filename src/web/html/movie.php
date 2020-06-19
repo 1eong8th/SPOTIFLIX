@@ -267,9 +267,28 @@
             </h3>
           </div>
           <div class="row">
-            <div class="col-md-2">
-              
-              <?php
+            <!-- <div class="col-md-2"> -->
+            <?php
+              $sql = "SELECT Mo_Photo, Mo_Name, Mo_id FROM movie ORDER BY movie.Mo_id DESC LIMIT 0,6";
+              $result = mysqli_query($conn, $sql) or die('MySQL query error');
+              if ($result->num_rows > 0) {
+                // output data of each row
+                 while($row = $result->fetch_assoc()) {
+                   echo '<div class="col-md-2">
+                           <a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'><img src="'.$row["Mo_Photo"].'" style="width:115%">  </a>
+                           <div class="middle">
+                             
+                             <div><img src="https://img.icons8.com/fluent/48/000000/play.png"  /></div>
+                             </div>
+                           <div>
+                             <p align="center"><a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style="color:blanchedalmond">'.$row["Mo_Name"].'</a></p>
+                             </div>
+                           </div>';
+                   
+                 }
+               }
+            ?>
+              <!-- <?php
                   $sql = "SELECT Mo_Photo FROM movie WHERE Mo_Name = '天氣之子'";
                   $result = mysqli_query($conn, $sql) or die('MySQL query error');
                   $image = mysqli_fetch_row($result);
@@ -278,9 +297,9 @@
                   $id = mysqli_fetch_array($result);
                   $trans = $id['Mo_id'];
                   // $newaddress = $_GET["add"];
-                  echo "<a hrefplayMovie.php?id=$trans&add=$newaddress>";
-                  echo "<img src=$image[0] style=width:115%>";
-                  "</a>";
+                  echo "<a href playMovie.php?id=$trans&add=$newaddress>
+                  <img src=$image[0] style=width:115%>
+                  </a>";
                 ?>
               <div>
                 <?php
@@ -435,9 +454,9 @@
                    echo "<a href=playMovie.php?id=$trans&add=$newaddress style=color:blanchedalmond>";
                    "</a>";
                    "</p>";
-                ?>
+                ?> -->
 
-              </div>
+              <!-- </div> -->
             </div>
           </div>
         </div>
