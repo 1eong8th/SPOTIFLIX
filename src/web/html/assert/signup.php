@@ -158,7 +158,7 @@
 					$result = mysqli_query($conn,$sql) or die('MySQL query error');//執行sql
 					$count = mysqli_fetch_array($result);
 					$add = $count['Acc_Email'];
-					echo "<script>alert('註冊成功'); location.href ='http://127.0.0.1/php_example/homepage.php?add=$add'</script>";
+					echo "<script>alert('註冊成功'); location.href ='../homepage.php?add=$add'</script>";
 					exit;
 				}else{
 					echo "<script>alert('註冊信息有誤')</script>";

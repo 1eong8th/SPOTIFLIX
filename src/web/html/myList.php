@@ -53,7 +53,7 @@
                 <li >
                 <?php
                     $newaddress = $_GET["add"];
-                    echo"<a class=nav-link href=http://127.0.0.1/php_example/kkbox1.php?add=$newaddress style=color:gainsboro>";
+                    echo"<a class=nav-link href=../php_example/kkbox1.php?add=$newaddress style=color:gainsboro>";
                     echo"<strong>";
                     echo"&emsp; 音樂";
                     echo"</strong>";
@@ -67,7 +67,7 @@
                 <li >
                 <?php
                     $newaddress = $_GET["add"];
-                    echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress style=color:gainsboro>";
+                    echo"<a class=nav-link href=../php_example/movie.php?add=$newaddress style=color:gainsboro>";
                     echo"<strong>";
                     echo"&emsp; 影片";
                     echo"</strong>";
@@ -83,7 +83,7 @@
               <form class="form-inline mt-2 mt-md-0">
                   <?php
                     $newaddress = $_GET["add"];
-                    echo"<a href=http://127.0.0.1/php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
+                    echo"<a href=../php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
                     echo"<strong>";
                     echo"我的片單";
                     echo"</strong>";
@@ -97,7 +97,7 @@
               <form class="form-inline mt-2 mt-md-0">
               <?php
                 $newaddress = $_GET["add"];
-                echo"<a href=http://127.0.0.1/php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
+                echo"<a href=../php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
                 echo"<strong>";
                 echo"個人資料";
                 echo"</strong>";
@@ -107,7 +107,7 @@
               </form>
               &emsp;
               <form class="form-inline mt-2 mt-md-0">
-                <a href="http://127.0.0.1/php_example/assert/login.php" role="button" style="color:gainsboro">
+                <a href="../php_example/assert/login.php" role="button" style="color:gainsboro">
                   <strong>登出</strong></a>
               </form>
             </div>
@@ -135,11 +135,11 @@
                                         while($row = $result->fetch_assoc()) {
                                            $a = $row["Mo_id"];
                                            echo  '
-                                           <div class=col-md-2><a href=http://127.0.0.1/php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'>
+                                           <div class=col-md-2><a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.'>
                                                   <img src="'.$row["Mo_Photo"].'" style=width:115%>
                                            </a>'.$row["Mo_Name"].'
                                            <p align=center>
-                                            <a href=http://127.0.0.1/php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style=color:blanchedalmond>
+                                            <a href=../php_example/playMovie.php?id='.$row["Mo_id"].'&add='.$newaddress.' style=color:blanchedalmond>
                                            </a>
                                            </p></div>';
                                            
@@ -161,7 +161,7 @@
                                           where '$a' = Fa_Mine and '$newaddress' = Acc_Email";
                                           $result = mysqli_query($conn, $sql) or die('MySQL query error');
                                           if($result){ 
-                                            echo "<script>alert('刪除成功'); location.href ='http://127.0.0.1/php_example/movie.php?add=$newaddress'</script>";
+                                            echo "<script>alert('刪除成功'); location.href ='../php_example/movie.php?add=$newaddress'</script>";
                                           }
                                          }
                                         }

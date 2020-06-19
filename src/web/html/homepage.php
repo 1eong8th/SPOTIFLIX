@@ -259,7 +259,7 @@
  <div class="b2 block" style="background-color: black;">
     <?php
         $newaddress = $_GET["add"];
-        echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress  role=button style=color:gainsboro>";
+        echo"<a class=nav-link href=../php_example/movie.php?add=$newaddress  role=button style=color:gainsboro>";
         echo"<h2 style=writing-mode: vertical-rl; line-height: 200%;margin-top: 50%;>";
         echo"電影</h2>"
     ?>
@@ -302,7 +302,7 @@
     <section class="section2">
         <!--main-->
         <div class="main block" style="background-color: black;">
-            <iframe src="billboard.html" scrolling="auto" width="100%" height="100%" style="border-radius: 2%;"></iframe>
+            <iframe src="billboard.php?add=<?php echo $newaddress;?>" scrolling="auto" width="100%" height="100%" style="border-radius: 2%;"></iframe>
         </div>
         <!--block1-->
         <div class="b1 block" style="background-color: black;">

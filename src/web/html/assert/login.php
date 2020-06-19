@@ -77,7 +77,7 @@
 							Don’t have an account?
 						</span>
 
-						<a class="txt2" href="http://127.0.0.1/php_example/assert/signup.php">
+						<a class="txt2" href="../assert/signup.php">
 							Sign Up
 						</a>
 					</div>
@@ -104,7 +104,7 @@
 				
 				if($count){//0 false 1 true
 					$trans = $count['Acc_Email'];
-					header("refresh:0;url=http://127.0.0.1/php_example/homepage.php?add=$trans");
+					header("refresh:0;url=../homepage.php?add=$trans");
 					exit;
 				}else{
 					echo "<script>alert('帳號密碼錯誤')</script>";

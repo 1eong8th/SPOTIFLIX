@@ -52,7 +52,7 @@
                 <li >
                 <?php
                     $newaddress = $_GET["add"];
-                    echo"<a class=nav-link href=http://127.0.0.1/php_example/kkbox1.php?add=$newaddress style=color:gainsboro>";
+                    echo"<a class=nav-link href=../php_example/kkbox1.php?add=$newaddress style=color:gainsboro>";
                     echo"<strong>";
                     echo"&emsp; 音樂";
                     echo"</strong>";
@@ -66,7 +66,7 @@
                 <li >
                 <?php
                     $newaddress = $_GET["add"];
-                    echo"<a class=nav-link href=http://127.0.0.1/php_example/movie.php?add=$newaddress style=color:gainsboro>";
+                    echo"<a class=nav-link href=../php_example/movie.php?add=$newaddress style=color:gainsboro>";
                     echo"<strong>";
                     echo"&emsp; 影片";
                     echo"</strong>";
@@ -82,7 +82,7 @@
               <form class="form-inline mt-2 mt-md-0">
                   <?php
                     $newaddress = $_GET["add"];
-                    echo"<a href=http://127.0.0.1/php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
+                    echo"<a href=../php_example/myList.php?add=$newaddress role=button style=color:gainsboro>";
                     echo"<strong>";
                     echo"我的片單";
                     echo"</strong>";
@@ -96,7 +96,7 @@
               <form class="form-inline mt-2 mt-md-0">-->
               <?php
                 $newaddress = $_GET["add"];
-                echo"<a href=http://127.0.0.1/php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
+                echo"<a href=../php_example/personInfo.php?add=$newaddress role=button style=color:gainsboro>";
                 echo"<strong>";
                 echo"個人資料";
                 echo"</strong>";
@@ -106,7 +106,7 @@
               </form>
               &emsp;
               <form class="form-inline mt-2 mt-md-0">
-                <a href="http://127.0.0.1/php_example/assert/login.php" role="button" style="color:gainsboro">
+                <a href="../php_example/assert/login.php" role="button" style="color:gainsboro">
                   <strong>登出</strong></a>
               </form>
             </div>
@@ -259,7 +259,7 @@
                     $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
                     $epri = mysqli_fetch_array($result);
                     $epriso = $epri['Eprisode_Ep'];
-                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo "<a href=../php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
                     echo"第01集";
                     echo"</a>";
                   //下面沒弄好
@@ -273,7 +273,7 @@
                     $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
                     $epri = mysqli_fetch_array($result);
                     $epriso = $epri['Eprisode_Ep'];
-                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo "<a href=../php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
                     echo"第02集";
                     echo"</a>";
                   //下面沒弄好
@@ -288,7 +288,7 @@
                       $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
                       $epri = mysqli_fetch_array($result);
                       $epriso = $epri['Eprisode_Ep'];
-                      echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                      echo "<a href=../php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
                       echo"第03集";
                       echo"</a>";
                     }else{
@@ -306,7 +306,7 @@
                       $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
                       $epri = mysqli_fetch_array($result);
                       $epriso = $epri['Eprisode_Ep'];
-                      echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                      echo "<a href=../php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
                       echo"第04集";
                       echo"</a>";
                     }else{
@@ -325,7 +325,7 @@
                     $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
                     $epri = mysqli_fetch_array($result);
                     $epriso = $epri['Eprisode_Ep'];
-                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo "<a href=../php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
                     echo"第05集";
                     echo"</a>";
                     }else{
@@ -344,7 +344,7 @@
                     $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
                     $epri = mysqli_fetch_array($result);
                     $epriso = $epri['Eprisode_Ep'];
-                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo "<a href=../php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
                     echo"第06集";
                     echo"</a>";
                     }else{
@@ -362,7 +362,7 @@
                     $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
                     $epri = mysqli_fetch_array($result);
                     $epriso = $epri['Eprisode_Ep'];
-                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo "<a href=../php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
                     echo"第07集";
                     echo"</a>";
                     }else{
@@ -380,7 +380,7 @@
                     $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
                     $epri = mysqli_fetch_array($result);
                     $epriso = $epri['Eprisode_Ep'];
-                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo "<a href=../php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
                     echo"第08集";
                     echo"</a>";
                     }else{
@@ -399,7 +399,7 @@
                     $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
                     $epri = mysqli_fetch_array($result);
                     $epriso = $epri['Eprisode_Ep'];
-                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo "<a href=../php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
                     echo"第09集";
                     echo"</a>";
                     }else{
@@ -418,7 +418,7 @@
                       $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
                       $epri = mysqli_fetch_array($result);
                       $epriso = $epri['Eprisode_Ep'];
-                      echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                      echo "<a href=../php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
                       echo"第10集";
                       echo"</a>";
                       }else{
@@ -437,7 +437,7 @@
                     $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
                     $epri = mysqli_fetch_array($result);
                     $epriso = $epri['Eprisode_Ep'];
-                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo "<a href=../php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
                     echo"第11集";
                     echo"</a>";
                     }else{
@@ -456,7 +456,7 @@
                     $result = mysqli_query($conn, $ep) or die('MySQL query error'); 
                     $epri = mysqli_fetch_array($result);
                     $epriso = $epri['Eprisode_Ep'];
-                    echo "<a href=http://127.0.0.1/php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
+                    echo "<a href=../php_example/series.php?id=$newId&add=$newaddress&ep=$epriso>";
                     echo"第12集";
                     echo"</a>";
                     }else{
